@@ -1,6 +1,6 @@
-import { alerts } from "../../constants/alerts";
-import { ButtonBehaviors } from "../../constants/button";
-import { Routes } from "../../constants/routeIds";
+import { alerts } from "../../../constants/alerts";
+import { ButtonBehaviors } from "../../../constants/button";
+import { Routes } from "../../../constants/routeIds";
 
 
 export const clientButtonData = [
