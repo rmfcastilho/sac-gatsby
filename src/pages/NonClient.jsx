@@ -1,5 +1,5 @@
 import React from "react";
-import { nonClientButtonData } from "../data/buttons/buttons";
+import { nonClientButtonData } from '../global/data/buttons/buttons';
 import Button from "../components/Button/Button.component";
 import { ButtonBehaviors } from "../constants/button";
 

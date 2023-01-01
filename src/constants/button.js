@@ -1,6 +1,12 @@
 export const ButtonTypes = {
+  BUTTON: 'button',
+  LINK: 'link',
+}
+
+export const ButtonStyles = {
   THIN: 'thinButton',
-  STANDARD: 'standardButton',
+  PRIMARY: 'primaryButton',
+  SECONDARY: 'secondaryButton',
 };
 
 export const ButtonBehaviors = {

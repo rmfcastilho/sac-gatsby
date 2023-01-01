@@ -1,12 +1,13 @@
 import React from "react";
 
-import Logo from "../../assets/images/logo";
+import { HeaderWrapper } from './styles/Header.styles';
+import Logo from "global/assets/images/logo";
 
 
 const Header = () => (
-  <div className="header">
+  <HeaderWrapper>
     <Logo />
-  </div>
+  </HeaderWrapper>
 );
 
 
