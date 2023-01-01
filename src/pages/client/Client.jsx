@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { clientButtonData } from 'global/data/buttons/buttons';
-import Button from '../components/Button/Button.component';
+import Button from 'components/Button/Button.component';
 import { ButtonBehaviors  } from 'constants/button';
 
 

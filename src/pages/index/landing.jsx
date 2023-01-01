@@ -4,8 +4,8 @@ import StandardTemplate from 'templates/StandardTemplate.component';
 
 import Heading from 'components/Heading/Heading.component';
 import SectionDivider from 'components/SectionDivider/SectionDivider.component';
-import Client from 'pages/Client';
-import NonClient from 'pages/NonClient';
+import Client from 'pages/client/Client';
+import NonClient from 'pages/non-client/NonClient';
 
 import { ButtonTypes, ButtonStyles } from 'constants/button';
 import { dividerOrientation } from 'constants/sectionDivider';
