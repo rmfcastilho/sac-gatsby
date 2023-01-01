@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
 import { ButtonTypes } from 'constants/button';
 import { StyledButton, StyledLink } from 'components/Button/styles/Button.styles';
 

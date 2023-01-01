@@ -5,6 +5,7 @@ import { ButtonStyles } from 'constants/button';
 import * as colors from 'constants/styles/colors';
 import { Link } from 'gatsby';
 
+
 export const StyledLink = styled(props => <Link {...props} />)`
   width: fit-content;
   max-width: 10rem;
