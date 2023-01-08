@@ -7,7 +7,8 @@ import SectionDivider from 'components/SectionDivider/SectionDivider.component';
 import { HeadingStyles } from 'constants/heading';
 import { dividerOrientation } from 'constants/sectionDivider';
 
-import LandingButtons from './components/LandingButtons';
+import LandingButtons from './index/components/LandingButtons';
+
 
 const Index = () => (
   <StandardTemplate>
