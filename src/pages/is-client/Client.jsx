@@ -4,6 +4,8 @@ import { clientButtonData } from 'global/data/buttons/buttons';
 import Button from 'components/Button/Button.component';
 import { ButtonBehaviors  } from 'constants/button';
 
+import StandardTemplate from "templates/StandardTemplate.component";
+
 
 const Client = () => {
   const buttonsToRender = clientButtonData.map((buttonData) => (
@@ -18,7 +20,7 @@ const Client = () => {
     />
   ));
 
-  return <div className="client">{buttonsToRender}</div>;
+  return <StandardTemplate>{buttonsToRender}</StandardTemplate>;
 };
 
 

@@ -1,20 +1,21 @@
 import React from 'react';
 
 import { LandingButtonWrapper } from './LandingButtons.styles';
-import Client from 'pages/client';
 import {ButtonStyles, ButtonTypes} from 'constants/button';
-import NonClient from 'pages/non-client';
 import Button from 'components/Button/Button.component';
+
+import { Routes } from "constants/routeIds";
+
 
 const landingOptions = [
   {
     label: 'Sou cliente',
-    target: Client,
+    target: Routes.CLIENT_LANDING,
     buttonStyle: ButtonStyles.PRIMARY,
   },
   {
     label: 'Não sou cliente',
-    target: NonClient,
+    target: Routes.NON_CLIENT_LANDING,
     buttonStyle: ButtonStyles.SECONDARY,
   }
 ];
