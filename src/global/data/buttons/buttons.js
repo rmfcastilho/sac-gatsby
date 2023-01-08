@@ -88,12 +88,6 @@ export const clientButtonData = [
     behavior: ButtonBehaviors.REDIRECT,
     behaviorData: Routes.READING_SUGGESTION_NON_CONTACT,
   },
-  {
-    id: "productComposition",
-    label: "O produto não flui para a ponta",
-    behavior: ButtonBehaviors.REDIRECT,
-    behaviorData: Routes.READING_SUGGESTION_NON_CONTACT,
-  },
 ];
 
 

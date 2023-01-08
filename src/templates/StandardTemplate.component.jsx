@@ -1,21 +1,23 @@
 import React from 'react';
 
-import { AppWrapper, ContentWrapper } from './styles/StandardTemplate.style';
+import { ContentWrapper } from './styles/StandardTemplate.style';
+import GlobalStyle from "global/styles/global.styles";
 
-import Header from '../components/Header/Header.component';
-import Footer from '../components/Footer/Footer.component';
+import Header from 'components/Header/Header.component';
+import Footer from 'components/Footer/Footer.component';
 
 
 const StandardTemplate = ({ children }) => (
-  <AppWrapper>
-    <Header />
+    <>
+      <GlobalStyle />
+      <Header />
 
-    <ContentWrapper>
-      {children}
-    </ContentWrapper>
+      <ContentWrapper>
+        {children}
+      </ContentWrapper>
 
-    <Footer />
-  </AppWrapper>
+      <Footer />
+    </>
 );
 
 
