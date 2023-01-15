@@ -1,4 +1,4 @@
-export const HeadingStyles = {
+export const headingStyles = {
   PRIMARY: 'primaryButton',
   SECONDARY: 'secondaryButton',
 };

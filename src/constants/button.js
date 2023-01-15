@@ -1,15 +1,15 @@
-export const ButtonTypes = {
+export const buttonTypes = {
   BUTTON: 'button',
   LINK: 'link',
 }
 
-export const ButtonStyles = {
+export const buttonStyles = {
   THIN: 'thinButton',
   PRIMARY: 'primaryButton',
   SECONDARY: 'secondaryButton',
 };
 
-export const ButtonBehaviors = {
+export const buttonBehaviors = {
   REDIRECT: 'redirect',
   ALERT: 'alert',
 }

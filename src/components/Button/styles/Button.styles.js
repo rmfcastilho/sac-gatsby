@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ButtonStyles } from 'constants/button';
+import { buttonStyles } from 'constants/button';
 import * as colors from 'constants/styles/colors';
 import { Link } from 'gatsby';
 import { fontWeights } from 'constants/styles/font';
@@ -27,7 +27,7 @@ const commonStyling = `
 `
 
 export const StyledButton = styled.button`
-  background-color: ${({ buttonStyle }) => buttonStyle === ButtonStyles.PRIMARY 
+  background-color: ${({ buttonStyle }) => buttonStyle === buttonStyles.PRIMARY 
     ? colors.colorTurquoiseGreen 
     : colors.colorSonicSilver 
   };
@@ -39,7 +39,7 @@ export const StyledButton = styled.button`
 `;
 
 export const StyledLink = styled(props => <Link {...props} />)`
-  background-color: ${({ buttonStyle }) => buttonStyle === ButtonStyles.PRIMARY 
+  background-color: ${({ buttonStyle }) => buttonStyle === buttonStyles.PRIMARY 
     ? colors.colorTurquoiseGreen 
     : colors.colorSonicSilver 
   };

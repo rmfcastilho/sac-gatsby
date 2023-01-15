@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ButtonTypes } from 'constants/button';
+import { buttonTypes } from 'constants/button';
 import { StyledButton, StyledLink } from 'components/Button/styles/Button.styles';
 
 
@@ -12,7 +12,7 @@ const Button = ({
   link,
   buttonStyle,
 }) => (
-  type === ButtonTypes.BUTTON
+  type === buttonTypes.BUTTON
     ? <StyledButton
       key={key}
       disabled={isDisabled}

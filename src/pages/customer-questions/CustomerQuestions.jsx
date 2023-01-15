@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Button from "components/Button/Button.component";
-import { ButtonStyles } from 'constants/button';
-import { Routes } from 'constants/routeIds';
+import { buttonStyles } from 'constants/button';
+import { routes } from 'constants/routeIds';
 import StandardTemplate from 'templates/StandardTemplate.component';
 import { ButtonContentWrappers } from 'global/styles/ButtonContentWrappers.styles';
 
@@ -11,20 +11,20 @@ const customerQuestionsButtons = [
   {
     id: 'sobreProduto',
     label: 'Sobre o produto',
-    target: Routes.CLIENT_LANDING,
-    buttonStyle: ButtonStyles.PRIMARY,
+    target: routes.CLIENT_LANDING,
+    buttonStyle: buttonStyles.PRIMARY,
   },
   {
     id: 'sobrePedido',
     label: 'Sobre o pedido',
-    target: Routes.NON_CLIENT_LANDING,
-    buttonStyle: ButtonStyles.PRIMARY,
+    target: routes.NON_CLIENT_LANDING,
+    buttonStyle: buttonStyles.PRIMARY,
   },
   {
     id: 'sobrePagamento',
     label: 'Sobre o pagamento',
-    target: Routes.NON_CLIENT_LANDING,
-    buttonStyle: ButtonStyles.PRIMARY,
+    target: routes.NON_CLIENT_LANDING,
+    buttonStyle: buttonStyles.PRIMARY,
   },
 ];
 
@@ -34,7 +34,7 @@ const CustomerQuestions = () => {
       <Button
         key={buttonData.id}
         isDisabled={false}
-        buttonStyle={ButtonStyles.PRIMARY}
+        buttonStyle={buttonStyles.PRIMARY}
         label={buttonData.label}
       />
     )
