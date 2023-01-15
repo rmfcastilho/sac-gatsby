@@ -18,7 +18,7 @@ export const questionTypeSlice = createSlice({
   },
 });
 
-export const { setQuestionType } = modalSlice.actions;
+export const { setQuestionType } = questionTypeSlice.actions;
 
 
 export default questionTypeSlice.reducer;
