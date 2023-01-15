@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { clientButtonData } from 'global/data/buttons/buttons';
+import { customerButtonData } from 'global/data/buttons/buttons';
 import Button from 'components/Button/Button.component';
 import { ButtonBehaviors, ButtonStyles } from 'constants/button';
 
@@ -8,8 +8,8 @@ import StandardTemplate from "templates/StandardTemplate.component";
 import { ButtonContentWrappers } from 'global/styles/ButtonContentWrappers.styles';
 
 
-const Client = () => {
-  const buttonsToRender = clientButtonData.map((buttonData) => (
+const CustomerLanding = () => {
+  const buttonsToRender = customerButtonData.map((buttonData) => (
     <Button
       key={buttonData.id}
       isDisabled={false}
@@ -32,4 +32,4 @@ const Client = () => {
 };
 
 
-export default Client;
+export default CustomerLanding;

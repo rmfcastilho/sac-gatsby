@@ -3,36 +3,36 @@ import { ButtonBehaviors } from "constants/button";
 import { Routes } from "constants/routeIds";
 
 
-export const clientButtonData = [
+export const customerButtonData = [
   {
     id: "wrongOrder",
     label: "Meu pedido veio incorreto",
     behavior: ButtonBehaviors.REDIRECT,
-    behaviorData: Routes.CLIENT_FORM,
+    behaviorData: Routes.CUSTOMER_CONTACT,
   },
   {
     id: "compliment",
     label: "Quero fazer um elogio",
     behavior: ButtonBehaviors.REDIRECT,
-    behaviorData: Routes.CLIENT_FORM,
+    behaviorData: Routes.CUSTOMER_CONTACT,
   },
   {
     id: "suggestion",
     label: "Quero fazer uma sugestão",
     behavior: ButtonBehaviors.REDIRECT,
-    behaviorData: Routes.CLIENT_FORM,
+    behaviorData: Routes.CUSTOMER_CONTACT,
   },
   {
     id: "complaint",
     label: "Quero fazer uma reclamação",
     behavior: ButtonBehaviors.REDIRECT,
-    behaviorData: Routes.CLIENT_FORM,
+    behaviorData: Routes.CUSTOMER_CONTACT,
   },
   {
     id: "doubt",
     label: "Tenho uma dúvida",
     behavior: ButtonBehaviors.REDIRECT,
-    behaviorData: Routes.CLIENT_DOUBTS,
+    behaviorData: Routes.CUSTOMER_QUESTIONS,
   },
   {
     id: "returnProduct",
@@ -91,30 +91,30 @@ export const clientButtonData = [
 ];
 
 
-export const nonClientButtonData = [
+export const nonCustomerButtonData = [
   {
     id: "compliment",
     label: "Quero fazer um elogio",
     behavior: ButtonBehaviors.REDIRECT,
-    behaviorData: Routes.NON_CLIENT_FORM,
+    behaviorData: Routes.NON_CUSTOMER_CONTACT,
   },
   {
     id: "suggestion",
     label: "Quero fazer uma sugestão",
     behavior: ButtonBehaviors.REDIRECT,
-    behaviorData: Routes.NON_CLIENT_FORM,
+    behaviorData: Routes.NON_CUSTOMER_CONTACT,
   },
   {
     id: "complaint",
     label: "Quero fazer uma reclamação",
     behavior: ButtonBehaviors.REDIRECT,
-    behaviorData: Routes.NON_CLIENT_FORM,
+    behaviorData: Routes.NON_CUSTOMER_CONTACT,
   },
   {
     id: "doubt",
     label: "Tenho uma dúvida",
     behavior: ButtonBehaviors.REDIRECT,
-    behaviorData: Routes.CLIENT_DOUBTS,
+    behaviorData: Routes.CUSTOMER_QUESTIONS,
   },
   {
     id: "productComposition",

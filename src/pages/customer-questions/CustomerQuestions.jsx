@@ -7,7 +7,7 @@ import StandardTemplate from 'templates/StandardTemplate.component';
 import { ButtonContentWrappers } from 'global/styles/ButtonContentWrappers.styles';
 
 
-const clientDoubtOptions = [
+const customerQuestionsButtons = [
   {
     id: 'sobreProduto',
     label: 'Sobre o produto',
@@ -28,8 +28,8 @@ const clientDoubtOptions = [
   },
 ];
 
-const ClientDoubts = () => {
-  const buttonsToRender = clientDoubtOptions.map(
+const CustomerQuestions = () => {
+  const buttonsToRender = customerQuestionsButtons.map(
     (buttonData) => (
       <Button
         key={buttonData.id}
@@ -50,4 +50,4 @@ const ClientDoubts = () => {
 };
 
 
-export default ClientDoubts;
+export default CustomerQuestions;

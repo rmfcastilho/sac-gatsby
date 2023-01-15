@@ -1,5 +1,5 @@
 import React from "react";
-import { nonClientButtonData } from 'global/data/buttons/buttons';
+import { nonCustomerButtonData } from 'global/data/buttons/buttons';
 import Button from "components/Button/Button.component";
 import {ButtonBehaviors, ButtonStyles} from 'constants/button';
 
@@ -7,8 +7,8 @@ import StandardTemplate from "templates/StandardTemplate.component";
 import { ButtonContentWrappers } from 'global/styles/ButtonContentWrappers.styles';
 
 
-const NonClient = () => {
-  const buttonsToRender = nonClientButtonData.map((buttonData) => (
+const NonCustomerLanding = () => {
+  const buttonsToRender = nonCustomerButtonData.map((buttonData) => (
     <Button
       key={buttonData.id}
       isDisabled={false}
@@ -31,4 +31,4 @@ const NonClient = () => {
 };
 
 
-export default NonClient;
+export default NonCustomerLanding;

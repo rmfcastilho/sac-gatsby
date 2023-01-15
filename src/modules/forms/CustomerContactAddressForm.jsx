@@ -1,15 +1,19 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
 
+import FormFooter from './components/FormFooter';
+
+import { FormSectionHeaderWrapper } from './styles/FormSectionHeader.styles';
+
 
 const handleSubmit = () => console.log('Submitted!');
 
-const ClientFormWithAddress = () => (
+const CustomerContactAddressForm = () => (
   <Form
     onSubmit={handleSubmit}
     render={() => (
       <form onSubmit={handleSubmit}>
-        1. Identificação
+        <FormSectionHeaderWrapper>1. Identificação</FormSectionHeaderWrapper>
         <div>
           <Field name="customerName" component="input" placeholder="Nome" />
         </div>
@@ -23,7 +27,7 @@ const ClientFormWithAddress = () => (
           <Field name="customerID" component="input" placeholder="CPF" />
         </div>
 
-        2. Novo endereço
+        <FormSectionHeaderWrapper>2. Novo endereço</FormSectionHeaderWrapper>
         <div>
           <Field name="zipCode" component="input" placeholder="CEP" />
         </div>
@@ -46,7 +50,7 @@ const ClientFormWithAddress = () => (
           <Field name="state" component="input" placeholder="UF" />
         </div>
 
-        3. Mensagem
+        <FormSectionHeaderWrapper>3. Mensagem</FormSectionHeaderWrapper>
         <div>
           <Field name="subject" component="input" placeholder="Assunto" />
         </div>
@@ -55,11 +59,12 @@ const ClientFormWithAddress = () => (
         </div>
 
         <button type="submit">Submit</button>
-        Campos com * são obrigatórios
+        
+        <FormFooter />
       </form>
     )}
   />
 );
 
 
-export default ClientFormWithAddress;
+export default CustomerContactAddressForm;

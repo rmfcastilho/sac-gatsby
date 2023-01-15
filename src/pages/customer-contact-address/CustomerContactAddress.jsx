@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ClientForm from 'modules/forms/ClientForm.module';
+import CustomerContactAddressForm from 'modules/forms/CustomerContactAddressForm';
 import StandardTemplate from 'templates/StandardTemplate.component';
 import Heading from 'components/Heading/Heading.component';
 import SectionDivider from 'components/SectionDivider/SectionDivider.component';
@@ -8,16 +8,17 @@ import SectionDivider from 'components/SectionDivider/SectionDivider.component';
 import { HeadingStyles } from 'constants/heading';
 import { dividerOrientation } from 'constants/sectionDivider';
 
-const ClientContactForm = () => (
+
+const CustomerContactAddress = () => (
   <StandardTemplate>
     <Heading type={HeadingStyles.PRIMARY}>Central de Ajuda</Heading>
     <Heading type={HeadingStyles.SECONDARY}>Sou cliente</Heading>
 
     <SectionDivider type={dividerOrientation.HORIZONTAL} />
 
-    <ClientForm />
+    <CustomerContactAddressForm />
   </StandardTemplate>
 );
 
 
-export default ClientContactForm;
+export default CustomerContactAddress;

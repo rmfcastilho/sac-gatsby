@@ -1,11 +1,11 @@
 export const Routes = {
   LANDING: '/',
-  CLIENT_LANDING: '/is-client',
-  NON_CLIENT_LANDING: '/non-client',
-  CLIENT_FORM: '/client-contact-form',
-  CLIENT_FORM_ADDRESS: '/client-form-address',
-  CLIENT_DOUBTS: '/client-doubts',
-  NON_CLIENT_FORM: '/non-client-form',
+  CUSTOMER_LANDING: '/customer-landing',
+  NON_CUSTOMER_LANDING: '/non-customer-landing',
+  CUSTOMER_CONTACT: '/customer-contact',
+  CUSTOMER_CONTACT_ADDRESS: '/customer-contact-address',
+  CUSTOMER_QUESTIONS: '/customer-questions',
+  NON_CUSTOMER_CONTACT: '/non-customer-contact',
   READING_SUGGESTION_NON_CONTACT: '/reading-non-contact',
   READING_SUGGESTION_CONTACT: '/reading-contact',
 };

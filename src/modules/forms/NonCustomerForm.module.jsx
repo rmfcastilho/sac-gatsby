@@ -1,29 +1,27 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
 
+import FormFooter from './components/FormFooter';
+
+import { FormSectionHeaderWrapper } from './styles/FormSectionHeader.styles';
+
 
 const handleSubmit = () => console.log('Submitted!');
 
-const ClientForm = () => (
+const NonCustomerForm = () => (
   <Form
     onSubmit={handleSubmit}
     render={() => (
       <form onSubmit={handleSubmit}>
-        1. Identificação
+        <FormSectionHeaderWrapper>1. Identificação</FormSectionHeaderWrapper>
         <div>
           <Field name="customerName" component="input" placeholder="Nome" />
         </div>
         <div>
-          <Field name="orderNumber" component="input" placeholder="Número do pedido" />
-        </div>
-        <div>
           <Field name="customerEmail" component="input" placeholder="E-mail usado na compra" />
         </div>
-        <div>
-          <Field name="customerID" component="input" placeholder="CPF" />
-        </div>
 
-        2. Mensagem
+        <FormSectionHeaderWrapper>2. Mensagem</FormSectionHeaderWrapper>
         <div>
           <Field name="subject" component="input" placeholder="Assunto" />
         </div>
@@ -32,11 +30,12 @@ const ClientForm = () => (
         </div>
 
         <button type="submit">Submit</button>
-        Campos com * são obrigatórios
+        
+        <FormFooter />
       </form>
     )}
   />
 );
 
 
-export default ClientForm;
+export default NonCustomerForm;
