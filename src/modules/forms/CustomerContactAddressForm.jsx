@@ -1,14 +1,22 @@
 import React from 'react';
+import Button from 'components/Button/Button.component';
 import { Form } from 'react-final-form';
 
 import FormFooter from './components/FormFooter';
+import { buttonStyles } from 'constants/button';
 
 import { FormSectionHeaderWrapper } from './styles/FormSectionHeader.styles';
+
 import {
-  StyledField,
+  SingleFieldRow,
+  DoubleFieldRow,
+  StyledFieldNarrow,
+  StyledFieldWide,
+  FormWrapper,
+  StyledFieldFullWidth,
   FormSubsection,
-  FieldGroupWrapper,
-  FieldPlaceholder,
+  FormFieldsWrapper,
+  FormSubmissionWrapper,
 } from './styles/Form.styles';
 
 
@@ -19,40 +27,46 @@ const CustomerContactAddressForm = () => (
     onSubmit={handleSubmit}
     render={() => (
       <form onSubmit={handleSubmit}>
-
-        <FormSectionHeaderWrapper>1. Identificação</FormSectionHeaderWrapper>
-        <FormSubsection>
-            <FieldGroupWrapper>
-              <StyledField name="customerName" component="input" />
-            
-            </FieldGroupWrapper>
-            <StyledField name="orderNumber" component="input" placeholder="Número do pedido" />
-            <StyledField name="customerEmail" component="input" placeholder="E-mail usado na compra" />
-            <StyledField name="customerID" component="input" placeholder="CPF" />
-        </FormSubsection>
-        
-
-        <FormSectionHeaderWrapper>2. Novo endereço</FormSectionHeaderWrapper>
-        <FormSubsection>
-            <StyledField name="zipCode" component="input" placeholder="CEP" />
-            <StyledField name="streetAddress" component="input" placeholder="Logradouro" />
-            <StyledField name="streetNumber" component="input" placeholder="Número" />
-            <StyledField name="additionalAddressInfo" component="input" placeholder="Complemento" />
-            <StyledField name="borough" component="input" placeholder="Bairro" />
-            <StyledField name="city" component="input" placeholder="Cidade" />
-            <StyledField name="state" component="input" placeholder="UF" />
-        </FormSubsection>
-
-        <FormSectionHeaderWrapper>3. Mensagem</FormSectionHeaderWrapper>
+        <FormFieldsWrapper>
           <FormSubsection>
-            <StyledField name="subject" component="input" placeholder="Assunto" />
-            <StyledField name="message" component="textarea" placeholder="Mensagem" />
-        </FormSubsection>
+            <FormSectionHeaderWrapper>1. Identificação</FormSectionHeaderWrapper>
+            
+            <StyledFieldFullWidth name="customerName" component="input" placeholder="Nome" />
+            <StyledFieldFullWidth name="orderNumber" component="input" placeholder="Número do pedido" />
+            <StyledFieldFullWidth name="customerEmail" component="input" placeholder="E-mail usado na compra" />
+            <StyledFieldFullWidth name="customerID" component="input" placeholder="CPF" />
+          </FormSubsection>
+          
+          <FormSubsection>
+            <FormSectionHeaderWrapper>2. Novo endereço</FormSectionHeaderWrapper>
+            
+            <StyledFieldFullWidth name="zipCode" component="input" placeholder="CEP" />
+            <StyledFieldFullWidth name="streetAddress" component="input" placeholder="Logradouro" />
+            <StyledFieldFullWidth name="streetNumber" component="input" placeholder="Número" />
+            <StyledFieldFullWidth name="additionalAddressInfo" component="input" placeholder="Complemento" />
+            <StyledFieldFullWidth name="borough" component="input" placeholder="Bairro" />
+            <StyledFieldFullWidth name="city" component="input" placeholder="Cidade" />
+            <StyledFieldFullWidth name="state" component="input" placeholder="UF" />
+          </FormSubsection>
 
-        <button type="submit">Submit</button>
-        
-        <FormFooter />
+          <FormSubsection>
+            <FormSectionHeaderWrapper>3. Mensagem (opcional)</FormSectionHeaderWrapper>
 
+            <StyledFieldFullWidth name="message" component="textarea" placeholder="Mensagem" />
+          </FormSubsection>
+        </FormFieldsWrapper>
+
+        <FormSubmissionWrapper>
+          <Button
+            type="submit"
+            isDisabled={false}
+            buttonStyle={buttonStyles.PRIMARY}
+            label="Enviar solicitação"
+            key="submitForm"
+          />
+
+          <FormFooter />
+        </FormSubmissionWrapper>
       </form>
     )}
   />

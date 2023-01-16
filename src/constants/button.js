@@ -1,5 +1,6 @@
 export const buttonTypes = {
   BUTTON: 'button',
+  SUBMIT: 'submit',
   LINK: 'link',
 }
 

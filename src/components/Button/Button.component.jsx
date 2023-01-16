@@ -12,11 +12,12 @@ const Button = ({
   link,
   buttonStyle,
 }) => (
-  type === buttonTypes.BUTTON
+  type !== buttonTypes.LINK
     ? <StyledButton
       key={key}
       disabled={isDisabled}
       buttonStyle={buttonStyle}
+      type={type}
     >
       {label}
     </StyledButton>
