@@ -1,9 +1,15 @@
 import React from 'react';
-import { Form, Field } from 'react-final-form';
+import { Form } from 'react-final-form';
 
 import FormFooter from './components/FormFooter';
 
 import { FormSectionHeaderWrapper } from './styles/FormSectionHeader.styles';
+import {
+  StyledField,
+  FormSubsection,
+  FieldGroupWrapper,
+  FieldPlaceholder,
+} from './styles/Form.styles';
 
 
 const handleSubmit = () => console.log('Submitted!');
@@ -13,54 +19,40 @@ const CustomerContactAddressForm = () => (
     onSubmit={handleSubmit}
     render={() => (
       <form onSubmit={handleSubmit}>
+
         <FormSectionHeaderWrapper>1. Identificação</FormSectionHeaderWrapper>
-        <div>
-          <Field name="customerName" component="input" placeholder="Nome" />
-        </div>
-        <div>
-          <Field name="orderNumber" component="input" placeholder="Número do pedido" />
-        </div>
-        <div>
-          <Field name="customerEmail" component="input" placeholder="E-mail usado na compra" />
-        </div>
-        <div>
-          <Field name="customerID" component="input" placeholder="CPF" />
-        </div>
+        <FormSubsection>
+            <FieldGroupWrapper>
+              <StyledField name="customerName" component="input" />
+            
+            </FieldGroupWrapper>
+            <StyledField name="orderNumber" component="input" placeholder="Número do pedido" />
+            <StyledField name="customerEmail" component="input" placeholder="E-mail usado na compra" />
+            <StyledField name="customerID" component="input" placeholder="CPF" />
+        </FormSubsection>
+        
 
         <FormSectionHeaderWrapper>2. Novo endereço</FormSectionHeaderWrapper>
-        <div>
-          <Field name="zipCode" component="input" placeholder="CEP" />
-        </div>
-        <div>
-          <Field name="streetAddress" component="input" placeholder="Logradouro" />
-        </div>
-        <div>
-          <Field name="streetNumber" component="input" placeholder="Número" />
-        </div>
-        <div>
-          <Field name="additionalAddressInfo" component="input" placeholder="Complemento" />
-        </div>
-        <div>
-          <Field name="borough" component="input" placeholder="Bairro" />
-        </div>
-        <div>
-          <Field name="city" component="input" placeholder="Cidade" />
-        </div>
-        <div>
-          <Field name="state" component="input" placeholder="UF" />
-        </div>
+        <FormSubsection>
+            <StyledField name="zipCode" component="input" placeholder="CEP" />
+            <StyledField name="streetAddress" component="input" placeholder="Logradouro" />
+            <StyledField name="streetNumber" component="input" placeholder="Número" />
+            <StyledField name="additionalAddressInfo" component="input" placeholder="Complemento" />
+            <StyledField name="borough" component="input" placeholder="Bairro" />
+            <StyledField name="city" component="input" placeholder="Cidade" />
+            <StyledField name="state" component="input" placeholder="UF" />
+        </FormSubsection>
 
         <FormSectionHeaderWrapper>3. Mensagem</FormSectionHeaderWrapper>
-        <div>
-          <Field name="subject" component="input" placeholder="Assunto" />
-        </div>
-        <div>
-          <Field name="message" component="textarea" placeholder="Mensagem" />
-        </div>
+          <FormSubsection>
+            <StyledField name="subject" component="input" placeholder="Assunto" />
+            <StyledField name="message" component="textarea" placeholder="Mensagem" />
+        </FormSubsection>
 
         <button type="submit">Submit</button>
         
         <FormFooter />
+
       </form>
     )}
   />

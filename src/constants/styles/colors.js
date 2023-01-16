@@ -6,3 +6,4 @@ export const colorAntiFlashWhite = '#F2F2F2';
 export const colorAlmond = '#F0DECE';
 export const colorMauvelous = '#F39DAD';
 export const colorStandardWhite = '#FFFFFF';
+export const colorFormGrey = '#545454';

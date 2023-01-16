@@ -10,12 +10,12 @@ import { routes } from "constants/routeIds";
 const landingOptions = [
   {
     label: 'Sou cliente',
-    target: routes.CLIENT_LANDING,
+    target: routes.CUSTOMER_LANDING,
     buttonStyle: buttonStyles.PRIMARY,
   },
   {
     label: 'Não sou cliente',
-    target: routes.NON_CLIENT_LANDING,
+    target: routes.NON_CUSTOMER_LANDING,
     buttonStyle: buttonStyles.SECONDARY,
   }
 ];
