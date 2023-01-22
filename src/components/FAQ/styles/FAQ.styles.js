@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
-import * as colors from 'constants/styles/colors';
+import { fontWeights } from "constants/styles/font";
 
 
 export const FAQContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 75%;
   padding: 1rem 0;
   cursor: pointer;
+  margin: 0 auto;
 `;
 
 export const FAQWrapper = styled.details`
@@ -23,6 +24,7 @@ export const FAQWrapper = styled.details`
 export const FAQHeader = styled.summary`
   background-color: rgba(240, 222, 206, 0.8);
   padding:  0.75rem;
+  font-weight: ${fontWeights.BOLD};
 `;
 
 export const FAQContent = styled.div`

@@ -1,12 +1,17 @@
 import React from "react";
+import { Link } from "gatsby";
+
+import Logo from "global/assets/images/logo";
 
 import { HeaderWrapper } from './styles/Header.styles';
-import Logo from "global/assets/images/logo";
+import { routes } from "constants/routeIds";
 
 
 const Header = () => (
   <HeaderWrapper>
-    <Logo />
+    <Link to={routes.LANDING}>
+      <Logo />
+    </Link>
   </HeaderWrapper>
 );
 

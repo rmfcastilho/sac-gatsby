@@ -18,7 +18,7 @@ const commonStyling = `
   font-weight: ${fontWeights.SEMI_BOLD};
   width: 100%;
   transition: 0.5s ease-in-out;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   text-shadow: 1px 0.5px rgba(0, 0, 0, 0.2);
   
   &:hover {
