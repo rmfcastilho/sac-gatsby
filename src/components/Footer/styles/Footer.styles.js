@@ -21,6 +21,7 @@ export const FooterContent = styled.div`
 `;
 
 export const FooterText = styled.span`
+  text-shadow: 1px 0.5px rgba(0, 0, 0, 0.2);
   color: ${colors.colorStandardWhite};
   text-align: center;
   font-weight: ${fontWeights.BOLD};

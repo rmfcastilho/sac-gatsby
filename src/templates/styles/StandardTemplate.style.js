@@ -12,6 +12,7 @@ export const ContentWrapper = styled.div`
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  flex-wrap: wrap;
   
   @media (min-width: ${breakpointTablet}) {
     width: 80%;

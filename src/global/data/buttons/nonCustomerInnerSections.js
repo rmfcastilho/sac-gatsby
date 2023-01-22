@@ -3,7 +3,7 @@ import {buttonBehaviors, buttonStyles} from "constants/button";
 import { routes } from "constants/routeIds";
 
 
-export const notCustomerInnerSections = [
+export const nonCustomerInnerSections = [
   {
     id: 'generalQuestions',
     header: 'Dúvidas gerais',

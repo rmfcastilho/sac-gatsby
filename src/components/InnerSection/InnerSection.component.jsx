@@ -1,11 +1,11 @@
 import React from "react";
 
-import InnerSectionButton from "./components/InnerSectionButton/InnerSectionButton.component";
+import InnerSectionContent from "./components/InnerSectionContent/InnerSectionContent.component";
 
 import {
   InnerSectionWrapper,
   InnerSectionHeader,
-  InnerSectionContent,
+  InnerSectionContentWrapper,
 } from "./styles/InnerSection.styles";
 
 
@@ -13,16 +13,16 @@ const InnerSection = ({ header, content }) => (
   <InnerSectionWrapper>
     <InnerSectionHeader>{header}</InnerSectionHeader>
 
-    <InnerSectionContent>
+    <InnerSectionContentWrapper>
       {
         content.map((button) => (
-          <InnerSectionButton
+          <InnerSectionContent
             key={button.id}
             {...button}
           />
         ))
       }
-    </InnerSectionContent>
+    </InnerSectionContentWrapper>
   </InnerSectionWrapper>
 );
 
