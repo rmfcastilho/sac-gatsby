@@ -10,6 +10,7 @@ export const FooterWrapper = styled.div`
   max-height: 3.75rem;
   padding: 1rem 0;
   margin-top: auto;
+  bottom: 0;
 `;
 
 export const FooterContent = styled.div`

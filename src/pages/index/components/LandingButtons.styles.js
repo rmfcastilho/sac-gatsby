@@ -7,5 +7,5 @@ export const LandingButtonWrapper = styled.div`
   gap: 0.5rem;
   margin: 0 auto;
   width: fit-content;
-  
+  border: 1px solid red;
 `

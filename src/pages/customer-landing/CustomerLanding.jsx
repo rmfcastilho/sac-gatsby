@@ -7,7 +7,7 @@ import SectionDivider from "components/SectionDivider/SectionDivider.component";
 
 import { InnerSectionGlobalWrapper } from "global/styles/InnerSectionGlobalWrapper.styles";
 
-import { currentCustomerInnerSections } from "global/data/buttons/currentCustomerInnerSections";
+import { currentCustomerInnerSections } from "global/data/currentCustomerInnerSections";
 
 import { headingStyles } from "constants/heading";
 import { dividerOrientation } from "constants/sectionDivider";

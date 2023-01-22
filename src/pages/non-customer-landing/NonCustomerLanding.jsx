@@ -4,7 +4,11 @@ import StandardTemplate from "templates/StandardTemplate.component";
 import { InnerSectionGlobalWrapper } from "global/styles/InnerSectionGlobalWrapper.styles";
 
 import InnerSection from "components/InnerSection/InnerSection.component";
-import { nonCustomerInnerSections } from "global/data/buttons/nonCustomerInnerSections";
+import { nonCustomerInnerSections } from "global/data/nonCustomerInnerSections";
+import Heading from "components/Heading/Heading.component";
+import {headingStyles} from "constants/heading";
+import SectionDivider from "components/SectionDivider/SectionDivider.component";
+import {dividerOrientation} from "constants/sectionDivider";
 
 
 const NonCustomerLanding = () => {
@@ -19,6 +23,20 @@ const NonCustomerLanding = () => {
 
   return (
     <StandardTemplate>
+      <Heading type={headingStyles.PRIMARY} colored>
+        Central de Ajuda
+      </Heading>
+
+      <Heading type={headingStyles.SECONDARY}>
+        Não sou cliente
+      </Heading>
+
+      <SectionDivider type={dividerOrientation.HORIZONTAL} />
+
+      <Heading type={headingStyles.SECONDARY} colored>
+        O que aconteceu?
+      </Heading>
+
       <InnerSectionGlobalWrapper>
         {sectionsToRender}
       </InnerSectionGlobalWrapper>
