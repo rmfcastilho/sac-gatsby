@@ -118,7 +118,7 @@ export const nonCustomerButtonData = [
   },
   {
     id: "productComposition",
-    label: "O produto não flui para a ponta",
+    label: "Qual a composição do produto?",
     behavior: buttonBehaviors.REDIRECT,
     behaviorData: routes.READING_SUGGESTION_NON_CONTACT,
   },
@@ -128,7 +128,6 @@ export const nonCustomerButtonData = [
     behavior: buttonBehaviors.REDIRECT,
     behaviorData: routes.READING_SUGGESTION_NON_CONTACT,
   },
-
   {
     id: "partnerships",
     label: "Sobre parcerias",

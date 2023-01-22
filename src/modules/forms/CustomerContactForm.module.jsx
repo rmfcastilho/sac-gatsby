@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
 
-import FormFooter from './components/FormFooter';
+import FormFooterComponent from './components/FormFooter.component';
 
 import { FormSectionHeaderWrapper } from './styles/FormSectionHeader.styles';
 
@@ -37,7 +37,7 @@ const CustomerContactForm = () => (
 
         <button type="submit">Submit</button>
         
-        <FormFooter />
+        <FormFooterComponent />
       </form>
     )}
   />

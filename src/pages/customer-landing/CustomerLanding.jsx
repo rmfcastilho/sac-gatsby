@@ -1,31 +1,26 @@
 import React from 'react';
 
-import { customerButtonData } from 'global/data/buttons/buttons';
-import Button from 'components/Button/Button.component';
-import { buttonBehaviors, buttonStyles } from 'constants/button';
-
 import StandardTemplate from "templates/StandardTemplate.component";
 import { ButtonContentWrappers } from 'global/styles/ButtonContentWrappers.styles';
 
+import InnerSection from "components/InnerSection/InnerSection.component";
+import { currentCustomerInnerSections } from "global/data/buttons/currentCustomerInnerSections";
+
 
 const CustomerLanding = () => {
-  const buttonsToRender = customerButtonData.map((buttonData) => (
-    <Button
-      key={buttonData.id}
-      isDisabled={false}
-      type={
-        buttonData.behavior === buttonBehaviors.REDIRECT ? "link" : "button"
-      }
-      label={buttonData.label}
-      link={buttonData.behaviorData}
-      buttonStyle={buttonStyles.PRIMARY}
-    />
-  ));
+  const sectionsToRender = currentCustomerInnerSections.map(
+    (section) => (
+      <InnerSection
+        id={section.id}
+        {...section}
+      />
+    )
+  );
 
   return (
     <StandardTemplate>
       <ButtonContentWrappers>
-        {buttonsToRender}
+        {sectionsToRender}
       </ButtonContentWrappers>
     </StandardTemplate>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CustomerContactAddressForm from 'modules/forms/CustomerContactAddressForm';
+import CustomerContactAddressForm from 'modules/forms/CustomerContactAddressForm.module';
 import StandardTemplate from 'templates/StandardTemplate.component';
 import Heading from 'components/Heading/Heading.component';
 import SectionDivider from 'components/SectionDivider/SectionDivider.component';

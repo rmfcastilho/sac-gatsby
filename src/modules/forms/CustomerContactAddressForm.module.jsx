@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'components/Button/Button.component';
 import { Form } from 'react-final-form';
 
-import FormFooter from './components/FormFooter';
+import FormFooterComponent from './components/FormFooter.component';
 import { buttonStyles } from 'constants/button';
 
 import { FormSectionHeaderWrapper } from './styles/FormSectionHeader.styles';
@@ -65,7 +65,7 @@ const CustomerContactAddressForm = () => (
             key="submitForm"
           />
 
-          <FormFooter />
+          <FormFooterComponent />
         </FormSubmissionWrapper>
       </form>
     )}
