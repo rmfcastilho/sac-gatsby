@@ -39,14 +39,23 @@ const CustomerContactAddressForm = () => (
           
           <FormSubsection>
             <FormSectionHeaderWrapper>2. Novo endereço</FormSectionHeaderWrapper>
-            
-            <StyledFieldFullWidth name="zipCode" component="input" placeholder="CEP" />
-            <StyledFieldFullWidth name="streetAddress" component="input" placeholder="Logradouro" />
-            <StyledFieldFullWidth name="streetNumber" component="input" placeholder="Número" />
+
+            <DoubleFieldRow>
+              <StyledFieldNarrow name="zipCode" component="input" placeholder="CEP" />
+            </DoubleFieldRow>
+
+            <DoubleFieldRow>
+              <StyledFieldWide name="streetAddress" component="input" placeholder="Logradouro" />
+              <StyledFieldNarrow name="streetNumber" component="input" placeholder="Número" />
+            </DoubleFieldRow>
+
             <StyledFieldFullWidth name="additionalAddressInfo" component="input" placeholder="Complemento" />
             <StyledFieldFullWidth name="borough" component="input" placeholder="Bairro" />
-            <StyledFieldFullWidth name="city" component="input" placeholder="Cidade" />
-            <StyledFieldFullWidth name="state" component="input" placeholder="UF" />
+
+            <DoubleFieldRow>
+              <StyledFieldWide name="city" component="input" placeholder="Cidade" />
+              <StyledFieldNarrow name="state" component="input" placeholder="UF" />
+            </DoubleFieldRow>
           </FormSubsection>
 
           <FormSubsection>

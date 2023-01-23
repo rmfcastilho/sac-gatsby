@@ -9,6 +9,7 @@ const standardFieldStyles = `
   border-radius: 5px;
   color: ${colors.colorFormGrey};
   padding: 0.5rem;
+  flex-grow: 1;
 
   ::placeholder {
     color: ${colors.colorTurquoiseGreen};
@@ -17,24 +18,24 @@ const standardFieldStyles = `
 
 export const FormFieldsWrapper = styled.div`
   display: flex;
-  flex-flow: row wrap;
-  gap: 2rem;
+  flex-flow: column wrap;
+  gap: 0.1rem;
   align-items: flex-start;
+  margin: 0 auto;
+  width: fit-content;
 `;
 
 export const FormSubsection = styled.div`
-  min-width: 48%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 0.5rem;
   margin: 1rem 0 2rem 0;
   flex-wrap: wrap;
 `;
 
 export const StyledFieldFullWidth = styled(Field)`
-  width: 100%;
+  width: 96%;
   ${standardFieldStyles};
 `;
 
@@ -50,12 +51,12 @@ export const SingleFieldRow = styled.div`
 `;
 
 export const StyledFieldNarrow = styled(Field)`
-  width: 35%;
+  max-width: 35%;
   ${standardFieldStyles};
 `;
 
 export const StyledFieldWide = styled(Field)`
-  width: 60%;
+  max-width: 70%;
   ${standardFieldStyles};
 `;
 

@@ -7,6 +7,8 @@ import SectionDivider from 'components/SectionDivider/SectionDivider.component';
 
 import { headingStyles } from 'constants/heading';
 import { dividerOrientation } from 'constants/sectionDivider';
+import Link from "components/Link/Link.component";
+import { routes } from "constants/routeIds";
 
 
 const CustomerContactAddress = () => (
@@ -17,6 +19,10 @@ const CustomerContactAddress = () => (
     <SectionDivider type={dividerOrientation.HORIZONTAL} />
 
     <CustomerContactAddressForm />
+
+    <Link isBackLink link={routes.CUSTOMER_LANDING}>
+      Voltar ao menu anterior
+    </Link>
   </StandardTemplate>
 );
 
