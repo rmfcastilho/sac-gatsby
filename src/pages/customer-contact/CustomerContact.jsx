@@ -1,7 +1,6 @@
 import React from 'react';
 
 import CustomerContactForm from 'modules/forms/CustomerContactForm.module';
-import StandardTemplate from 'templates/StandardTemplate.component';
 import Heading from 'components/Heading/Heading.component';
 import SectionDivider from 'components/SectionDivider/SectionDivider.component';
 
@@ -12,7 +11,7 @@ import { routes } from "constants/routeIds";
 
 
 const CustomerContact = () => (
-  <StandardTemplate>
+  <React.Fragment>
     <Heading type={headingStyles.PRIMARY}>Central de Ajuda</Heading>
     <Heading type={headingStyles.SECONDARY}>Sou cliente</Heading>
 
@@ -23,7 +22,7 @@ const CustomerContact = () => (
     <Link isBackLink link={routes.CUSTOMER_LANDING}>
       Voltar ao menu anterior
     </Link>
-  </StandardTemplate>
+  </React.Fragment>
 );
 
 

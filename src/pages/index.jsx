@@ -1,6 +1,5 @@
 import React from 'react';
 
-import StandardTemplate from 'templates/StandardTemplate.component';
 import Heading from 'components/Heading/Heading.component';
 import SectionDivider from 'components/SectionDivider/SectionDivider.component';
 import FAQ from "components/FAQ/FAQ.component";
@@ -12,7 +11,7 @@ import LandingButtons from './index/components/LandingButtons';
 
 
 const Index = () => (
-  <StandardTemplate>
+  <React.Fragment>
     <Heading type={headingStyles.PRIMARY} colored>Central de Ajuda</Heading>
     <Heading type={headingStyles.SECONDARY}>Veja soluções rápidas</Heading>
 
@@ -23,7 +22,7 @@ const Index = () => (
     <Heading type={headingStyles.SECONDARY}>Ou abra uma nova solicitação</Heading>
 
     <LandingButtons />
-  </StandardTemplate>
+  </React.Fragment>
 );
 
 

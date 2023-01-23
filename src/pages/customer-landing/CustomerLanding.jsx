@@ -1,6 +1,5 @@
 import React from 'react';
 
-import StandardTemplate from "templates/StandardTemplate.component";
 import InnerSection from "components/InnerSection/InnerSection.component";
 import Heading from "components/Heading/Heading.component";
 import SectionDivider from "components/SectionDivider/SectionDivider.component";
@@ -25,7 +24,7 @@ const CustomerLanding = () => {
   );
 
   return (
-    <StandardTemplate>
+    <React.Fragment>
       <Heading type={headingStyles.PRIMARY} colored>
         Central de Ajuda
       </Heading>
@@ -47,7 +46,7 @@ const CustomerLanding = () => {
       <Link isBackLink link="/">
         Voltar ao menu anterior
       </Link>
-    </StandardTemplate>
+    </React.Fragment>
   );
 };
 

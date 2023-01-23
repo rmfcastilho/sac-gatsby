@@ -1,6 +1,5 @@
 import React from "react";
 
-import StandardTemplate from "templates/StandardTemplate.component";
 import { InnerSectionGlobalWrapper } from "global/styles/InnerSectionGlobalWrapper.styles";
 
 import InnerSection from "components/InnerSection/InnerSection.component";
@@ -23,7 +22,7 @@ const NonCustomerLanding = () => {
   );
 
   return (
-    <StandardTemplate>
+    <React.Fragment>
       <Heading type={headingStyles.PRIMARY} colored>
         Central de Ajuda
       </Heading>
@@ -45,7 +44,7 @@ const NonCustomerLanding = () => {
       <Link isBackLink link="/">
         Voltar ao menu anterior
       </Link>
-    </StandardTemplate>
+    </React.Fragment>
   );
 };
 

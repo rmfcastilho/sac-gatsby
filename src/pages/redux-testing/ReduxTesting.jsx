@@ -1,15 +1,22 @@
 import React from "react";
-import StandardTemplate from "templates/StandardTemplate.component";
 
-import { useSelector, useDispatch } from "react-redux";
-
+import { toggleModal } from "slices/modal.slice";
+import { useDispatch } from "react-redux";
 
 
 const ReduxTesting = () => {
+  const dispatch = useDispatch();
+
+  const onClick = () => dispatch(toggleModal());
+
   return (
-    <StandardTemplate>
+    <React.Fragment>
       <div>Redux Testing</div>
-    </StandardTemplate>
+
+      <button onClick={onClick}>
+        Toggle Modal
+      </button>
+    </React.Fragment>
   );
 }
 
