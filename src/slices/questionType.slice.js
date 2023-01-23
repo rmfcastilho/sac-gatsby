@@ -3,9 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { questionTypes } from 'constants/questionTypes';
 
 
-const initialState = {
-  questionType: questionTypes.PRODUCT,
-};
+const initialState = questionTypes.PRODUCT;
 
 
 export const questionTypeSlice = createSlice({

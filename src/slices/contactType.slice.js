@@ -1,8 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  contactType: false,
-};
+const initialState = false;
 
 
 export const contactTypeSlice = createSlice({
