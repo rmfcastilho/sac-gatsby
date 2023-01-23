@@ -11,6 +11,7 @@ const Button = ({
   label,
   link,
   buttonStyle,
+  onClick,
 }) => (
   type !== buttonTypes.LINK
     ? <StyledButton
@@ -18,6 +19,7 @@ const Button = ({
       disabled={isDisabled}
       buttonStyle={buttonStyle}
       type={type}
+      onClick={onClick}
     >
       {label}
     </StyledButton>
@@ -26,6 +28,7 @@ const Button = ({
         key={key}
         to={link}
         buttonStyle={buttonStyle}
+        disabled={isDisabled}
       >
         {label}
       </StyledLink>

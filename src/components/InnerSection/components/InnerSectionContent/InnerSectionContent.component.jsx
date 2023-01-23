@@ -7,6 +7,9 @@ import {
   InnerSectionLink
 } from "./styles/InnerSectionContent.styles";
 
+import { ChevronRightIcon } from "evergreen-ui";
+import { IconContainer } from "components/Link/styles/Link.styles";
+
 
 const InnerSectionContent = ({
   id,
@@ -18,11 +21,19 @@ const InnerSectionContent = ({
     ? (
       <InnerSectionLink key={id} to={behaviorData}>
         {label}
+
+        <IconContainer>
+          <ChevronRightIcon size={18} />
+        </IconContainer>
       </InnerSectionLink>
     )
     : (
       <InnerSectionButton key={id}>
         {label}
+
+        <IconContainer>
+          <ChevronRightIcon size={18} />
+        </IconContainer>
       </InnerSectionButton>
     )
 );

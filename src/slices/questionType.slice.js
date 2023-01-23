@@ -10,8 +10,8 @@ export const questionTypeSlice = createSlice({
   name: 'questionType',
   initialState,
   reducers: {
-    setQuestionType: (state, payload) => {
-      state.questionType = payload
+    setQuestionType: (state, action) => {
+      state.questionType = action.payload
     },
   },
 });

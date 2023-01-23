@@ -23,6 +23,13 @@ export const TextualLink = styled(props => <Link {...props} />)`
   }
 `;
 
+export const IconContainer = styled.div`
+  color: white;
+  z-index: 2;
+  position: absolute;
+  right: 1rem;
+`;
+
 export const InnerLinkText = styled.span`
   padding-left: 0.5rem;
 `;

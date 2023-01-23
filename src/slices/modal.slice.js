@@ -16,8 +16,8 @@ export const modalSlice = createSlice({
     toggleModal: (state) => {
       state.isOpen = !state.isOpen
     },
-    setModalContent: (state, payload) => {
-      state.content = payload
+    setModalContent: (state, action) => {
+      state.content = action.payload
     }
   },
 });

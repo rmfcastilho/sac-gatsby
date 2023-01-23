@@ -7,8 +7,8 @@ export const contactTypeSlice = createSlice({
   name: 'contactType',
   initialState,
   reducers: {
-    setContactType: (state, payload) => {
-      state.contactType = payload
+    setContactType: (state, action) => {
+      state.contactType = action.payload
     },
   },
 });

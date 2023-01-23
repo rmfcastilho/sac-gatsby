@@ -7,8 +7,8 @@ export const isCustomerSlice = createSlice({
   name: 'modal',
   initialState,
   reducers: {
-    setIsCustomer: (state, payload) => {
-      state.isCustomer = payload
+    setIsCustomer: (state, action) => {
+      state.isCustomer = action.payload
     },
   },
 });
