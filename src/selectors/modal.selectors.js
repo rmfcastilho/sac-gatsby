@@ -13,3 +13,8 @@ export const isModalOpenSelector = createDraftSafeSelector(
   [getModalState],
   (modal) => modal.isOpen,
 );
+
+export const getModalContentSelector = createDraftSafeSelector(
+  [getModalState],
+  (modal) => modal.content,
+);
