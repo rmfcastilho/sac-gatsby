@@ -21,7 +21,7 @@ const commonStyling = `
   font-weight: ${fontWeights.BOLD};
   
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
     background-color: ${colors.colorMauvelous};
   }
 `

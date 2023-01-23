@@ -6,7 +6,7 @@ import {
 } from 'constants/styles/sizes';
 
 
-export const ContentWrapper = styled.div`
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -23,4 +23,10 @@ export const ContentWrapper = styled.div`
     width: 80%;
     max-width: 50rem;
   }
+`;
+
+export const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 `;

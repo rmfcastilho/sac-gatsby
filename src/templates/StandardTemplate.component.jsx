@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ContentWrapper } from './styles/StandardTemplate.style';
+import { ContentWrapper, Content } from './styles/StandardTemplate.style';
 import GlobalStyle from "global/styles/global.styles";
 
 import Header from 'components/Header/Header.component';
@@ -11,16 +11,16 @@ import { Provider } from 'react-redux';
 
 const StandardTemplate = ({ children }) => (
   <Provider store={store}>
-    <>
+    <ContentWrapper>
       <GlobalStyle />
       <Header />
 
-      <ContentWrapper>
+      <Content>
         {children}
-      </ContentWrapper>
+      </Content>
 
       <Footer />
-    </>
+    </ContentWrapper>
   </Provider>
 );
 

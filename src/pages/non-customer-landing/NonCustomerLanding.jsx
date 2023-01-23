@@ -9,6 +9,7 @@ import Heading from "components/Heading/Heading.component";
 import {headingStyles} from "constants/heading";
 import SectionDivider from "components/SectionDivider/SectionDivider.component";
 import {dividerOrientation} from "constants/sectionDivider";
+import Link from "components/Link/Link.component";
 
 
 const NonCustomerLanding = () => {
@@ -40,6 +41,10 @@ const NonCustomerLanding = () => {
       <InnerSectionGlobalWrapper>
         {sectionsToRender}
       </InnerSectionGlobalWrapper>
+
+      <Link isBackLink link="/">
+        Voltar ao menu anterior
+      </Link>
     </StandardTemplate>
   );
 };
