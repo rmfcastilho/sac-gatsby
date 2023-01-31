@@ -1,6 +1,6 @@
 import { alerts } from "constants/alerts";
 import {buttonBehaviors, buttonStyles} from "constants/button";
-import { routes } from "constants/routeIds";
+import { routes } from "constants/routes";
 
 
 export const nonCustomerInnerSections = [

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { buttonBehaviors } from "constants/button";
+import { BUTTON_BEHAVIORS } from "constants/button";
 
 import {
   InnerSectionButton,
@@ -17,7 +17,7 @@ const InnerSectionContent = ({
   behavior,
   behaviorData,
 }) => (
-  behavior === buttonBehaviors.REDIRECT
+  behavior === BUTTON_BEHAVIORS.REDIRECT
     ? (
       <InnerSectionLink key={id} to={behaviorData}>
         {label}

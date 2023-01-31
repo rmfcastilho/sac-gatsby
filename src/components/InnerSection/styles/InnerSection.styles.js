@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import * as colors from 'constants/styles/colors';
-import { fontWeights } from "constants/styles/font";
+import { FONT_WEIGHTS } from "constants/styles/font";
 
 export const InnerSectionWrapper = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ export const InnerSectionHeader = styled.div`
   
   background-color: ${colors.colorTurquoiseGreenDark};
   color: ${colors.colorAntiFlashWhite};
-  font-weight: ${fontWeights.EXTRA_BOLD};
+  font-weight: ${FONT_WEIGHTS.EXTRA_BOLD};
   font-size: 1.25rem;
   text-align: left;
   text-shadow: 1px 0.5px rgba(0, 0, 0, 0.3);

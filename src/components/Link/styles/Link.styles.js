@@ -2,16 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 import { Link } from 'gatsby';
-import { fontWeights } from "constants/styles/font";
+import { FONT_WEIGHTS } from "constants/styles/font";
 
 import * as colors from "constants/styles/colors";
 
 
 export const TextualLink = styled(props => <Link {...props} />)`
   color: ${colors.colorTurquoiseGreenDark};
-  font-weight: ${fontWeights.BOLD};
+  font-weight: ${FONT_WEIGHTS.BOLD};
   transition: 0.5s ease-in-out;
-  padding-bottom: 0.1rem;
   max-width: fit-content;
   display: flex;
   align-content: flex-start;

@@ -1,4 +1,4 @@
-export const routes = {
+export const ROUTES = {
   LANDING: "/",
   CUSTOMER_LANDING: "/customer-landing",
   NON_CUSTOMER_LANDING: "/non-customer-landing",

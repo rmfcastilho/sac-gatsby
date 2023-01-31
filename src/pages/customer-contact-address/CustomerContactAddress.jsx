@@ -3,23 +3,22 @@ import React from 'react';
 import CustomerContactAddressForm from 'modules/forms/CustomerContactAddressForm.module';
 import Heading from 'components/Heading/Heading.component';
 import SectionDivider from 'components/SectionDivider/SectionDivider.component';
-
-import { headingStyles } from 'constants/heading';
-import { dividerOrientation } from 'constants/sectionDivider';
 import Link from "components/Link/Link.component";
-import { routes } from "constants/routeIds";
+
+import { HEADING_STYLES } from 'constants/heading';
+import { DIVIDER_ORIENTATION } from 'constants/sectionDivider';
+import { ROUTES } from "constants/routes";
 
 
 const CustomerContactAddress = () => (
   <React.Fragment>
-    <Heading type={headingStyles.PRIMARY}>Central de Ajuda</Heading>
-    <Heading type={headingStyles.SECONDARY}>Sou cliente</Heading>
+    <Heading type={HEADING_STYLES.SECONDARY}>Sou cliente</Heading>
 
-    <SectionDivider type={dividerOrientation.HORIZONTAL} />
+    <SectionDivider type={DIVIDER_ORIENTATION.HORIZONTAL} />
 
     <CustomerContactAddressForm />
 
-    <Link isBackLink link={routes.CUSTOMER_LANDING}>
+    <Link isBackLink link={ROUTES.CUSTOMER_LANDING}>
       Voltar ao menu anterior
     </Link>
   </React.Fragment>

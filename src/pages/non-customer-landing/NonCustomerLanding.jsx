@@ -1,14 +1,15 @@
 import React from "react";
 
-import { InnerSectionGlobalWrapper } from "global/styles/InnerSectionGlobalWrapper.styles";
-
 import InnerSection from "components/InnerSection/InnerSection.component";
-import { nonCustomerInnerSections } from "global/data/nonCustomerInnerSections";
 import Heading from "components/Heading/Heading.component";
-import {headingStyles} from "constants/heading";
 import SectionDivider from "components/SectionDivider/SectionDivider.component";
-import {dividerOrientation} from "constants/sectionDivider";
 import Link from "components/Link/Link.component";
+
+import { InnerSectionGlobalWrapper } from "global/styles/InnerSectionGlobalWrapper.styles";
+import { nonCustomerInnerSections } from "global/data/nonCustomerInnerSections";
+
+import { DIVIDER_ORIENTATION } from "constants/sectionDivider";
+import { HEADING_STYLES } from "constants/heading";
 
 
 const NonCustomerLanding = () => {
@@ -23,17 +24,13 @@ const NonCustomerLanding = () => {
 
   return (
     <React.Fragment>
-      <Heading type={headingStyles.PRIMARY} colored>
-        Central de Ajuda
-      </Heading>
-
-      <Heading type={headingStyles.SECONDARY}>
+      <Heading type={HEADING_STYLES.SECONDARY}>
         Não sou cliente
       </Heading>
 
-      <SectionDivider type={dividerOrientation.HORIZONTAL} />
+      <SectionDivider type={DIVIDER_ORIENTATION.HORIZONTAL} />
 
-      <Heading type={headingStyles.SECONDARY} colored>
+      <Heading type={HEADING_STYLES.SECONDARY} colored>
         O que aconteceu?
       </Heading>
 

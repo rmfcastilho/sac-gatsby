@@ -6,11 +6,10 @@ import SectionDivider from "components/SectionDivider/SectionDivider.component";
 import Link from "components/Link/Link.component";
 
 import { InnerSectionGlobalWrapper } from "global/styles/InnerSectionGlobalWrapper.styles";
-
 import { currentCustomerInnerSections } from "global/data/currentCustomerInnerSections";
 
-import { headingStyles } from "constants/heading";
-import { dividerOrientation } from "constants/sectionDivider";
+import { HEADING_STYLES } from "constants/heading";
+import { DIVIDER_ORIENTATION } from "constants/sectionDivider";
 
 
 const CustomerLanding = () => {
@@ -25,17 +24,13 @@ const CustomerLanding = () => {
 
   return (
     <React.Fragment>
-      <Heading type={headingStyles.PRIMARY} colored>
-        Central de Ajuda
-      </Heading>
-
-      <Heading type={headingStyles.SECONDARY}>
+      <Heading type={HEADING_STYLES.SECONDARY}>
         Sou cliente
       </Heading>
 
-      <SectionDivider type={dividerOrientation.HORIZONTAL} />
+      <SectionDivider type={DIVIDER_ORIENTATION.HORIZONTAL} />
 
-      <Heading type={headingStyles.SECONDARY} colored>
+      <Heading type={HEADING_STYLES.SECONDARY} colored>
         O que aconteceu?
       </Heading>
 

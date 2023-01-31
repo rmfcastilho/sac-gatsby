@@ -1,5 +1,4 @@
 // MEDIA BREAKPOINTS
 
-// export const breakpointMobile = '375px';
-export const breakpointTablet = '768px';
-export const breakpointDesktop = '1200px';
+export const BREAKPOINT_TABLET = '768px';
+export const BREAKPOINT_DESKTOP = '1200px';

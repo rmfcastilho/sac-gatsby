@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 import {
-  breakpointTablet,
-  breakpointDesktop
+  BREAKPOINT_TABLET,
+  BREAKPOINT_DESKTOP,
 } from 'constants/styles/sizes';
 
 
@@ -14,12 +14,12 @@ export const Content = styled.div`
   text-align: center;
   flex-wrap: wrap;
   
-  @media (min-width: ${breakpointTablet}) {
+  @media (min-width: ${BREAKPOINT_TABLET}) {
     width: 80%;
     max-width: 31.25rem;
   }
   
-  @media (min-width: ${breakpointDesktop}) {
+  @media (min-width: ${BREAKPOINT_DESKTOP}) {
     width: 80%;
     max-width: 50rem;
   }

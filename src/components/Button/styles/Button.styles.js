@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { buttonStyles } from 'constants/button';
+import { BUTTON_STYLES } from 'constants/button';
 import * as colors from 'constants/styles/colors';
 import { Link } from 'gatsby';
-import { fontWeights } from 'constants/styles/font';
+import { FONT_WEIGHTS } from 'constants/styles/font';
 
 
 const commonStyling = `
@@ -18,7 +18,7 @@ const commonStyling = `
   text-align: center;
   transition: 0.5s ease-in-out;
   font-size: 1rem;
-  font-weight: ${fontWeights.BOLD};
+  font-weight: ${FONT_WEIGHTS.BOLD};
   
   &:hover {
     transform: scale(1.05);
@@ -27,7 +27,7 @@ const commonStyling = `
 `
 
 export const StyledButton = styled.button`
-  background-color: ${({ buttonStyle }) => buttonStyle === buttonStyles.PRIMARY 
+  background-color: ${({ buttonStyle }) => buttonStyle === BUTTON_STYLES.PRIMARY 
     ? colors.colorTurquoiseGreen 
     : colors.colorSonicSilver 
   };
@@ -39,7 +39,7 @@ export const StyledButton = styled.button`
 `;
 
 export const StyledLink = styled(props => <Link {...props} />)`
-  background-color: ${({ buttonStyle }) => buttonStyle === buttonStyles.PRIMARY 
+  background-color: ${({ buttonStyle }) => buttonStyle === BUTTON_STYLES.PRIMARY 
     ? colors.colorTurquoiseGreen 
     : colors.colorSonicSilver 
   };

@@ -1,4 +1,4 @@
-export const alerts = {
+export const ALERTS = {
   PARTNERSHIPS: {
     header: 'Agradecemos o interesse',
     explanation: 'Mas não trabalhamos com parcerias',

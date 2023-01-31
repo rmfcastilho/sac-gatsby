@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { fontWeights } from "constants/styles/font";
+import { FONT_WEIGHTS } from "constants/styles/font";
 
 
 export const FAQContainer = styled.div`
@@ -24,7 +24,7 @@ export const FAQWrapper = styled.details`
 export const FAQHeader = styled.summary`
   background-color: rgba(240, 222, 206, 0.8);
   padding:  0.75rem;
-  font-weight: ${fontWeights.BOLD};
+  font-weight: ${FONT_WEIGHTS.BOLD};
 `;
 
 export const FAQContent = styled.div`

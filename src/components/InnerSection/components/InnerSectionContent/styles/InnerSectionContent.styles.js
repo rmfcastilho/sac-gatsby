@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Link } from 'gatsby';
 
 import * as colors from 'constants/styles/colors';
-import { fontWeights } from 'constants/styles/font';
+import { FONT_WEIGHTS } from 'constants/styles/font';
 
 
 const commonStyling = `
@@ -15,7 +15,7 @@ const commonStyling = `
   padding: 0.8rem 0.5rem;
   cursor: pointer;
   font-size: 1rem;
-  font-weight: ${fontWeights.SEMI_BOLD};
+  font-weight: ${FONT_WEIGHTS.SEMI_BOLD};
   width: 100%;
   transition: 0.5s ease-in-out;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);

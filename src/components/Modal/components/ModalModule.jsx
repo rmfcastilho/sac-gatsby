@@ -1,5 +1,5 @@
 import React from "react";
-import { modalContentTypes } from "constants/modal";
+import { MODAL_CONTENT_TYPES } from "constants/modal";
 
 import PartnershipsModalContent from "../modalSubmodules/PartnershipsModalContent";
 import ResalesModalContent from "../modalSubmodules/ResalesModalContent";
@@ -14,34 +14,34 @@ import NonCustomerProductDoubtModalContent from "../modalSubmodules/NonCustomerP
 
 
 const ModalModule = ({ contentType }) => {
-  if (contentType === modalContentTypes.PARTNERSHIPS) {
+  if (contentType === MODAL_CONTENT_TYPES.PARTNERSHIPS) {
     return <PartnershipsModalContent />;
   }
-  if (contentType === modalContentTypes.RESALES) {
+  if (contentType === MODAL_CONTENT_TYPES.RESALES) {
     return <ResalesModalContent />;
   }
-  if (contentType === modalContentTypes.EXPORTS) {
+  if (contentType === MODAL_CONTENT_TYPES.EXPORTS) {
     return <ExportsModalContent />;
   }
-  if (contentType === modalContentTypes.PRODUCT_COMPOSITION) {
+  if (contentType === MODAL_CONTENT_TYPES.PRODUCT_COMPOSITION) {
     return <ProductCompositionModalContent />;
   }
-  if (contentType === modalContentTypes.TIP_OVERFLOW) {
+  if (contentType === MODAL_CONTENT_TYPES.TIP_OVERFLOW) {
     return <TipOverflowModalContent />;
   }
-  if (contentType === modalContentTypes.TIP_UNDERFLOW) {
+  if (contentType === MODAL_CONTENT_TYPES.TIP_UNDERFLOW) {
     return <TipUnderflowModalContent />;
   }
-  if (contentType === modalContentTypes.CANCELLED_ORDER) {
+  if (contentType === MODAL_CONTENT_TYPES.CANCELLED_ORDER) {
     return <CancelledOrderModalContent />;
   }
-  if (contentType === modalContentTypes.PRODUCT_DOUBT) {
+  if (contentType === MODAL_CONTENT_TYPES.PRODUCT_DOUBT) {
     return <ProductDoubtModalContent />;
   }
-  if (contentType === modalContentTypes.NON_CUSTOMER_PRODUCT_DOUBT) {
+  if (contentType === MODAL_CONTENT_TYPES.NON_CUSTOMER_PRODUCT_DOUBT) {
     return <NonCustomerProductDoubtModalContent />;
   }
-  if (contentType === modalContentTypes.ORDER_DOUBT) {
+  if (contentType === MODAL_CONTENT_TYPES.ORDER_DOUBT) {
     return <OrderDoubtModalContent />;
   }
 

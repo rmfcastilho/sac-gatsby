@@ -1,4 +1,4 @@
-export const modalContentTypes = {
+export const MODAL_CONTENT_TYPES = {
   PARTNERSHIPS: 'partnerships',
   RESALES: 'resales',
   EXPORTS: 'exports',

@@ -1,4 +1,4 @@
-export const dividerOrientation = {
+export const DIVIDER_ORIENTATION = {
   VERTICAL: 'vertical',
   HORIZONTAL: 'horizontal',
 };

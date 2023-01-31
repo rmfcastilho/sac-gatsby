@@ -4,7 +4,7 @@ import Button from "components/Button/Button.component";
 import FormFooter from "../FormFooter/FormFooter.component";
 
 import { FormSubmissionWrapper } from "modules/forms/styles/Form.styles";
-import { buttonStyles } from "constants/button";
+import { BUTTON_STYLES } from "constants/button";
 
 
 const FormSubmission = () => (
@@ -12,7 +12,7 @@ const FormSubmission = () => (
     <Button
       type="submit"
       isDisabled={false}
-      buttonStyle={buttonStyles.PRIMARY}
+      buttonStyle={BUTTON_STYLES.PRIMARY}
       label="Enviar solicitação"
       key="submitForm"
     />

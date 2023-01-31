@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Button from "components/Button/Button.component";
-import { buttonTypes } from "constants/button";
+import { BUTTON_TYPES } from "constants/button";
 
 
 const TimedButton = () => {
@@ -14,9 +14,9 @@ const TimedButton = () => {
   }, [timeRemaining]);
 
   return <Button
-    type={buttonTypes.LINK}
+    type={BUTTON_TYPES.LINK}
     isDisabled={timeRemaining > 0}
-    buttonStyle={buttonStyles.PRIMARY}
+    buttonStyle={BUTTON_STYLES.PRIMARY}
     label={`${timeRemaining}s`}
   />
 }

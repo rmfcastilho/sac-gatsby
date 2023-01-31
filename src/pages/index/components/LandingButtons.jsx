@@ -1,22 +1,23 @@
 import React from 'react';
 
-import { LandingButtonWrapper } from './LandingButtons.styles';
-import { buttonStyles, buttonTypes } from 'constants/button';
 import Button from 'components/Button/Button.component';
 
-import { routes } from "constants/routeIds";
+import { LandingButtonWrapper } from './LandingButtons.styles';
+import { BUTTON_STYLES, BUTTON_TYPES } from 'constants/button';
+
+import { ROUTES } from "constants/routes";
 
 
 const landingOptions = [
   {
     label: 'Sou cliente',
-    target: routes.CUSTOMER_LANDING,
-    buttonStyle: buttonStyles.PRIMARY,
+    target: ROUTES.CUSTOMER_LANDING,
+    buttonStyle: BUTTON_STYLES.PRIMARY,
   },
   {
     label: 'Não sou cliente',
-    target: routes.NON_CUSTOMER_LANDING,
-    buttonStyle: buttonStyles.SECONDARY,
+    target: ROUTES.NON_CUSTOMER_LANDING,
+    buttonStyle: BUTTON_STYLES.SECONDARY,
   }
 ];
 
@@ -25,7 +26,7 @@ const LandingButtons = () => (
     {
       landingOptions.map((option) => (
         <Button
-          type={buttonTypes.LINK}
+          type={BUTTON_TYPES.LINK}
           label={option.label}
           link={option.target}
           buttonStyle={option.buttonStyle}

@@ -1,16 +1,16 @@
-export const buttonTypes = {
+export const BUTTON_TYPES = {
   BUTTON: 'button',
   SUBMIT: 'submit',
   LINK: 'link',
 }
 
-export const buttonStyles = {
+export const BUTTON_STYLES = {
   THIN: 'thinButton',
   PRIMARY: 'primaryButton',
   SECONDARY: 'secondaryButton',
 };
 
-export const buttonBehaviors = {
+export const BUTTON_BEHAVIORS = {
   REDIRECT: 'redirect',
   ALERT: 'alert',
 }

@@ -1,4 +1,4 @@
-export const fontWeights = {
+export const FONT_WEIGHTS = {
   THIN: 100,
   EXTRA_LIGHT: 200,
   LIGHT: 300,

@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { HorizontalLine, VerticalLine } from './styles/SectionDivider.styles'
-import { dividerOrientation } from '../../constants/sectionDivider';
+import { DIVIDER_ORIENTATION } from '../../constants/sectionDivider';
 
-const SectionDivider = ({ type }) => type === dividerOrientation.HORIZONTAL
+const SectionDivider = ({ type }) => type === DIVIDER_ORIENTATION.HORIZONTAL
   ? <HorizontalLine />
   : <VerticalLine />;
 

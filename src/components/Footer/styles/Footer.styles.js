@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import * as colors from 'constants/styles/colors';
-import { fontWeights } from 'constants/styles/font';
+import { FONT_WEIGHTS } from 'constants/styles/font';
 
 
 export const FooterWrapper = styled.div`
@@ -25,6 +25,6 @@ export const FooterText = styled.span`
   text-shadow: 1px 0.5px rgba(0, 0, 0, 0.2);
   color: ${colors.colorStandardWhite};
   text-align: center;
-  font-weight: ${fontWeights.BOLD};
+  font-weight: ${FONT_WEIGHTS.BOLD};
   font-size: 1.2rem;
 `;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Field } from 'react-final-form';
 
 import * as colors from 'constants/styles/colors';
-import { fontWeights } from "constants/styles/font";
+import { FONT_WEIGHTS } from "constants/styles/font";
 
 
 const standardFieldStyles = `
@@ -72,5 +72,5 @@ export const FormSectionHeaderWrapper = styled.div`
   text-align: left;
   width: 100%;
   color: ${colors.colorTurquoiseGreenDark};
-  font-weight: ${fontWeights.BOLD};
+  font-weight: ${FONT_WEIGHTS.BOLD};
 `;

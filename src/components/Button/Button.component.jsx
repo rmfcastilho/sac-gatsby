@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { buttonTypes } from 'constants/button';
+import { BUTTON_TYPES } from 'constants/button';
 import { StyledButton, StyledLink } from 'components/Button/styles/Button.styles';
 
 
@@ -13,7 +13,7 @@ const Button = ({
   buttonStyle,
   onClick,
 }) => (
-  type !== buttonTypes.LINK
+  type !== BUTTON_TYPES.LINK
     ? <StyledButton
       key={key}
       disabled={isDisabled}
