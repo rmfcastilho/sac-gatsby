@@ -12,6 +12,6 @@ export const landingFaqContent = [
   {
     id: 3,
     questionTitle: 'Preciso alterar meu cadastro',
-    questionContent: 'Problema seu.',
+    questionContent: 'Use esse link: LINK',
   },
 ];

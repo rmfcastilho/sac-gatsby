@@ -5,7 +5,7 @@ export const LandingButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 100%;
+  width: 30%;
   margin: 0 auto;
-  text-align: center;
+  padding-bottom: 2rem;
 `
