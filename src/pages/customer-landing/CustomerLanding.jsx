@@ -10,6 +10,8 @@ import { currentCustomerInnerSections } from "global/data/currentCustomerInnerSe
 
 import { HEADING_STYLES } from "constants/heading";
 import { DIVIDER_ORIENTATION } from "constants/sectionDivider";
+import { BACKLINK_LABEL } from "constants/backlink";
+import { HEADERS } from "constants/headers";
 
 
 const CustomerLanding = () => {
@@ -25,13 +27,13 @@ const CustomerLanding = () => {
   return (
     <React.Fragment>
       <Heading type={HEADING_STYLES.SECONDARY}>
-        Sou cliente
+        {HEADERS.EXISTING_CUSTOMER}
       </Heading>
 
       <SectionDivider type={DIVIDER_ORIENTATION.HORIZONTAL} />
 
       <Heading type={HEADING_STYLES.SECONDARY} colored>
-        O que aconteceu?
+        {HEADERS.WHAT_HAPPENED}
       </Heading>
 
       <InnerSectionGlobalWrapper>
@@ -39,7 +41,7 @@ const CustomerLanding = () => {
       </InnerSectionGlobalWrapper>
 
       <Link isBackLink link="/">
-        Voltar ao menu anterior
+        { BACKLINK_LABEL }
       </Link>
     </React.Fragment>
   );

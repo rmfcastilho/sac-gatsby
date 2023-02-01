@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { useDispatch } from "react-redux";
+import { setModalContent, toggleModal } from "slices/modal.slice";
+
 import { BUTTON_BEHAVIORS } from "constants/button";
 
 import {
@@ -16,27 +19,36 @@ const InnerSectionContent = ({
   label,
   behavior,
   behaviorData,
-}) => (
-  behavior === BUTTON_BEHAVIORS.REDIRECT
-    ? (
-      <InnerSectionLink key={id} to={behaviorData}>
-        {label}
+}) => {
+  const dispatch = useDispatch();
 
-        <IconContainer>
-          <ChevronRightIcon size={18} />
-        </IconContainer>
-      </InnerSectionLink>
-    )
-    : (
-      <InnerSectionButton key={id}>
-        {label}
+  const handleClick = () => {
+    dispatch(setModalContent(behaviorData));
+    dispatch(toggleModal());
+  }
 
-        <IconContainer>
-          <ChevronRightIcon size={18} />
-        </IconContainer>
-      </InnerSectionButton>
-    )
-);
+  return (
+    behavior === BUTTON_BEHAVIORS.REDIRECT
+      ? (
+        <InnerSectionLink key={id} to={behaviorData}>
+          {label}
+
+          <IconContainer>
+            <ChevronRightIcon size={18}/>
+          </IconContainer>
+        </InnerSectionLink>
+      )
+      : (
+        <InnerSectionButton key={id} onClick={handleClick}>
+          {label}
+
+          <IconContainer>
+            <ChevronRightIcon size={18}/>
+          </IconContainer>
+        </InnerSectionButton>
+      )
+  )
+};
 
 
 export default InnerSectionContent;

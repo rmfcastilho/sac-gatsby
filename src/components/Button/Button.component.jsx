@@ -29,6 +29,7 @@ const Button = ({
         to={link}
         buttonStyle={buttonStyle}
         disabled={isDisabled}
+        onClick={onClick}
       >
         {label}
       </StyledLink>

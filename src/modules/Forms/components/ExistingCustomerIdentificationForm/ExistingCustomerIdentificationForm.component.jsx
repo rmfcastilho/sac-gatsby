@@ -1,4 +1,11 @@
 import React from 'react';
+
+import {
+  EXISTING_CUSTOMER_ID_FORM_HEADER,
+  EXISTING_CUSTOMER_ID_FORM_FIELDS,
+  EXISTING_CUSTOMER_ID_FORM_LABELS,
+} from "modules/Forms/constants/ExistingCustomerIdentificationForm.constants";
+
 import {
   FormSectionHeaderWrapper,
   FormSubsection,
@@ -8,12 +15,42 @@ import {
 
 const ExistingCustomerIdentificationForm = () => (
   <FormSubsection>
-    <FormSectionHeaderWrapper>Identificação</FormSectionHeaderWrapper>
+    <FormSectionHeaderWrapper>
+      {EXISTING_CUSTOMER_ID_FORM_HEADER}
+    </FormSectionHeaderWrapper>
 
-    <StyledFieldFullWidth name="customerID" component="input" placeholder="CPF" />
-    <StyledFieldFullWidth name="customerName" component="input" placeholder="Nome" />
-    <StyledFieldFullWidth name="orderNumber" component="input" placeholder="Número do pedido" />
-    <StyledFieldFullWidth name="customerEmail" component="input" placeholder="E-mail usado na compra" />
+    <StyledFieldFullWidth
+      name={EXISTING_CUSTOMER_ID_FORM_FIELDS.ID}
+      component="input"
+      placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+        EXISTING_CUSTOMER_ID_FORM_FIELDS.ID
+        ]
+      }
+    />
+    <StyledFieldFullWidth
+      name={EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME}
+      component="input"
+      placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+        EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME
+        ]
+      }
+    />
+    <StyledFieldFullWidth
+      name={EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL}
+      component="input"
+      placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+        EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL
+        ]
+      }
+    />
+    <StyledFieldFullWidth
+      name={EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER}
+      component="input"
+      placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+        EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER
+        ]
+      }
+    />
   </FormSubsection>
 );
 

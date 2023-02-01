@@ -8,4 +8,5 @@ export const LandingButtonWrapper = styled.div`
   width: 30%;
   margin: 0 auto;
   padding-bottom: 2rem;
+  padding-right: 5%;
 `

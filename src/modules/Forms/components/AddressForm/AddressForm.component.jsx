@@ -1,6 +1,12 @@
 import React from 'react';
 
 import {
+  ADDRESS_FORM_HEADER,
+  ADDRESS_FORM_FIELDS,
+  ADDRESS_FORM_LABELS,
+} from "modules/Forms/constants/AddressForm.constants";
+
+import {
   StyledFieldFullWidth,
   StyledFieldNarrow,
   StyledFieldWide,
@@ -12,19 +18,50 @@ import {
 
 const AddressForm = () => (
   <FormSubsection>
-    <FormSectionHeaderWrapper>Novo endereço</FormSectionHeaderWrapper>
+    <FormSectionHeaderWrapper>
+      {ADDRESS_FORM_HEADER}
+    </FormSectionHeaderWrapper>
 
-    <LoneStyledFieldNarrow name="zipCode" component="input" placeholder="CEP" />
+    <LoneStyledFieldNarrow
+      name={ADDRESS_FORM_FIELDS.ZIP}
+      component="input"
+      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.ZIP]}
+    />
 
-    <StyledFieldWide name="streetAddress" component="input" placeholder="Logradouro" />
-    <StyledFieldNarrow name="streetNumber" component="input" placeholder="Número" />
+    <StyledFieldWide
+      name={ADDRESS_FORM_FIELDS.STREET}
+      component="input"
+      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.STREET]}
+    />
+    <StyledFieldNarrow
+      name={ADDRESS_FORM_FIELDS.NUMBER}
+      component="input"
+      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.NUMBER]}
+    />
 
-    <StyledFieldFullWidth name="additionalAddressInfo" component="input" placeholder="Complemento" />
+    <StyledFieldFullWidth
+      name={ADDRESS_FORM_FIELDS.COMPLEMENT}
+      component="input"
+      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.COMPLEMENT]}
+    />
 
-    <StyledFieldFullWidth name="borough" component="input" placeholder="Bairro" />
+    <StyledFieldFullWidth
+      name={ADDRESS_FORM_FIELDS.DISTRICT}
+      component="input"
+      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.DISTRICT]}
+    />
 
-    <StyledFieldWide name="city" component="input" placeholder="Cidade" />
-    <StyledFieldNarrow name="state" component="input" placeholder="UF" />
+    <StyledFieldWide
+      name={ADDRESS_FORM_FIELDS.CITY}
+      component="input"
+      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.CITY]}
+    />
+    
+    <StyledFieldNarrow
+      name={ADDRESS_FORM_FIELDS.STATE}
+      component="input"
+      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.STATE]}
+    />
   </FormSubsection>
 );
 

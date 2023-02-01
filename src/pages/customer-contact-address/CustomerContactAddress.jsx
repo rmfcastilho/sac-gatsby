@@ -8,18 +8,19 @@ import Link from "components/Link/Link.component";
 import { HEADING_STYLES } from 'constants/heading';
 import { DIVIDER_ORIENTATION } from 'constants/sectionDivider';
 import { ROUTES } from "constants/routes";
-
+import { BACKLINK_LABEL } from "constants/backlink";
+import { HEADERS } from "constants/headers";
 
 const CustomerContactAddress = () => (
   <React.Fragment>
-    <Heading type={HEADING_STYLES.SECONDARY}>Sou cliente</Heading>
+    <Heading type={HEADING_STYLES.SECONDARY}>{HEADERS.EXISTING_CUSTOMER}</Heading>
 
     <SectionDivider type={DIVIDER_ORIENTATION.HORIZONTAL} />
 
     <CustomerContactAddressForm />
 
     <Link isBackLink link={ROUTES.CUSTOMER_LANDING}>
-      Voltar ao menu anterior
+      { BACKLINK_LABEL }
     </Link>
   </React.Fragment>
 );

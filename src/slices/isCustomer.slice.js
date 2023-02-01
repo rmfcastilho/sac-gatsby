@@ -4,11 +4,11 @@ const initialState = false;
 
 
 export const isCustomerSlice = createSlice({
-  name: 'modal',
+  name: 'isCustomer',
   initialState,
   reducers: {
     setIsCustomer: (state, action) => {
-      state.isCustomer = action.payload
+      return action.payload;
     },
   },
 });

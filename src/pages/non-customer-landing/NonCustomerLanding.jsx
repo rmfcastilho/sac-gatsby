@@ -10,7 +10,8 @@ import { nonCustomerInnerSections } from "global/data/nonCustomerInnerSections";
 
 import { DIVIDER_ORIENTATION } from "constants/sectionDivider";
 import { HEADING_STYLES } from "constants/heading";
-
+import { HEADERS } from "constants/headers";
+import { BACKLINK_LABEL } from "constants/backlink";
 
 const NonCustomerLanding = () => {
   const sectionsToRender = nonCustomerInnerSections.map(
@@ -25,13 +26,13 @@ const NonCustomerLanding = () => {
   return (
     <React.Fragment>
       <Heading type={HEADING_STYLES.SECONDARY}>
-        Não sou cliente
+        {HEADERS.NON_CUSTOMER}
       </Heading>
 
       <SectionDivider type={DIVIDER_ORIENTATION.HORIZONTAL} />
 
       <Heading type={HEADING_STYLES.SECONDARY} colored>
-        O que aconteceu?
+        {HEADERS.WHAT_HAPPENED}
       </Heading>
 
       <InnerSectionGlobalWrapper>
@@ -39,7 +40,7 @@ const NonCustomerLanding = () => {
       </InnerSectionGlobalWrapper>
 
       <Link isBackLink link="/">
-        Voltar ao menu anterior
+        {BACKLINK_LABEL}
       </Link>
     </React.Fragment>
   );
