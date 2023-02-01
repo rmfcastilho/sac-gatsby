@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { questionTypes } from 'constants/questionTypes';
+import { QUESTION_TYPES } from 'constants/questionTypes';
 
 
-const initialState = questionTypes.PRODUCT;
+const initialState = QUESTION_TYPES.PRODUCT;
 
 
 export const questionTypeSlice = createSlice({

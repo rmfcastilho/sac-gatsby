@@ -9,4 +9,10 @@ export const MODAL_CONTENT_TYPES = {
   PRODUCT_DOUBT: 'productDoubt',
   NON_CUSTOMER_PRODUCT_DOUBT: 'nonCustomerProductDoubt',
   ORDER_DOUBT: 'orderDoubt',
+  PRODUCT_RETURN: 'productReturn',
+  DELIVERY_DEADLINES: 'deliveryDeadlines',
+  ORDER_TRACKING: 'orderTracking',
+  ORDER_STATUS: 'orderStatus',
+  LATE_ORDER: 'lateOrder',
+  CHANGE_SHIPPING_ADDRESS: 'changeShippingAddress',
 }

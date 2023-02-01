@@ -2,7 +2,7 @@ import React from 'react';
 
 import Heading from 'components/Heading/Heading.component';
 import SectionDivider from 'components/SectionDivider/SectionDivider.component';
-import FAQ from "components/FAQ/FAQ.component";
+import Faq from "components/Faq/Faq.component";
 
 import { HEADING_STYLES } from 'constants/heading';
 import { DIVIDER_ORIENTATION } from 'constants/sectionDivider';
@@ -14,7 +14,7 @@ const Index = () => (
   <React.Fragment>
     <Heading type={HEADING_STYLES.SECONDARY}>Veja soluções rápidas</Heading>
 
-    <FAQ />
+    <Faq />
 
     <SectionDivider type={DIVIDER_ORIENTATION.HORIZONTAL} />
 

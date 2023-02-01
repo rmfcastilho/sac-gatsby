@@ -1,6 +1,6 @@
-import { alerts } from "constants/alerts";
-import { buttonBehaviors, buttonStyles } from "constants/button";
-import { routes } from "constants/routes";
+import { BUTTON_BEHAVIORS } from "constants/button";
+import { ROUTES } from "constants/routes";
+import { MODAL_CONTENT_TYPES } from "constants/modal";
 
 
 export const currentCustomerInnerSections = [
@@ -11,20 +11,20 @@ export const currentCustomerInnerSections = [
       {
         id: 'sobreProduto',
         label: 'Sobre o produto',
-        target: routes.CLIENT_LANDING,
-        buttonStyle: buttonStyles.PRIMARY,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.PRODUCT_DOUBT,
       },
       {
         id: 'sobrePedido',
         label: 'Sobre o pedido',
-        target: routes.NON_CLIENT_LANDING,
-        buttonStyle: buttonStyles.PRIMARY,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.ORDER_DOUBT,
       },
       {
         id: 'sobrePagamento',
         label: 'Sobre o pagamento',
-        target: routes.NON_CLIENT_LANDING,
-        buttonStyle: buttonStyles.PRIMARY,
+        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behaviorData: ROUTES.CUSTOMER_CONTACT,
       },
     ],
   },
@@ -35,20 +35,20 @@ export const currentCustomerInnerSections = [
       {
         id: "compliment",
         label: "Quero fazer um elogio",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.NON_CUSTOMER_CONTACT,
+        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behaviorData: ROUTES.CUSTOMER_CONTACT,
       },
       {
         id: "suggestion",
         label: "Quero fazer uma sugestão",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.NON_CUSTOMER_CONTACT,
+        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behaviorData: ROUTES.CUSTOMER_CONTACT,
       },
       {
         id: "complaint",
         label: "Quero fazer uma reclamação",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.NON_CUSTOMER_CONTACT,
+        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behaviorData: ROUTES.CUSTOMER_CONTACT,
       },
     ],
   },
@@ -59,50 +59,50 @@ export const currentCustomerInnerSections = [
       {
         id: "wrongOrder",
         label: "Meu pedido veio incorreto",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.CUSTOMER_CONTACT,
+        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behaviorData: ROUTES.CUSTOMER_CONTACT,
       },
       {
         id: "returnProduct",
         label: "Preciso trocar ou devolver o produto",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.READING_SUGGESTION_CONTACT,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.PRODUCT_RETURN,
       },
       {
         id: "deliveryDeadlines",
         label: "Prazos e condições de entrega",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.READING_SUGGESTION_CONTACT,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.DELIVERY_DEADLINES,
       },
       {
         id: "orderTracking",
         label: "Quero rastrear meu pedido",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.READING_SUGGESTION_CONTACT,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.ORDER_TRACKING,
       },
       {
         id: "orderStatus",
         label: "Quero saber o status do meu pedido",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.READING_SUGGESTION_CONTACT,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.ORDER_STATUS,
       },
       {
         id: "lateOrder",
         label: "Minha entrega está atrasada",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.READING_SUGGESTION_CONTACT,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.LATE_ORDER,
       },
       {
         id: "changeShippingAddress",
         label: "Quero alterar o endereço de entrega",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.READING_SUGGESTION_CONTACT,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.CHANGE_SHIPPING_ADDRESS,
       },
       {
         id: "cancelledOrder",
         label: "Minha compra foi cancelada",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.READING_SUGGESTION_NON_CONTACT,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.CANCELLED_ORDER,
       },
     ],
   },
@@ -113,20 +113,20 @@ export const currentCustomerInnerSections = [
       {
         id: "productComposition",
         label: "Qual a composição do produto?",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.READING_SUGGESTION_NON_CONTACT,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.PRODUCT_COMPOSITION,
       },
       {
         id: "noFlowToTip",
         label: "O produto não flui para a ponta",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.READING_SUGGESTION_NON_CONTACT,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.TIP_UNDERFLOW,
       },
       {
         id: "tipOverflow",
         label: "A ponta está soltando muito produto",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.READING_SUGGESTION_NON_CONTACT,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.TIP_OVERFLOW,
       },
     ],
   },

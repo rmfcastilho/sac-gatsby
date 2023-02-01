@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { modalContentTypes } from "constants/modal";
+import { MODAL_CONTENT_TYPES } from "constants/modal";
 
 
 const initialState = {
   isOpen: false,
-  content: modalContentTypes.PRODUCT_DOUBT,
+  content: MODAL_CONTENT_TYPES.PRODUCT_DOUBT,
 };
 
 

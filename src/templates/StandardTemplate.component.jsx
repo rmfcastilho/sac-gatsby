@@ -5,7 +5,7 @@ import GlobalStyle from "global/styles/global.styles";
 
 import Header from 'components/Header/Header.component';
 import Footer from 'components/Footer/Footer.component';
-import Modal from "components/Modal/Modal.component";
+import Modal from "modules/Modal/Modal.component";
 import Heading from "components/Heading/Heading.component";
 
 import { HEADING_STYLES } from "constants/heading";

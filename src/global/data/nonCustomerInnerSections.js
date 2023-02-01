@@ -1,6 +1,6 @@
-import { alerts } from "constants/alerts";
-import {buttonBehaviors, buttonStyles} from "constants/button";
-import { routes } from "constants/routes";
+import { BUTTON_BEHAVIORS } from "constants/button";
+import { ROUTES } from "constants/routes";
+import { MODAL_CONTENT_TYPES } from "constants/modal";
 
 
 export const nonCustomerInnerSections = [
@@ -11,20 +11,8 @@ export const nonCustomerInnerSections = [
       {
         id: 'sobreProduto',
         label: 'Sobre o produto',
-        target: routes.CLIENT_LANDING,
-        buttonStyle: buttonStyles.PRIMARY,
-      },
-      {
-        id: 'sobrePedido',
-        label: 'Sobre o pedido',
-        target: routes.NON_CLIENT_LANDING,
-        buttonStyle: buttonStyles.PRIMARY,
-      },
-      {
-        id: 'sobrePagamento',
-        label: 'Sobre o pagamento',
-        target: routes.NON_CLIENT_LANDING,
-        buttonStyle: buttonStyles.PRIMARY,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.PRODUCT_DOUBT,
       },
     ],
   },
@@ -35,39 +23,39 @@ export const nonCustomerInnerSections = [
       {
         id: "compliment",
         label: "Quero fazer um elogio",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.NON_CUSTOMER_CONTACT,
+        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behaviorData: ROUTES.NON_CUSTOMER_CONTACT,
       },
       {
         id: "suggestion",
         label: "Quero fazer uma sugestão",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.NON_CUSTOMER_CONTACT,
+        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behaviorData: ROUTES.NON_CUSTOMER_CONTACT,
       },
       {
         id: "complaint",
         label: "Quero fazer uma reclamação",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.NON_CUSTOMER_CONTACT,
+        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behaviorData: ROUTES.NON_CUSTOMER_CONTACT,
       },
       {
         id: "partnerships",
         label: "Sobre parcerias",
-        behavior: buttonBehaviors.ALERT,
-        behaviorData: alerts.PARTNERSHIPS,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.PARTNERSHIPS,
       },
       {
         id: "resales",
         label: "Sobre revendas",
-        behavior: buttonBehaviors.ALERT,
-        behaviorData: alerts.RESALES,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.RESALES,
       },
 
       {
         id: "exports",
         label: "Envios para o exterior",
-        behavior: buttonBehaviors.ALERT,
-        behaviorData: alerts.EXPORTS,
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.EXPORTS,
       },
     ],
   },
@@ -78,8 +66,8 @@ export const nonCustomerInnerSections = [
       {
         id: "productComposition",
         label: "Qual a composição do produto?",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.READING_SUGGESTION_NON_CONTACT,
+        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behaviorData: MODAL_CONTENT_TYPES.PRODUCT_COMPOSITION,
       },
     ],
   },
@@ -90,8 +78,8 @@ export const nonCustomerInnerSections = [
       {
         id: "cancelledOrder",
         label: "Minha compra foi cancelada",
-        behavior: buttonBehaviors.REDIRECT,
-        behaviorData: routes.READING_SUGGESTION_NON_CONTACT,
+        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behaviorData: MODAL_CONTENT_TYPES.CANCELLED_ORDER,
       },
     ],
   },

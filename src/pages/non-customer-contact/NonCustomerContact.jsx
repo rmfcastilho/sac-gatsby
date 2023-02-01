@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NonCustomerForm from 'modules/forms/NonCustomerForm.module';
+import NonCustomerForm from 'modules/Forms/NonCustomerForm.module';
 import Heading from 'components/Heading/Heading.component';
 import SectionDivider from 'components/SectionDivider/SectionDivider.component';
 import Link from "components/Link/Link.component";

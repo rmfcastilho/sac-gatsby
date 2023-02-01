@@ -4,7 +4,7 @@ import * as colors from 'constants/styles/colors';
 
 
 export const MainHeading = styled.h2`
-  color: ${(props) => props.colored 
+  color: ${({ colored }) => colored 
     ? colors.colorMauvelous 
     : colors.colorStandardBlack};
   
@@ -14,7 +14,7 @@ export const MainHeading = styled.h2`
 `;
 
 export const SubHeading = styled.h3`
-  color: ${(props) => props.colored 
+  color: ${({ colored }) => colored 
     ? colors.colorMauvelous 
     : colors.colorStandardBlack};
 
