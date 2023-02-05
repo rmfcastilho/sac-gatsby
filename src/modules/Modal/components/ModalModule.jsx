@@ -3,6 +3,7 @@ import React from "react";
 import { modalTextContent } from "modules/Modal/constants/ModalTextContent";
 import { modalTypes } from "modules/Modal/constants/ModalTypes";
 
+import TimedButton from "modules/Modal/components/TimedButton.component";
 
 const ModalModule = ({ contentType }) => (
   <div>
@@ -10,9 +11,9 @@ const ModalModule = ({ contentType }) => (
 
     {modalTextContent[contentType].textualClarification}
 
-    {modalTextContent[contentType].type === modalTypes.DELAYED_RESOURCE
-      ? 'Delayed Button Here'
-      : 'Nothing to show'
+    {
+      modalTextContent[contentType].type === modalTypes.DELAYED_RESOURCE
+      && <TimedButton targetRoute={modalTextContent[contentType].targetRoute} />
     }
   </div>
 )
