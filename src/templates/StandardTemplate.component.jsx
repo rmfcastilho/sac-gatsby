@@ -9,7 +9,7 @@ import Modal from "modules/Modal/Modal.component";
 import Heading from "components/Heading/Heading.component";
 
 import { HEADING_STYLES } from "constants/heading";
-
+import { HEADERS } from "constants/headers";
 
 const StandardTemplate = ({ children }) => (
   <ContentWrapper>
@@ -19,7 +19,7 @@ const StandardTemplate = ({ children }) => (
 
     <Content>
         <Heading type={HEADING_STYLES.PRIMARY} colored>
-            Central de Ajuda
+            {HEADERS.HELP_CENTRAL}
         </Heading>
 
       {children}
