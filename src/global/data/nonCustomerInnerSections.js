@@ -66,7 +66,7 @@ export const nonCustomerInnerSections = [
       {
         id: "productComposition",
         label: "Qual a composição do produto?",
-        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behavior: BUTTON_BEHAVIORS.ALERT,
         behaviorData: MODAL_CONTENT_TYPES.PRODUCT_COMPOSITION,
       },
     ],
@@ -78,7 +78,7 @@ export const nonCustomerInnerSections = [
       {
         id: "cancelledOrder",
         label: "Minha compra foi cancelada",
-        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behavior: BUTTON_BEHAVIORS.ALERT,
         behaviorData: MODAL_CONTENT_TYPES.CANCELLED_ORDER,
       },
     ],
