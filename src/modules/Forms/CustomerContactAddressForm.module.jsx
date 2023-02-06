@@ -1,4 +1,6 @@
 import React from 'react';
+import { useDispatch } from "react-redux";
+
 import { Form } from 'react-final-form';
 
 import FormSubmission from "./components/FormSubmission/FormSubmission.component";
@@ -11,25 +13,38 @@ import {
   FormFieldsWrapper,
 } from './styles/Form.styles';
 
+import { updateForm } from "slices/formSlice.slice";
 
-const handleSubmit = () => console.log('Submitted!');
 
-const CustomerContactAddressForm = () => (
-  <Form
-    onSubmit={handleSubmit}
-    render={() => (
-      <form onSubmit={handleSubmit}>
-        <FormFieldsWrapper>
-          <ExistingCustomerIdentificationForm />
-          <AddressForm />
-          <MessageEntryForm isOptional />
-        </FormFieldsWrapper>
+const CustomerContactAddressForm = () => {
+  const dispatch = useDispatch();
 
-        <FormSubmission />
-      </form>
-    )}
-  />
-);
+  const handleSubmit = () => console.log('Submitted!');
+
+  const handleChange = (event) => {
+    dispatch(updateForm({
+      formName: 'customerContactAddress',
+      test: event.target.value,
+    }));
+  };
+
+  return (
+    <Form
+      onSubmit={handleSubmit}
+      render={() => (
+        <form onSubmit={handleSubmit} onChange={handleChange}>
+          <FormFieldsWrapper>
+            <ExistingCustomerIdentificationForm/>
+            <AddressForm/>
+            <MessageEntryForm isOptional/>
+          </FormFieldsWrapper>
+
+          <FormSubmission/>
+        </form>
+      )}
+    />
+  )
+};
 
 
 export default CustomerContactAddressForm;
