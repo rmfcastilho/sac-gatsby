@@ -24,6 +24,7 @@ const Modal = () => {
       isOpen={isModalOpen}
       onRequestClose={onToggleModal}
       style={modalStyles}
+      ariaHideApp={false}
     >
       <ModalModule contentType={module} />
     </ReactModal>

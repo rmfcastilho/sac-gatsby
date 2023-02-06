@@ -1,26 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { landingFaqContent } from "global/data/faq";
 
-import {
-  FAQContainer,
-  FAQWrapper,
-  FAQHeader,
-  FAQContent,
-} from "components/FAQ/styles/FAQ.styles";
+import FaqUnit from "./components/FaqUnit.component";
 
-const Faq = () => {
-  return (
-    <FAQContainer>
-      {landingFaqContent.map((faq) => (
-        <FAQWrapper key={faq.id}>
-          <FAQHeader>{faq.questionTitle}</FAQHeader>
-          <FAQContent>{faq.questionContent}</FAQContent>
-        </FAQWrapper>
-      ))}
-    </FAQContainer>
-  );
-};
+import { FAQContainer } from "components/FAQ/styles/FAQ.styles";
+
+const Faq = () => (
+  <FAQContainer>
+    {landingFaqContent.map((faq) => (
+      <FaqUnit {...faq} />
+    ))}
+  </FAQContainer>
+);
 
 
 export default Faq;

@@ -15,4 +15,4 @@ export const MODAL_CONTENT_TYPES = {
   ORDER_STATUS: 'orderStatus',
   LATE_ORDER: 'lateOrder',
   CHANGE_SHIPPING_ADDRESS: 'changeShippingAddress',
-}
+};

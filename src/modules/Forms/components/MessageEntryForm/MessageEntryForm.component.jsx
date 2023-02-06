@@ -10,7 +10,8 @@ import {
 import {
   FormSectionHeaderWrapper,
   FormSubsection,
-  StyledFieldFullWidth
+  StyledFieldFullWidth,
+  StyledTextArea,
 } from "modules/Forms/styles/Form.styles";
 
 
@@ -29,7 +30,7 @@ const MessageEntryForm = ({ isOptional }) => (
       placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]}
     />
 
-    <StyledFieldFullWidth
+    <StyledTextArea
       name={MESSAGE_ENTRY_FORM_FIELDS.MESSAGE}
       component="textarea"
       placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]}

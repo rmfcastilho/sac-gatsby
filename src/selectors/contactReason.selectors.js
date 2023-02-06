@@ -4,7 +4,7 @@ import { createDraftSafeSelector } from "@reduxjs/toolkit";
 const getState = (state) => state;
 
 
-export const contactTypeSelector = createDraftSafeSelector(
+export const contactReasonSelector = createDraftSafeSelector(
   [getState],
-  (state) => state.contactType,
+  (state) => state.contactReason,
 );

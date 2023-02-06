@@ -2,10 +2,8 @@ import styled from 'styled-components';
 
 import * as colors from 'constants/styles/colors';
 
-
 const commonTextStyling = `
   font-size: 1.6rem;
-  text-shadow: 1px 0.5px rgba(0, 0, 0, 0.4);
 `;
 
 export const InnerModalContentWrapper = styled.div`
@@ -14,24 +12,32 @@ export const InnerModalContentWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
-  gap: 3.5rem;
-  padding: 5rem;
-  color: ${colors.colorTurquoiseGreenDark};
-  text-shadow: 1px 0.5px rgba(255, 255, 255, 0.2);
+  gap: 2.5rem;
+  padding: 2rem 5rem 2rem 4.1rem;
 `;
 
 export const InnerModalContentText = styled.span`
   ${commonTextStyling};
+  color: ${colors.colorFormGrey};
 `;
 
 export const InnerModalContentAnchor = styled.a`
   ${commonTextStyling};
-  font-size: 1.6rem;
+  color: ${colors.colorFormGrey};
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   
   :hover {
     color: ${colors.colorMauvelous};
     text-decoration: underline;
   }
+`;
+
+export const InnerModalButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  gap: 1rem;
+  padding-top: 2rem;
 `;

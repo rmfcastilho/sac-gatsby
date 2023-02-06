@@ -10,19 +10,19 @@ export const currentCustomerInnerSections = [
     content: [
       {
         id: 'sobreProduto',
-        label: 'Sobre o produto',
+        label: 'Dúvida sobre o produto',
         behavior: BUTTON_BEHAVIORS.ALERT,
         behaviorData: MODAL_CONTENT_TYPES.PRODUCT_DOUBT,
       },
       {
         id: 'sobrePedido',
-        label: 'Sobre o pedido',
+        label: 'Dúvida sobre o pedido',
         behavior: BUTTON_BEHAVIORS.ALERT,
         behaviorData: MODAL_CONTENT_TYPES.ORDER_DOUBT,
       },
       {
         id: 'sobrePagamento',
-        label: 'Sobre o pagamento',
+        label: 'Dúvida sobre o pagamento',
         behavior: BUTTON_BEHAVIORS.REDIRECT,
         behaviorData: ROUTES.CUSTOMER_CONTACT,
       },

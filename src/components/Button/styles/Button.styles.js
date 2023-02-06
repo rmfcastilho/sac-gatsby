@@ -10,7 +10,6 @@ import { FONT_WEIGHTS } from 'constants/styles/font';
 const commonStyling = `
   color: white;
   width: fit-content;
-  cursor: pointer;
   padding: 0.75rem 1rem;
   border-radius: 0.75rem;
   width: 100%;
@@ -19,12 +18,17 @@ const commonStyling = `
   transition: 0.5s ease-in-out;
   font-size: 1rem;
   font-weight: ${FONT_WEIGHTS.BOLD};
-  
+`;
+
+const activeElementsStyling = `
+  cursor: pointer;
+
   &:hover {
     transform: scale(1.05);
     background-color: ${colors.colorMauvelous};
   }
-`
+`;
+
 
 export const StyledButton = styled.button`
   background-color: ${({ buttonStyle }) => buttonStyle === BUTTON_STYLES.PRIMARY 
@@ -33,6 +37,7 @@ export const StyledButton = styled.button`
   };
   
   ${commonStyling};
+  ${activeElementsStyling};
   
   border: none;
   box-sizing: content-box;
@@ -41,8 +46,15 @@ export const StyledButton = styled.button`
 export const StyledLink = styled(props => <Link {...props} />)`
   background-color: ${({ buttonStyle }) => buttonStyle === BUTTON_STYLES.PRIMARY 
     ? colors.colorTurquoiseGreen 
-    : colors.colorSonicSilver 
+    : colors.colorSonicSilver
   };
   
   ${commonStyling};
+  ${activeElementsStyling};
+`;
+
+export const StyledDisabledLink = styled(props => <Link {...props} />)`
+  ${commonStyling};
+  background-color: ${colors.colorFormGrey};
+  cursor: not-allowed;
 `;

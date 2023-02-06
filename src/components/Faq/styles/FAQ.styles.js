@@ -22,6 +22,8 @@ export const FAQWrapper = styled.details`
 `;
 
 export const FAQHeader = styled.summary`
+  display: flex;
+  flex-direction: row;
   background-color: rgba(240, 222, 206, 0.8);
   padding:  0.75rem;
   font-weight: ${FONT_WEIGHTS.BOLD};
@@ -30,4 +32,9 @@ export const FAQHeader = styled.summary`
 export const FAQContent = styled.div`
   background-color: rgba(240, 222, 206, 0.3);
   padding:  1.75rem 0.75rem;
+`;
+
+export const FAQHeaderIcon = styled.div`
+  width: fit-content;
+  margin-left: auto;
 `;

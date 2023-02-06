@@ -2,6 +2,7 @@ import React from 'react';
 
 import { useDispatch } from "react-redux";
 import { setModalContent, toggleModal } from "slices/modal.slice";
+import { setContactReason } from "slices/contactReason.slice";
 
 import { BUTTON_BEHAVIORS } from "constants/button";
 
@@ -22,7 +23,12 @@ const InnerSectionContent = ({
 }) => {
   const dispatch = useDispatch();
 
+  const handleContactReason = () => {
+    dispatch(setContactReason(label));
+  };
+
   const handleClick = () => {
+    handleContactReason();
     dispatch(setModalContent(behaviorData));
     dispatch(toggleModal());
   }
@@ -30,7 +36,7 @@ const InnerSectionContent = ({
   return (
     behavior === BUTTON_BEHAVIORS.REDIRECT
       ? (
-        <InnerSectionLink key={id} to={behaviorData}>
+        <InnerSectionLink key={id} to={behaviorData} onClick={handleContactReason}>
           {label}
 
           <IconContainer>

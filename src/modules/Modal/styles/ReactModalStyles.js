@@ -3,14 +3,14 @@ export const modalStyles = {
     backgroundColor: 'rgba(0, 0, 0, 0.9)',
   },
   content: {
+    backgroundColor: 'rgb(240,233,246)',
     margin: 'auto',
-    maxWidth: '40rem',
+    maxWidth: '35rem',
     maxHeight: 'fit-content',
-    padding: '5rem 0',
+    padding: '1.5rem 0',
     textAlign: 'center',
-    backgroundColor: 'transparent',
     border: 'none',
-    color: 'white',
+    color: 'black',
     textShadow: '1px 0.5px rgba(0, 0, 0, 0.2)',
   },
 };

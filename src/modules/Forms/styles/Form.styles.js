@@ -35,6 +35,12 @@ export const FormSubsection = styled.div`
   flex-wrap: wrap;
 `;
 
+export const StyledTextArea = styled(Field)`
+  ${standardFieldStyles};
+  width: 100%;
+  min-height: 10rem;
+`;
+
 export const StyledFieldFullWidth = styled(Field)`
   ${standardFieldStyles};
   width: 100%;

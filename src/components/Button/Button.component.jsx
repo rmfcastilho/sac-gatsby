@@ -1,7 +1,9 @@
 import React from 'react';
 
+import LinkAsButton from "./components/LinkAsButton.component";
+
 import { BUTTON_TYPES } from 'constants/button';
-import { StyledButton, StyledLink } from 'components/Button/styles/Button.styles';
+import { StyledButton } from 'components/Button/styles/Button.styles';
 
 
 const Button = ({
@@ -24,17 +26,15 @@ const Button = ({
       {label}
     </StyledButton>
 
-    : <StyledLink
+    : <LinkAsButton
         key={key}
-        to={link}
+        link={link}
         buttonStyle={buttonStyle}
-        disabled={isDisabled}
+        isDisabled={isDisabled}
         onClick={onClick}
-      >
-        {label}
-      </StyledLink>
+        label={label}
+      />
 );
-
 
 
 export default Button;

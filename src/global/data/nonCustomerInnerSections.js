@@ -10,9 +10,9 @@ export const nonCustomerInnerSections = [
     content: [
       {
         id: 'sobreProduto',
-        label: 'Sobre o produto',
+        label: 'Dúvida sobre o produto',
         behavior: BUTTON_BEHAVIORS.ALERT,
-        behaviorData: MODAL_CONTENT_TYPES.PRODUCT_DOUBT,
+        behaviorData: MODAL_CONTENT_TYPES.NON_CUSTOMER_PRODUCT_DOUBT,
       },
     ],
   },

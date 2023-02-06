@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from "react-redux";
 
 import CustomerContactAddressForm from 'modules/Forms/CustomerContactAddressForm.module';
 import Heading from 'components/Heading/Heading.component';
@@ -10,20 +11,36 @@ import { DIVIDER_ORIENTATION } from 'constants/sectionDivider';
 import { ROUTES } from "constants/routes";
 import { BACKLINK_LABEL } from "constants/backlink";
 import { HEADERS } from "constants/headers";
+import { FormSubheader } from "global/styles/FormSubheader.styles";
+import { FORM_SUBHEADER_TEXT } from "constants/form";
 
-const CustomerContactAddress = () => (
-  <React.Fragment>
-    <Heading type={HEADING_STYLES.SECONDARY}>{HEADERS.EXISTING_CUSTOMER}</Heading>
+import { contactReasonSelector } from "selectors/contactReason.selectors";
 
-    <SectionDivider type={DIVIDER_ORIENTATION.HORIZONTAL} />
 
-    <CustomerContactAddressForm />
+const CustomerContactAddress = () => {
+  const contactReason = useSelector(contactReasonSelector);
 
-    <Link isBackLink link={ROUTES.CUSTOMER_LANDING}>
-      { BACKLINK_LABEL }
-    </Link>
-  </React.Fragment>
-);
+  return (
+    <React.Fragment>
+      <Heading type={HEADING_STYLES.SECONDARY}>{HEADERS.EXISTING_CUSTOMER}</Heading>
 
+      <SectionDivider type={DIVIDER_ORIENTATION.HORIZONTAL}/>
+
+      <Heading type={HEADING_STYLES.SECONDARY}>
+        {contactReason}
+      </Heading>
+
+      <FormSubheader>
+        {FORM_SUBHEADER_TEXT}
+      </FormSubheader>
+
+      <CustomerContactAddressForm/>
+
+      <Link isBackLink link={ROUTES.CUSTOMER_LANDING}>
+        {BACKLINK_LABEL}
+      </Link>
+    </React.Fragment>
+  );
+}
 
 export default CustomerContactAddress;
