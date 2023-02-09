@@ -34,9 +34,9 @@ const CustomerContactAddressForm = () => {
       render={() => (
         <form onSubmit={handleSubmit} onChange={handleChange}>
           <FormFieldsWrapper>
-            <ExistingCustomerIdentificationForm/>
-            <AddressForm/>
-            <MessageEntryForm isOptional/>
+            <ExistingCustomerIdentificationForm />
+            <AddressForm />
+            <MessageEntryForm isOptional />
           </FormFieldsWrapper>
 
           <FormSubmission/>

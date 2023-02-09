@@ -22,4 +22,4 @@ export const StyledCloseModalButton = styled.button`
     background-color: ${colors.colorMauvelous};
     color: ${colors.colorStandardWhite};
   }
-`
+`;
