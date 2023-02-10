@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from "react-redux";
 
-import { FORM_MODULES } from "../../constants/FormModules.constants";
+import { updateExistingCustomerIdForm } from "slices/formSlices/existingCustomerIdentificationForm.slice";
 
 import {
   EXISTING_CUSTOMER_ID_FORM_HEADER,
@@ -19,8 +19,15 @@ import {
 const ExistingCustomerIdentificationForm = () => {
   const dispatch = useDispatch();
 
+  const handleChange = (e) => dispatch(
+    updateExistingCustomerIdForm({
+      name: e.target.name,
+      value: e.target.value,
+    }),
+  );
+
   return (
-    <FormSubsection>
+    <FormSubsection onChange={handleChange}>
       <FormSectionHeaderWrapper>
         {EXISTING_CUSTOMER_ID_FORM_HEADER}
       </FormSectionHeaderWrapper>

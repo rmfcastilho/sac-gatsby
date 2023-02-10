@@ -13,7 +13,7 @@ export const existingCustomerIdSlice = createSlice({
   name: 'existingCustomerId',
   initialState,
   reducers: {
-    updateExistingCustomerAddressForm: (state, action) => {
+    updateExistingCustomerIdForm: (state, action) => {
       return {
         ...state,
         [action.payload.name]: action.payload.value,
@@ -22,6 +22,6 @@ export const existingCustomerIdSlice = createSlice({
   },
 });
 
-export const { updateExistingCustomerAddressForm } = existingCustomerIdSlice.actions;
+export const { updateExistingCustomerIdForm } = existingCustomerIdSlice.actions;
 
 export default existingCustomerIdSlice.reducer;
