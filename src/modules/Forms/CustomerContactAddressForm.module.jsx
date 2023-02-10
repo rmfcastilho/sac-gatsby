@@ -13,7 +13,7 @@ import {
   FormFieldsWrapper,
 } from './styles/Form.styles';
 
-import { updateForm } from "slices/formSlice.slice";
+import { updateAddressForm } from "slices/innerFormSlices/addressForm.slice";
 
 
 const CustomerContactAddressForm = () => {
@@ -21,18 +21,11 @@ const CustomerContactAddressForm = () => {
 
   const handleSubmit = () => console.log('Submitted!');
 
-  const handleChange = (event) => {
-    dispatch(updateForm({
-      formName: 'customerContactAddress',
-      test: event.target.value,
-    }));
-  };
-
   return (
     <Form
       onSubmit={handleSubmit}
       render={() => (
-        <form onSubmit={handleSubmit} onChange={handleChange}>
+        <form onSubmit={handleSubmit}>
           <FormFieldsWrapper>
             <ExistingCustomerIdentificationForm />
             <AddressForm />

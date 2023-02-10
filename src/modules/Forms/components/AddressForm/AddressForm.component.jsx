@@ -1,4 +1,7 @@
 import React from 'react';
+import { useDispatch } from "react-redux";
+
+import { updateAddressForm } from "slices/innerFormSlices/addressForm.slice";
 
 import {
   ADDRESS_FORM_HEADER,
@@ -16,54 +19,64 @@ import {
 } from "modules/Forms/styles/Form.styles";
 
 
-const AddressForm = () => (
-  <FormSubsection>
-    <FormSectionHeaderWrapper>
-      {ADDRESS_FORM_HEADER}
-    </FormSectionHeaderWrapper>
+const AddressForm = () => {
+  const dispatch = useDispatch();
 
-    <LoneStyledFieldNarrow
-      name={ADDRESS_FORM_FIELDS.ZIP}
-      component="input"
-      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.ZIP]}
-    />
+  const handleChange = (e) => dispatch(
+    updateAddressForm({
+      name: e.target.name,
+      value: e.target.value,
+    })
+  )
 
-    <StyledFieldWide
-      name={ADDRESS_FORM_FIELDS.STREET}
-      component="input"
-      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.STREET]}
-    />
-    <StyledFieldNarrow
-      name={ADDRESS_FORM_FIELDS.NUMBER}
-      component="input"
-      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.NUMBER]}
-    />
+  return (
+    <FormSubsection onChange={handleChange}>
+      <FormSectionHeaderWrapper>
+        {ADDRESS_FORM_HEADER}
+      </FormSectionHeaderWrapper>
 
-    <StyledFieldFullWidth
-      name={ADDRESS_FORM_FIELDS.COMPLEMENT}
-      component="input"
-      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.COMPLEMENT]}
-    />
+      <LoneStyledFieldNarrow
+        name={ADDRESS_FORM_FIELDS.ZIP}
+        component="input"
+        placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.ZIP]}
+      />
 
-    <StyledFieldFullWidth
-      name={ADDRESS_FORM_FIELDS.DISTRICT}
-      component="input"
-      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.DISTRICT]}
-    />
+      <StyledFieldWide
+        name={ADDRESS_FORM_FIELDS.STREET}
+        component="input"
+        placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.STREET]}
+      />
+      <StyledFieldNarrow
+        name={ADDRESS_FORM_FIELDS.NUMBER}
+        component="input"
+        placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.NUMBER]}
+      />
 
-    <StyledFieldWide
-      name={ADDRESS_FORM_FIELDS.CITY}
-      component="input"
-      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.CITY]}
-    />
-    
-    <StyledFieldNarrow
-      name={ADDRESS_FORM_FIELDS.STATE}
-      component="input"
-      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.STATE]}
-    />
-  </FormSubsection>
-);
+      <StyledFieldFullWidth
+        name={ADDRESS_FORM_FIELDS.COMPLEMENT}
+        component="input"
+        placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.COMPLEMENT]}
+      />
 
+      <StyledFieldFullWidth
+        name={ADDRESS_FORM_FIELDS.DISTRICT}
+        component="input"
+        placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.DISTRICT]}
+      />
+
+      <StyledFieldWide
+        name={ADDRESS_FORM_FIELDS.CITY}
+        component="input"
+        placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.CITY]}
+      />
+
+      <StyledFieldNarrow
+        name={ADDRESS_FORM_FIELDS.STATE}
+        component="input"
+        placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.STATE]}
+      />
+    </FormSubsection>
+  );
+}
 
 export default AddressForm;
