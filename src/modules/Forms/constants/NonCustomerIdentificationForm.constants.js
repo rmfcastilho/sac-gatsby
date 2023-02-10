@@ -1,7 +1,7 @@
 export const NON_CUSTOMER_FORM_HEADER = 'Identificação';
 
 export const NON_CUSTOMER_FORM_FIELDS = {
-  NAME: 'nome',
+  NAME: 'name',
   EMAIL: 'email',
 }
 

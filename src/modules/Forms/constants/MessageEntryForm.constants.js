@@ -2,8 +2,8 @@ export const MESSAGE_ENTRY_FORM_HEADER_REQUIRED = 'Mensagem';
 export const MESSAGE_ENTRY_FORM_HEADER_OPTIONAL = 'Mensagem (opcional)';
 
 export const MESSAGE_ENTRY_FORM_FIELDS = {
-  SUBJECT: 'assunto',
-  MESSAGE: 'mensagem',
+  SUBJECT: 'subject',
+  MESSAGE: 'message',
 };
 
 export const MESSAGE_ENTRY_FORM_LABELS = {

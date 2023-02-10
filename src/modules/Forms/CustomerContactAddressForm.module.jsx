@@ -13,7 +13,7 @@ import {
   FormFieldsWrapper,
 } from './styles/Form.styles';
 
-import { updateAddressForm } from "slices/innerFormSlices/addressForm.slice";
+import { updateAddressForm } from "slices/formSlices/addressForm.slice";
 
 
 const CustomerContactAddressForm = () => {

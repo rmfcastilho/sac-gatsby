@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
 
-import { updateAddressForm } from "slices/innerFormSlices/addressForm.slice";
+import { updateAddressForm } from "slices/formSlices/addressForm.slice";
 
 import {
   ADDRESS_FORM_HEADER,
