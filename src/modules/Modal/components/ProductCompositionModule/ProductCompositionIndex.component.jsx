@@ -13,7 +13,7 @@ import Heading from "components/Heading/Heading.component";
 import { HEADING_STYLES } from "constants/heading";
 
 
-const ProductCompositionIndex = () => {
+const ProductCompositionIndex = ({ onSelectProduct }) => {
 
   return (
     <ProductCompositionModuleWrapper>
