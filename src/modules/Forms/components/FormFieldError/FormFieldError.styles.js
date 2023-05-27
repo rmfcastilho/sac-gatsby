@@ -5,6 +5,7 @@ export const StyledFieldError = styled.span`
   color: ${colors.colorAntiFlashWhite};
   font-size: 0.8rem;
   font-weight: bold;
+  width: 100%;
 `;
 
 export const StyledFieldErrorWrapper = styled.div`

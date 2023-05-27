@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { Field } from 'react-final-form';
 
 import * as colors from 'constants/styles/colors';
 import { FONT_WEIGHTS } from "constants/styles/font";
 
 
 const standardFieldStyles = `
-  border: 0.2px solid rgba(122, 122, 122, 0.6);
+  border: none;
+  box-shadow: 0 0 1rem 0.25rem rgba(122, 122, 122, 0.1);
   border-radius: 5px;
   color: ${colors.colorFormGrey};
   padding: 0.5rem;
@@ -28,6 +28,21 @@ export const FormFieldsWrapper = styled.div`
   padding-top: 2rem;
 `;
 
+export const FormFieldWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  border: 1px solid blue;
+  overflow: visible;
+  
+  ${({ doubleFieldWide }) => doubleFieldWide 
+    ? `width: 60%; flex-grow: 0;`
+    : `max-width: 25%; flex-grow: 1;`
+  }
+`;
+
 export const FormSubsection = styled.div`
   width: 100%;
   display: flex;
@@ -44,6 +59,12 @@ export const StyledTextArea = styled.textarea`
   min-height: 10rem;
 `;
 
+export const StyledTextInput = styled.input`
+  ${standardFieldStyles};
+  ${({ hasError }) => hasError && errorStyling}
+  width: 100%;
+`;
+
 export const StyledFieldFullWidth = styled.input`
   ${standardFieldStyles};
   ${({ hasError }) => hasError && errorStyling}
@@ -51,20 +72,27 @@ export const StyledFieldFullWidth = styled.input`
 `;
 
 export const StyledFieldWide = styled.input`
-  ${({ hasError }) => hasError && errorStyling}
   ${standardFieldStyles};
-  width: 65%;
+  ${({ hasError }) => hasError && errorStyling}
+  min-width: 60%;
+  max-width: 70%;
+`;
+
+export const StyledDoubleFieldRow = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 `;
 
 export const StyledFieldNarrow = styled.input`
-  ${({ hasError }) => hasError && errorStyling}
   ${standardFieldStyles};
+  ${({ hasError }) => hasError && errorStyling}
   flex-grow: 1;
 `;
 
 export const LoneStyledFieldNarrow = styled.input`
-  ${({ hasError }) => hasError && errorStyling}
   ${standardFieldStyles};
+  ${({ hasError }) => hasError && errorStyling}
   width: 35%;
   flex-grow: 0;
 `;

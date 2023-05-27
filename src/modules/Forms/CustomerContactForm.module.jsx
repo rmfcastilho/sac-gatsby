@@ -1,8 +1,12 @@
 import React from 'react';
-import { Form } from 'react-final-form';
+import { Form, Field } from 'react-final-form';
 import { useDispatch } from 'react-redux';
 import formatString from 'format-string-by-pattern';
 
+import { composeValidators } from 'modules/Forms/helpers/composeValidators';
+import { requiredValidator, isEmailValidValidator, isCpfValidValidator } from 'modules/Forms/helpers/fieldValidation';
+
+import FormFieldError from 'modules/Forms/components/FormFieldError/FormFieldError';
 import Button from 'components/Button/Button.component';
 
 import {
@@ -51,40 +55,85 @@ const CustomerContactForm = () => {
                 {EXISTING_CUSTOMER_ID_FORM_HEADER}
               </FormSectionHeaderWrapper>
 
-              <StyledFieldFullWidth
+              <Field
                 name={EXISTING_CUSTOMER_ID_FORM_FIELDS.ID}
-                component="input"
-                placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
-                  EXISTING_CUSTOMER_ID_FORM_FIELDS.ID
-                  ]
-                }
                 parse={formatString(EXISTING_CUSTOMER_ID_FIELD_MASKS[EXISTING_CUSTOMER_ID_FORM_FIELDS.ID])}
                 maxLength={14}
-              />
-              <StyledFieldFullWidth
+                validate={composeValidators(requiredValidator, isCpfValidValidator)}
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      type="text"
+                      placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+                        EXISTING_CUSTOMER_ID_FORM_FIELDS.ID
+                        ]
+                      }
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
+
+              <Field
                 name={EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME}
-                component="input"
-                placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
-                  EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME
-                  ]
-                }
-              />
-              <StyledFieldFullWidth
+                validate={requiredValidator}
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      type="text"
+                      placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+                        EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME
+                        ]
+                      }
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
+
+              <Field
                 name={EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL}
-                component="input"
-                placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
-                  EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL
-                  ]
-                }
-              />
-              <StyledFieldFullWidth
+                validate={composeValidators(requiredValidator, isEmailValidValidator)}
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL]}
+                      type="email"
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
+
+              <Field
                 name={EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER}
-                component="input"
-                placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
-                  EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER
-                  ]
-                }
-              />
+                validate={requiredValidator}
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      type="text"
+                      placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+                        EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER
+                        ]
+                      }
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
+
             </FormSubsection>
 
             <FormSubsection>
@@ -92,17 +141,40 @@ const CustomerContactForm = () => {
                 {MESSAGE_ENTRY_FORM_HEADER_REQUIRED}
               </FormSectionHeaderWrapper>
 
-              <StyledFieldFullWidth
+              <Field
                 name={MESSAGE_ENTRY_FORM_FIELDS.SUBJECT}
-                component="input"
-                placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]}
-              />
+                validate={composeValidators(requiredValidator)}
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      placeholder={`${MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]} *`}
+                      type="text"
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
 
-              <StyledTextArea
+
+              <Field
                 name={MESSAGE_ENTRY_FORM_FIELDS.MESSAGE}
-                component="textarea"
-                placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]}
-              />
+                validate={composeValidators(requiredValidator)}
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledTextArea
+                      hasError={meta.error && meta.touched}
+                      placeholder={`${MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]} *`}
+                      type="text"
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
             </FormSubsection>
           </FormFieldsWrapper>
 

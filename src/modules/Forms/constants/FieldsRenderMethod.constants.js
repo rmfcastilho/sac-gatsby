@@ -1,0 +1,3 @@
+export const FIELDS_RENDER_METHOD = {
+  FULL_WIDTH: 'FULL_WIDTH',
+};

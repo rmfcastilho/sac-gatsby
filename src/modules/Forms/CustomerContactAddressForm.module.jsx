@@ -1,16 +1,18 @@
 import React from 'react';
-import { Form } from 'react-final-form';
+import { Field, Form } from 'react-final-form';
 import formatString from 'format-string-by-pattern';
 
 import Button from 'components/Button/Button.component';
 
 import {
+  FormFieldWrapper,
   FormFieldsWrapper,
   FormFooterWrapper,
   FormSectionHeaderWrapper,
   FormSubmissionWrapper,
   FormSubsection, LoneStyledFieldNarrow,
   StyledFieldFullWidth, StyledFieldNarrow, StyledFieldWide, StyledTextArea,
+  StyledDoubleFieldRow,
 } from './styles/Form.styles';
 
 
@@ -32,7 +34,12 @@ import {
 
 import { composeValidators } from 'modules/Forms/helpers/composeValidators';
 
-import { isNumberValidator, requiredValidator } from 'modules/Forms/helpers/fieldValidation';
+import {
+  isCpfValidValidator,
+  isEmailValidValidator,
+  isNumberValidator,
+  requiredValidator
+} from 'modules/Forms/helpers/fieldValidation';
 
 import {
   MESSAGE_ENTRY_FORM_FIELDS,
@@ -43,6 +50,7 @@ import {
 import { useDispatch } from 'react-redux';
 import { handleFormFieldChange } from 'modules/Forms/helpers/handleFormFieldChange';
 import { FORM_NAMES } from 'modules/Forms/constants/FormNames.constants';
+import FormFieldError from 'modules/Forms/components/FormFieldError/FormFieldError';
 
 
 const CustomerContactAddressForm = () => {
@@ -62,40 +70,84 @@ const CustomerContactAddressForm = () => {
                 {EXISTING_CUSTOMER_ID_FORM_HEADER}
               </FormSectionHeaderWrapper>
 
-              <StyledFieldFullWidth
+              <Field
                 name={EXISTING_CUSTOMER_ID_FORM_FIELDS.ID}
-                component="input"
-                placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
-                  EXISTING_CUSTOMER_ID_FORM_FIELDS.ID
-                  ]
-                }
                 parse={formatString(EXISTING_CUSTOMER_ID_FIELD_MASKS[EXISTING_CUSTOMER_ID_FORM_FIELDS.ID])}
                 maxLength={14}
-              />
-              <StyledFieldFullWidth
+                validate={composeValidators(requiredValidator, isCpfValidValidator)}
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      type="text"
+                      placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+                        EXISTING_CUSTOMER_ID_FORM_FIELDS.ID
+                        ]
+                      }
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
+
+              <Field
                 name={EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME}
-                component="input"
-                placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
-                  EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME
-                  ]
-                }
-              />
-              <StyledFieldFullWidth
+                validate={requiredValidator}
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      type="text"
+                      placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+                        EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME
+                        ]
+                      }
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
+
+              <Field
                 name={EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL}
-                component="input"
-                placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
-                  EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL
-                  ]
-                }
-              />
-              <StyledFieldFullWidth
+                validate={composeValidators(requiredValidator, isEmailValidValidator)}
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL]}
+                      type="email"
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
+
+              <Field
                 name={EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER}
-                component="input"
-                placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
-                  EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER
-                  ]
-                }
-              />
+                validate={requiredValidator}
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      type="text"
+                      placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+                        EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER
+                        ]
+                      }
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
             </FormSubsection>
 
             <FormSubsection>
@@ -103,55 +155,128 @@ const CustomerContactAddressForm = () => {
                 {ADDRESS_FORM_HEADER}
               </FormSectionHeaderWrapper>
 
-              <LoneStyledFieldNarrow
+              <Field
                 name={ADDRESS_FORM_FIELDS.ZIP}
-                component="input"
-                placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.ZIP]}
-                maxLength={9}
-                validate={composeValidators(requiredValidator, isNumberValidator)}
                 parse={formatString(ADDRESS_FIELD_MASKS[ADDRESS_FORM_FIELDS.ZIP])}
-              />
-
-              <StyledFieldWide
-                name={ADDRESS_FORM_FIELDS.STREET}
-                component="input"
-                placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.STREET]}
                 validate={requiredValidator}
-              />
-              <StyledFieldNarrow
-                name={ADDRESS_FORM_FIELDS.NUMBER}
-                component="input"
-                placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.NUMBER]}
-                validate={composeValidators(requiredValidator, isNumberValidator)}
-              />
+                maxLength={9}
+              >
+                {({ input, meta }) => (
+                  <FormFieldWrapper>
+                    <LoneStyledFieldNarrow
+                      hasError={meta.error && meta.touched}
+                      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.ZIP]}
+                      type="text"
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </FormFieldWrapper>
+                )}
+              </Field>
 
-              <StyledFieldFullWidth
+              <StyledDoubleFieldRow>
+                <Field
+                  name={ADDRESS_FORM_FIELDS.STREET}
+                  validate={requiredValidator}
+                >
+                  {({ input, meta }) => (
+                    <FormFieldWrapper doubleFieldWide>
+                      <StyledFieldFullWidth
+                        hasError={meta.error && meta.touched}
+                        type="text"
+                        placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.STREET]}
+                        {...input}
+                      />
+                      {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                    </FormFieldWrapper>
+                  )}
+                </Field>
+
+                <Field
+                  name={ADDRESS_FORM_FIELDS.NUMBER}
+                  validate={requiredValidator}
+                >
+                  {({ input, meta }) => (
+                    <FormFieldWrapper doubleFieldWide={false}>
+                      <StyledFieldFullWidth
+                        hasError={meta.error && meta.touched}
+                        type="text"
+                        placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.NUMBER]}
+                        {...input}
+                      />
+                      {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                    </FormFieldWrapper>
+                  )}
+                </Field>
+              </StyledDoubleFieldRow>
+
+              <Field
                 name={ADDRESS_FORM_FIELDS.COMPLEMENT}
-                component="input"
-                placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.COMPLEMENT]}
                 validate={requiredValidator}
-              />
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      type="text"
+                      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.COMPLEMENT]}
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
 
-              <StyledFieldFullWidth
+              <Field
                 name={ADDRESS_FORM_FIELDS.DISTRICT}
-                component="input"
-                placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.DISTRICT]}
                 validate={requiredValidator}
-              />
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      type="text"
+                      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.DISTRICT]}
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
 
-              <StyledFieldWide
+              <Field
                 name={ADDRESS_FORM_FIELDS.CITY}
-                component="input"
-                placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.CITY]}
                 validate={requiredValidator}
-              />
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      type="text"
+                      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.CITY]}
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
 
-              <StyledFieldNarrow
+              <Field
                 name={ADDRESS_FORM_FIELDS.STATE}
-                component="input"
-                placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.STATE]}
                 validate={requiredValidator}
-              />
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      type="text"
+                      placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.STATE]}
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
             </FormSubsection>
 
             <FormSubsection>
@@ -159,17 +284,38 @@ const CustomerContactAddressForm = () => {
                 {MESSAGE_ENTRY_FORM_HEADER_OPTIONAL}
               </FormSectionHeaderWrapper>
 
-              <StyledFieldFullWidth
+              <Field
                 name={MESSAGE_ENTRY_FORM_FIELDS.SUBJECT}
-                component="input"
-                placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]}
-              />
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]}
+                      type="text"
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
 
-              <StyledTextArea
+
+              <Field
                 name={MESSAGE_ENTRY_FORM_FIELDS.MESSAGE}
-                component="textarea"
-                placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]}
-              />
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledTextArea
+                      hasError={meta.error && meta.touched}
+                      placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]}
+                      type="text"
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
             </FormSubsection>
           </FormFieldsWrapper>
 
