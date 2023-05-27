@@ -41,7 +41,7 @@ export const StyledTextArea = styled(Field)`
   min-height: 10rem;
 `;
 
-export const StyledFieldFullWidth = styled(Field)`
+export const StyledFieldFullWidth = styled.input`
   ${standardFieldStyles};
   width: 100%;
 `;

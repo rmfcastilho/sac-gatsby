@@ -1,6 +1,9 @@
 import React from 'react';
-import { Form } from 'react-final-form';
+import { Form, Field } from 'react-final-form';
 import { useDispatch } from 'react-redux';
+
+import { composeValidators } from 'modules/Forms/helpers/composeValidators';
+import { requiredValidator } from 'modules/Forms/helpers/fieldValidation';
 
 import Button from 'components/Button/Button.component';
 
@@ -48,11 +51,21 @@ const NonCustomerForm = () => {
                 {NON_CUSTOMER_FORM_HEADER}
               </FormSectionHeaderWrapper>
 
-              <StyledFieldFullWidth
+              <Field
                 name={NON_CUSTOMER_FORM_FIELDS.NAME}
-                component="input"
                 placeholder={NON_CUSTOMER_FORM_LABELS[NON_CUSTOMER_FORM_FIELDS.NAME]}
-              />
+                validate={composeValidators(requiredValidator)}
+              >
+                {({ input, meta }) => (
+                  <>
+                    {console.log(`Touched: ${meta.touched}`)}
+                    {console.log(`Error: ${meta.error}`)}
+                    <StyledFieldFullWidth type="text" {...input} />
+                    {meta.error && meta.touched && <span>{meta.error}</span>}
+                  </>
+                )}
+              </Field>
+
               <StyledFieldFullWidth
                 name={NON_CUSTOMER_FORM_FIELDS.EMAIL}
                 component="input"
