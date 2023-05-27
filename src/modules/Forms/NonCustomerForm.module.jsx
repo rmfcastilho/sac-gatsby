@@ -3,7 +3,7 @@ import { Form, Field } from 'react-final-form';
 import { useDispatch } from 'react-redux';
 
 import { composeValidators } from 'modules/Forms/helpers/composeValidators';
-import { requiredValidator } from 'modules/Forms/helpers/fieldValidation';
+import { requiredValidator, isEmailValidValidator } from 'modules/Forms/helpers/fieldValidation';
 
 import Button from 'components/Button/Button.component';
 
@@ -11,21 +11,27 @@ import { handleFormFieldChange } from 'modules/Forms/helpers/handleFormFieldChan
 
 import { FORM_NAMES } from 'modules/Forms/constants/FormNames.constants';
 
+import FormFieldError from 'modules/Forms/components/FormFieldError/FormFieldError';
+
 import {
   FormFieldsWrapper,
-  FormSectionHeaderWrapper, FormSubmissionWrapper,
+  FormSectionHeaderWrapper,
+  FormSubmissionWrapper,
   FormSubsection,
-  StyledFieldFullWidth, StyledTextArea
+  StyledFieldFullWidth,
+  StyledTextArea,
 } from "./styles/Form.styles";
 
 import {
   NON_CUSTOMER_FORM_FIELDS,
-  NON_CUSTOMER_FORM_HEADER, NON_CUSTOMER_FORM_LABELS
+  NON_CUSTOMER_FORM_HEADER,
+  NON_CUSTOMER_FORM_LABELS,
 } from 'modules/Forms/constants/NonCustomerIdentificationForm.constants';
 
 import {
   MESSAGE_ENTRY_FORM_FIELDS,
-  MESSAGE_ENTRY_FORM_HEADER_REQUIRED, MESSAGE_ENTRY_FORM_LABELS
+  MESSAGE_ENTRY_FORM_HEADER_REQUIRED,
+  MESSAGE_ENTRY_FORM_LABELS,
 } from 'modules/Forms/constants/MessageEntryForm.constants';
 
 import { BUTTON_STYLES } from 'constants/button';
@@ -53,24 +59,37 @@ const NonCustomerForm = () => {
 
               <Field
                 name={NON_CUSTOMER_FORM_FIELDS.NAME}
-                placeholder={NON_CUSTOMER_FORM_LABELS[NON_CUSTOMER_FORM_FIELDS.NAME]}
                 validate={composeValidators(requiredValidator)}
               >
                 {({ input, meta }) => (
                   <>
-                    {console.log(`Touched: ${meta.touched}`)}
-                    {console.log(`Error: ${meta.error}`)}
-                    <StyledFieldFullWidth type="text" {...input} />
-                    {meta.error && meta.touched && <span>{meta.error}</span>}
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      placeholder={NON_CUSTOMER_FORM_LABELS[NON_CUSTOMER_FORM_FIELDS.NAME]}
+                      type="text"
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
                   </>
                 )}
               </Field>
 
-              <StyledFieldFullWidth
+              <Field
                 name={NON_CUSTOMER_FORM_FIELDS.EMAIL}
-                component="input"
-                placeholder={NON_CUSTOMER_FORM_LABELS[NON_CUSTOMER_FORM_FIELDS.EMAIL]}
-              />
+                validate={composeValidators(requiredValidator, isEmailValidValidator)}
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      placeholder={NON_CUSTOMER_FORM_LABELS[NON_CUSTOMER_FORM_FIELDS.EMAIL]}
+                      type="email"
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
             </FormSubsection>
 
             <FormSubsection>
@@ -78,17 +97,40 @@ const NonCustomerForm = () => {
                 {MESSAGE_ENTRY_FORM_HEADER_REQUIRED}
               </FormSectionHeaderWrapper>
 
-              <StyledFieldFullWidth
+              <Field
                 name={MESSAGE_ENTRY_FORM_FIELDS.SUBJECT}
-                component="input"
-                placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]}
-              />
+                validate={composeValidators(requiredValidator)}
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledFieldFullWidth
+                      hasError={meta.error && meta.touched}
+                      placeholder={`${MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]} *`}
+                      type="text"
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
 
-              <StyledTextArea
+
+              <Field
                 name={MESSAGE_ENTRY_FORM_FIELDS.MESSAGE}
-                component="textarea"
-                placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]}
-              />
+                validate={composeValidators(requiredValidator)}
+              >
+                {({ input, meta }) => (
+                  <>
+                    <StyledTextArea
+                      hasError={meta.error && meta.touched}
+                      placeholder={`${MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]} *`}
+                      type="text"
+                      {...input}
+                    />
+                    {meta.error && meta.touched && <FormFieldError error={meta.error} />}
+                  </>
+                )}
+              </Field>
             </FormSubsection>
           </FormFieldsWrapper>
 

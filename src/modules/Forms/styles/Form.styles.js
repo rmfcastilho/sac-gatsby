@@ -17,6 +17,8 @@ const standardFieldStyles = `
   }
 `;
 
+const errorStyling = `border: 1px solid red; color: red; ::placeholder { color: red; }`;
+
 export const FormFieldsWrapper = styled.div`
   display: flex;
   flex-flow: column wrap;
@@ -35,28 +37,33 @@ export const FormSubsection = styled.div`
   flex-wrap: wrap;
 `;
 
-export const StyledTextArea = styled(Field)`
+export const StyledTextArea = styled.textarea`
   ${standardFieldStyles};
+  ${({ hasError }) => hasError && errorStyling}
   width: 100%;
   min-height: 10rem;
 `;
 
 export const StyledFieldFullWidth = styled.input`
   ${standardFieldStyles};
+  ${({ hasError }) => hasError && errorStyling}
   width: 100%;
 `;
 
-export const StyledFieldWide = styled(Field)`
+export const StyledFieldWide = styled.input`
+  ${({ hasError }) => hasError && errorStyling}
   ${standardFieldStyles};
   width: 65%;
 `;
 
-export const StyledFieldNarrow = styled(Field)`
+export const StyledFieldNarrow = styled.input`
+  ${({ hasError }) => hasError && errorStyling}
   ${standardFieldStyles};
   flex-grow: 1;
 `;
 
-export const LoneStyledFieldNarrow = styled(Field)`
+export const LoneStyledFieldNarrow = styled.input`
+  ${({ hasError }) => hasError && errorStyling}
   ${standardFieldStyles};
   width: 35%;
   flex-grow: 0;
