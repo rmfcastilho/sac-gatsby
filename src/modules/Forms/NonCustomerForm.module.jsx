@@ -1,7 +1,12 @@
 import React from 'react';
 import { Form } from 'react-final-form';
+import { useDispatch } from 'react-redux';
 
 import Button from 'components/Button/Button.component';
+
+import { handleFormFieldChange } from 'modules/Forms/helpers/handleFormFieldChange';
+
+import { FORM_NAMES } from 'modules/Forms/constants/FormNames.constants';
 
 import {
   FormFieldsWrapper,
@@ -26,64 +31,70 @@ import { FormFooterWrapper } from './styles/Form.styles';
 
 const handleSubmit = () => console.log('Submitted!');
 
-const NonCustomerForm = () => (
-  <Form
-    onSubmit={handleSubmit}
-    render={() => (
-      <form onSubmit={handleSubmit}>
-        <FormFieldsWrapper>
+const NonCustomerForm = () => {
+  const dispatch = useDispatch();
 
-          <FormSubsection>
-            <FormSectionHeaderWrapper>
-              {NON_CUSTOMER_FORM_HEADER}
-            </FormSectionHeaderWrapper>
+  const handleChange = (event) => handleFormFieldChange(event, FORM_NAMES.NON_CUSTOMER_FORM, dispatch);
 
-            <StyledFieldFullWidth
-              name={NON_CUSTOMER_FORM_FIELDS.NAME}
-              component="input"
-              placeholder={NON_CUSTOMER_FORM_LABELS[NON_CUSTOMER_FORM_FIELDS.NAME]}
+  return (
+    <Form
+      onSubmit={handleSubmit}
+      render={() => (
+        <form onSubmit={handleSubmit} onChange={handleChange}>
+          <FormFieldsWrapper>
+
+            <FormSubsection>
+              <FormSectionHeaderWrapper>
+                {NON_CUSTOMER_FORM_HEADER}
+              </FormSectionHeaderWrapper>
+
+              <StyledFieldFullWidth
+                name={NON_CUSTOMER_FORM_FIELDS.NAME}
+                component="input"
+                placeholder={NON_CUSTOMER_FORM_LABELS[NON_CUSTOMER_FORM_FIELDS.NAME]}
+              />
+              <StyledFieldFullWidth
+                name={NON_CUSTOMER_FORM_FIELDS.EMAIL}
+                component="input"
+                placeholder={NON_CUSTOMER_FORM_LABELS[NON_CUSTOMER_FORM_FIELDS.EMAIL]}
+              />
+            </FormSubsection>
+
+            <FormSubsection>
+              <FormSectionHeaderWrapper>
+                {MESSAGE_ENTRY_FORM_HEADER_REQUIRED}
+              </FormSectionHeaderWrapper>
+
+              <StyledFieldFullWidth
+                name={MESSAGE_ENTRY_FORM_FIELDS.SUBJECT}
+                component="input"
+                placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]}
+              />
+
+              <StyledTextArea
+                name={MESSAGE_ENTRY_FORM_FIELDS.MESSAGE}
+                component="textarea"
+                placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]}
+              />
+            </FormSubsection>
+          </FormFieldsWrapper>
+
+          <FormSubmissionWrapper>
+            <Button
+              type="submit"
+              isDisabled={false}
+              buttonStyle={BUTTON_STYLES.PRIMARY}
+              label="Enviar solicitação"
+              key="submitForm"
             />
-            <StyledFieldFullWidth
-              name={NON_CUSTOMER_FORM_FIELDS.EMAIL}
-              component="input"
-              placeholder={NON_CUSTOMER_FORM_LABELS[NON_CUSTOMER_FORM_FIELDS.EMAIL]}
-            />
-          </FormSubsection>
 
-          <FormSubsection>
-            <FormSectionHeaderWrapper>
-              {MESSAGE_ENTRY_FORM_HEADER_REQUIRED}
-            </FormSectionHeaderWrapper>
-
-            <StyledFieldFullWidth
-              name={MESSAGE_ENTRY_FORM_FIELDS.SUBJECT}
-              component="input"
-              placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]}
-            />
-
-            <StyledTextArea
-              name={MESSAGE_ENTRY_FORM_FIELDS.MESSAGE}
-              component="textarea"
-              placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]}
-            />
-          </FormSubsection>
-        </FormFieldsWrapper>
-
-        <FormSubmissionWrapper>
-          <Button
-            type="submit"
-            isDisabled={false}
-            buttonStyle={BUTTON_STYLES.PRIMARY}
-            label="Enviar solicitação"
-            key="submitForm"
-          />
-
-          <FormFooterWrapper>Campos com * são obrigatórios</FormFooterWrapper>
-        </FormSubmissionWrapper>
-      </form>
-    )}
-  />
-);
+            <FormFooterWrapper>Campos com * são obrigatórios</FormFooterWrapper>
+          </FormSubmissionWrapper>
+        </form>
+      )}
+    />
+  );
+};
 
 
 export default NonCustomerForm;

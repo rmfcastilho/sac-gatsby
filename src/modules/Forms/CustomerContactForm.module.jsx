@@ -1,5 +1,7 @@
 import React from 'react';
 import { Form } from 'react-final-form';
+import { useDispatch } from 'react-redux';
+
 
 import Button from 'components/Button/Button.component';
 
@@ -21,89 +23,97 @@ import {
 } from 'modules/Forms/constants/MessageEntryForm.constants';
 
 import { BUTTON_STYLES } from 'constants/button';
+import { handleFormFieldChange } from 'modules/Forms/helpers/handleFormFieldChange';
+import { FORM_NAMES } from 'modules/Forms/constants/FormNames.constants';
 
 
 const handleSubmit = () => console.log('Submitted!');
 
-const CustomerContactForm = () => (
-  <Form
-    onSubmit={handleSubmit}
-    render={() => (
-      <form onSubmit={handleSubmit}>
-        <FormFieldsWrapper>
-          <FormSubsection>
-            <FormSectionHeaderWrapper>
-              {EXISTING_CUSTOMER_ID_FORM_HEADER}
-            </FormSectionHeaderWrapper>
+const CustomerContactForm = () => {
+  const dispatch = useDispatch();
 
-            <StyledFieldFullWidth
-              name={EXISTING_CUSTOMER_ID_FORM_FIELDS.ID}
-              component="input"
-              placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
-                EXISTING_CUSTOMER_ID_FORM_FIELDS.ID
-                ]
-              }
-            />
-            <StyledFieldFullWidth
-              name={EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME}
-              component="input"
-              placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
-                EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME
-                ]
-              }
-            />
-            <StyledFieldFullWidth
-              name={EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL}
-              component="input"
-              placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
-                EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL
-                ]
-              }
-            />
-            <StyledFieldFullWidth
-              name={EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER}
-              component="input"
-              placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
-                EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER
-                ]
-              }
-            />
-          </FormSubsection>
+  const handleChange = (event) => handleFormFieldChange(event, FORM_NAMES.CUSTOMER_FORM, dispatch);
 
-          <FormSubsection>
-            <FormSectionHeaderWrapper>
-              {MESSAGE_ENTRY_FORM_HEADER_REQUIRED}
-            </FormSectionHeaderWrapper>
+  return (
+    <Form
+      onSubmit={handleSubmit}
+      render={() => (
+        <form onSubmit={handleSubmit} onChange={handleChange}>
+          <FormFieldsWrapper>
+            <FormSubsection>
+              <FormSectionHeaderWrapper>
+                {EXISTING_CUSTOMER_ID_FORM_HEADER}
+              </FormSectionHeaderWrapper>
 
-            <StyledFieldFullWidth
-              name={MESSAGE_ENTRY_FORM_FIELDS.SUBJECT}
-              component="input"
-              placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]}
+              <StyledFieldFullWidth
+                name={EXISTING_CUSTOMER_ID_FORM_FIELDS.ID}
+                component="input"
+                placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+                  EXISTING_CUSTOMER_ID_FORM_FIELDS.ID
+                  ]
+                }
+              />
+              <StyledFieldFullWidth
+                name={EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME}
+                component="input"
+                placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+                  EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME
+                  ]
+                }
+              />
+              <StyledFieldFullWidth
+                name={EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL}
+                component="input"
+                placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+                  EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL
+                  ]
+                }
+              />
+              <StyledFieldFullWidth
+                name={EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER}
+                component="input"
+                placeholder={EXISTING_CUSTOMER_ID_FORM_LABELS[
+                  EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER
+                  ]
+                }
+              />
+            </FormSubsection>
+
+            <FormSubsection>
+              <FormSectionHeaderWrapper>
+                {MESSAGE_ENTRY_FORM_HEADER_REQUIRED}
+              </FormSectionHeaderWrapper>
+
+              <StyledFieldFullWidth
+                name={MESSAGE_ENTRY_FORM_FIELDS.SUBJECT}
+                component="input"
+                placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]}
+              />
+
+              <StyledTextArea
+                name={MESSAGE_ENTRY_FORM_FIELDS.MESSAGE}
+                component="textarea"
+                placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]}
+              />
+            </FormSubsection>
+          </FormFieldsWrapper>
+
+          <FormSubmissionWrapper>
+            <Button
+              type="submit"
+              isDisabled={false}
+              buttonStyle={BUTTON_STYLES.PRIMARY}
+              label="Enviar solicitação"
+              key="submitForm"
             />
 
-            <StyledTextArea
-              name={MESSAGE_ENTRY_FORM_FIELDS.MESSAGE}
-              component="textarea"
-              placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]}
-            />
-          </FormSubsection>
-        </FormFieldsWrapper>
-
-        <FormSubmissionWrapper>
-          <Button
-            type="submit"
-            isDisabled={false}
-            buttonStyle={BUTTON_STYLES.PRIMARY}
-            label="Enviar solicitação"
-            key="submitForm"
-          />
-
-          <FormFooterWrapper>Campos com * são obrigatórios</FormFooterWrapper>
-        </FormSubmissionWrapper>
-      </form>
-    )}
-  />
-);
+            <FormFooterWrapper>Campos com * são obrigatórios</FormFooterWrapper>
+          </FormSubmissionWrapper>
+        </form>
+      )}
+    />
+  )
+};
 
 
 export default CustomerContactForm;

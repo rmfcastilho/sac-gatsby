@@ -37,15 +37,22 @@ import {
   MESSAGE_ENTRY_FORM_LABELS,
 } from 'modules/Forms/constants/MessageEntryForm.constants';
 
+import { useDispatch } from 'react-redux';
+import { handleFormFieldChange } from 'modules/Forms/helpers/handleFormFieldChange';
+import { FORM_NAMES } from 'modules/Forms/constants/FormNames.constants';
+
 
 const CustomerContactAddressForm = () => {
+  const dispatch = useDispatch();
+
   const handleSubmit = () => console.log('Submitted!');
+  const handleChange = (event) => handleFormFieldChange(event, FORM_NAMES.CUSTOMER_ADDRESS_FORM, dispatch);
 
   return (
     <Form
       onSubmit={handleSubmit}
       render={() => (
-        <form onSubmit={handleSubmit}>
+        <form onChange={handleChange} onSubmit={handleSubmit}>
           <FormFieldsWrapper>
             <FormSubsection>
               <FormSectionHeaderWrapper>
