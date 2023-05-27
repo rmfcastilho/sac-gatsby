@@ -20,6 +20,7 @@
     "babel-plugin-styled-components": "^2.0.7",
     "evergreen-ui": "^6.13.3",
     "final-form": "^4.20.8",
+    "format-string-by-pattern": "^1.2.2",
     "gatsby": "^5.3.3",
     "gatsby-plugin-image": "^3.3.2",
     "gatsby-plugin-react-redux": "^1.1.0",

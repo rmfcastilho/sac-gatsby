@@ -5,7 +5,6 @@ import * as colors from 'constants/styles/colors';
 
 export const StyledCloseModalButton = styled.button`
   display: flex;
-  border: none;
   box-sizing: content-box;
   background-color: transparent;
   color: ${colors.colorTurquoiseGreenDark};
@@ -16,9 +15,10 @@ export const StyledCloseModalButton = styled.button`
   justify-content: center;
   align-items: center;
   transition: 0.2s ease-in-out;
+  border: 1px solid ${colors.colorTurquoiseGreenDark};
 
   &:hover {
-    transform: scale(1.05);
+    border: none;
     background-color: ${colors.colorMauvelous};
     color: ${colors.colorStandardWhite};
   }
