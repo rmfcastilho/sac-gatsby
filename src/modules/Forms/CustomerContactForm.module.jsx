@@ -1,25 +1,31 @@
 import React from 'react';
 import { Form } from 'react-final-form';
 import { useDispatch } from 'react-redux';
-
+import formatString from 'format-string-by-pattern';
 
 import Button from 'components/Button/Button.component';
 
 import {
-  FormFieldsWrapper, FormFooterWrapper,
-  FormSectionHeaderWrapper, FormSubmissionWrapper,
+  FormFieldsWrapper,
+  FormFooterWrapper,
+  FormSectionHeaderWrapper,
+  FormSubmissionWrapper,
   FormSubsection,
-  StyledFieldFullWidth, StyledTextArea
+  StyledFieldFullWidth,
+  StyledTextArea,
 } from "./styles/Form.styles";
 
 import {
   EXISTING_CUSTOMER_ID_FORM_FIELDS,
-  EXISTING_CUSTOMER_ID_FORM_HEADER, EXISTING_CUSTOMER_ID_FORM_LABELS
+  EXISTING_CUSTOMER_ID_FORM_HEADER,
+  EXISTING_CUSTOMER_ID_FORM_LABELS,
+  EXISTING_CUSTOMER_ID_FIELD_MASKS,
 } from 'modules/Forms/constants/ExistingCustomerIdentificationForm.constants';
 
 import {
   MESSAGE_ENTRY_FORM_FIELDS,
-  MESSAGE_ENTRY_FORM_HEADER_REQUIRED, MESSAGE_ENTRY_FORM_LABELS
+  MESSAGE_ENTRY_FORM_HEADER_REQUIRED,
+  MESSAGE_ENTRY_FORM_LABELS,
 } from 'modules/Forms/constants/MessageEntryForm.constants';
 
 import { BUTTON_STYLES } from 'constants/button';
@@ -52,6 +58,8 @@ const CustomerContactForm = () => {
                   EXISTING_CUSTOMER_ID_FORM_FIELDS.ID
                   ]
                 }
+                parse={formatString(EXISTING_CUSTOMER_ID_FIELD_MASKS[EXISTING_CUSTOMER_ID_FORM_FIELDS.ID])}
+                maxLength={14}
               />
               <StyledFieldFullWidth
                 name={EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME}

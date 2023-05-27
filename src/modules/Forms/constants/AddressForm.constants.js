@@ -8,7 +8,7 @@ export const ADDRESS_FORM_FIELDS = {
   DISTRICT: 'district',
   CITY: 'city',
   STATE: 'state',
-}
+};
 
 export const ADDRESS_FORM_LABELS = {
   [ADDRESS_FORM_FIELDS.ZIP]: 'CEP',
@@ -18,4 +18,8 @@ export const ADDRESS_FORM_LABELS = {
   [ADDRESS_FORM_FIELDS.DISTRICT]: 'Bairro',
   [ADDRESS_FORM_FIELDS.CITY]: 'Cidade',
   [ADDRESS_FORM_FIELDS.STATE]: 'UF',
-}
+};
+
+export const ADDRESS_FIELD_MASKS = {
+  [ADDRESS_FORM_FIELDS.ZIP]: '99999-999',
+};

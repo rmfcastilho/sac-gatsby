@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form } from 'react-final-form';
+import formatString from 'format-string-by-pattern';
 
 import Button from 'components/Button/Button.component';
 
@@ -19,12 +20,14 @@ import {
   EXISTING_CUSTOMER_ID_FORM_FIELDS,
   EXISTING_CUSTOMER_ID_FORM_HEADER,
   EXISTING_CUSTOMER_ID_FORM_LABELS,
+  EXISTING_CUSTOMER_ID_FIELD_MASKS,
 } from 'modules/Forms/constants/ExistingCustomerIdentificationForm.constants';
 
 import {
   ADDRESS_FORM_FIELDS,
   ADDRESS_FORM_HEADER,
   ADDRESS_FORM_LABELS,
+  ADDRESS_FIELD_MASKS,
 } from 'modules/Forms/constants/AddressForm.constants';
 
 import { composeValidators } from 'modules/Forms/helpers/composeValidators';
@@ -66,6 +69,8 @@ const CustomerContactAddressForm = () => {
                   EXISTING_CUSTOMER_ID_FORM_FIELDS.ID
                   ]
                 }
+                parse={formatString(EXISTING_CUSTOMER_ID_FIELD_MASKS[EXISTING_CUSTOMER_ID_FORM_FIELDS.ID])}
+                maxLength={14}
               />
               <StyledFieldFullWidth
                 name={EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME}
@@ -104,7 +109,7 @@ const CustomerContactAddressForm = () => {
                 placeholder={ADDRESS_FORM_LABELS[ADDRESS_FORM_FIELDS.ZIP]}
                 maxLength={9}
                 validate={composeValidators(requiredValidator, isNumberValidator)}
-                type="number"
+                parse={formatString(ADDRESS_FIELD_MASKS[ADDRESS_FORM_FIELDS.ZIP])}
               />
 
               <StyledFieldWide
