@@ -21,7 +21,11 @@ const ProductCompositionIndex = ({ onSelectProduct }) => {
 
       {
         PRODUCT_COMPOSITION_ITEMS.map((item) => (
-          <ProductCompositionItemWrapper key={item.id}>
+          <ProductCompositionItemWrapper
+            key={item.id}
+            role="button"
+            onClick={onSelectProduct}
+          >
             <ProductCompositionItemImageWrapper>
               <img src={item.image} alt={item.name} />
             </ProductCompositionItemImageWrapper>

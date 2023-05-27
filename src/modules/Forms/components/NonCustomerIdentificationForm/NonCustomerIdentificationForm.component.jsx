@@ -28,7 +28,7 @@ const NonCustomerIdentificationForm = () => {
   ));
 
   return (
-    <FormSubsection onChange={handleChange}>
+    <FormSubsection>
       <FormSectionHeaderWrapper>
         {NON_CUSTOMER_FORM_HEADER}
       </FormSectionHeaderWrapper>

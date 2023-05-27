@@ -1,12 +1,27 @@
 import React from 'react';
 import { Form } from 'react-final-form';
 
-import MessageEntryForm from "./components/MessageEntryForm/MessageEntryForm.component";
-import FormSubmission from "./components/FormSubmission/FormSubmission.component";
-import NonCustomerIdentificationForm
-  from "./components/NonCustomerIdentificationForm/NonCustomerIdentificationForm.component";
+import Button from 'components/Button/Button.component';
 
-import { FormFieldsWrapper } from "./styles/Form.styles";
+import {
+  FormFieldsWrapper,
+  FormSectionHeaderWrapper, FormSubmissionWrapper,
+  FormSubsection,
+  StyledFieldFullWidth, StyledTextArea
+} from "./styles/Form.styles";
+
+import {
+  NON_CUSTOMER_FORM_FIELDS,
+  NON_CUSTOMER_FORM_HEADER, NON_CUSTOMER_FORM_LABELS
+} from 'modules/Forms/constants/NonCustomerIdentificationForm.constants';
+
+import {
+  MESSAGE_ENTRY_FORM_FIELDS,
+  MESSAGE_ENTRY_FORM_HEADER_REQUIRED, MESSAGE_ENTRY_FORM_LABELS
+} from 'modules/Forms/constants/MessageEntryForm.constants';
+
+import { BUTTON_STYLES } from 'constants/button';
+import { FormFooterWrapper } from './styles/Form.styles';
 
 
 const handleSubmit = () => console.log('Submitted!');
@@ -17,11 +32,54 @@ const NonCustomerForm = () => (
     render={() => (
       <form onSubmit={handleSubmit}>
         <FormFieldsWrapper>
-          <NonCustomerIdentificationForm />
-          <MessageEntryForm isOptional={false} />
+
+          <FormSubsection>
+            <FormSectionHeaderWrapper>
+              {NON_CUSTOMER_FORM_HEADER}
+            </FormSectionHeaderWrapper>
+
+            <StyledFieldFullWidth
+              name={NON_CUSTOMER_FORM_FIELDS.NAME}
+              component="input"
+              placeholder={NON_CUSTOMER_FORM_LABELS[NON_CUSTOMER_FORM_FIELDS.NAME]}
+            />
+            <StyledFieldFullWidth
+              name={NON_CUSTOMER_FORM_FIELDS.EMAIL}
+              component="input"
+              placeholder={NON_CUSTOMER_FORM_LABELS[NON_CUSTOMER_FORM_FIELDS.EMAIL]}
+            />
+          </FormSubsection>
+
+          <FormSubsection>
+            <FormSectionHeaderWrapper>
+              {MESSAGE_ENTRY_FORM_HEADER_REQUIRED}
+            </FormSectionHeaderWrapper>
+
+            <StyledFieldFullWidth
+              name={MESSAGE_ENTRY_FORM_FIELDS.SUBJECT}
+              component="input"
+              placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]}
+            />
+
+            <StyledTextArea
+              name={MESSAGE_ENTRY_FORM_FIELDS.MESSAGE}
+              component="textarea"
+              placeholder={MESSAGE_ENTRY_FORM_LABELS[MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]}
+            />
+          </FormSubsection>
         </FormFieldsWrapper>
 
-        <FormSubmission />
+        <FormSubmissionWrapper>
+          <Button
+            type="submit"
+            isDisabled={false}
+            buttonStyle={BUTTON_STYLES.PRIMARY}
+            label="Enviar solicitação"
+            key="submitForm"
+          />
+
+          <FormFooterWrapper>Campos com * são obrigatórios</FormFooterWrapper>
+        </FormSubmissionWrapper>
       </form>
     )}
   />

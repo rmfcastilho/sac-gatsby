@@ -80,3 +80,7 @@ export const FormSectionHeaderWrapper = styled.div`
   color: ${colors.colorTurquoiseGreenDark};
   font-weight: ${FONT_WEIGHTS.BOLD};
 `;
+
+export const FormFooterWrapper = styled.span`
+  
+`;

@@ -6,22 +6,24 @@ import { ProductCompositionModuleWrapper } from './styles/ProductCompositionModu
 import ProductCompositionIndex from "./ProductCompositionIndex.component";
 import ProductCompositionDetails from "./ProductCompositionDetails.component";
 
+import { MODAL_INDEX } from "./constants/ProductCompositionModal.constants";
+
 
 const ProductCompositionModule = () => {
-  const [activeModule, setActiveModule] = useState('index');
+  const [activeModule, setActiveModule] = useState(MODAL_INDEX);
 
-  const resetActiveModule = () => setActiveModule('index');
+  const resetActiveModule = () => setActiveModule(MODAL_INDEX);
   const changeActiveModule = (id) => setActiveModule(id);
 
   const activeModuleData = (
-    activeModule !== 'index' &&
+    activeModule !== MODAL_INDEX &&
     PRODUCT_COMPOSITION_ITEMS.find((item) => item.id === activeModule)
   );
 
   return (
     <ProductCompositionModuleWrapper>
       {
-        activeModule === 'index'
+        activeModule === MODAL_INDEX
           ? <ProductCompositionIndex onSelectProduct={changeActiveModule} />
           : <ProductCompositionDetails
               name={activeModuleData.name}

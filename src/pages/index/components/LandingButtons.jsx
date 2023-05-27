@@ -15,16 +15,18 @@ const LandingButtons = () => {
   const dispatch = useDispatch();
 
   const buttons = LANDING_PAGE_BUTTONS.map((option) => {
+    const { isCustomer, label, target, buttonStyle } = option;
+
     const handleClick = () => dispatch(
-      setIsCustomer(option.isCustomer)
+      setIsCustomer(isCustomer)
     );
 
     return (
       <Button
         type={BUTTON_TYPES.LINK}
-        label={option.label}
-        link={option.target}
-        buttonStyle={option.buttonStyle}
+        label={label}
+        link={target}
+        buttonStyle={buttonStyle}
         onClick={handleClick}
       />
     )

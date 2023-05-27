@@ -1,5 +1,6 @@
 const toAddress = 'rodrigo.m.castilho@outlook.com';
 
+
 export const sendEmailToCustomer = (
   fromAddress,
   subject,
