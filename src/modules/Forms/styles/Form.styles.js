@@ -43,7 +43,7 @@ export const FormFieldWrapper = styled.div`
   }
 `;
 
-export const FormSubsection = styled.div`
+export const StyledFormSubsection = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;

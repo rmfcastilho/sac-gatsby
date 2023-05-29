@@ -1,11 +1,27 @@
-export const NON_CUSTOMER_FORM_HEADER = 'Identificação';
+import { requiredValidator, isEmailValidValidator } from 'modules/Forms/helpers/fieldValidation';
+import { FIELDS_RENDER_METHOD } from 'modules/Forms/constants/FieldsRenderMethod.constants';
 
 export const NON_CUSTOMER_FORM_FIELDS = {
   NAME: 'name',
   EMAIL: 'email',
 }
 
-export const NON_CUSTOMER_FORM_LABELS = {
-  [NON_CUSTOMER_FORM_FIELDS.NAME]: 'Nome *',
-  [NON_CUSTOMER_FORM_FIELDS.EMAIL]: 'E-mail *',
-}
+export const NON_CUSTOMER_SUBSECTION = {
+  title: 'Identificação',
+  fields: [
+    {
+      id: NON_CUSTOMER_FORM_FIELDS.NAME,
+      validators: [requiredValidator],
+      type: 'text',
+      placeholder: 'Nome *',
+      renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
+    },
+    {
+      id: NON_CUSTOMER_FORM_FIELDS.EMAIL,
+      validators: [requiredValidator, isEmailValidValidator],
+      type: 'text',
+      placeholder: 'E-mail usado na compra *',
+      renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
+    }
+  ],
+};

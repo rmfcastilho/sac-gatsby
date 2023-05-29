@@ -1,8 +1,6 @@
 import { requiredValidator } from 'modules/Forms/helpers/fieldValidation';
 import { FIELDS_RENDER_METHOD } from 'modules/Forms/constants/FieldsRenderMethod.constants';
 
-export const ADDRESS_FORM_HEADER = 'Novo endereço';
-
 export const ADDRESS_FORM_FIELDS = {
   ZIP: 'zipCode',
   STREET: 'streetAddress',
@@ -17,7 +15,7 @@ export const ADDRESS_SUBSECTION = {
   title: 'Novo endereço',
   fields: [
     {
-      id: 'zipCode',
+      id: ADDRESS_FORM_FIELDS.ZIP,
       mask: '99999-999',
       validators: [requiredValidator],
       type: 'text',
@@ -26,60 +24,45 @@ export const ADDRESS_SUBSECTION = {
       maxLength: 9,
     },
     {
-      id: 'streetAddress',
+      id: ADDRESS_FORM_FIELDS.STREET,
       validators: [requiredValidator],
       type: 'text',
       placeholder: 'Logradouro',
       renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
     },
     {
-      id: 'number',
+      id: ADDRESS_FORM_FIELDS.NUMBER,
       validators: [requiredValidator],
       type: 'text',
       placeholder: 'Número',
       renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
     },
     {
-      id: 'complement',
-      validators: [requiredValidator],
+      id: ADDRESS_FORM_FIELDS.COMPLEMENT,
       type: 'text',
       placeholder: 'Complemento',
       renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
     },
     {
-      id: 'district',
+      id: ADDRESS_FORM_FIELDS.DISTRICT,
       validators: [requiredValidator],
       type: 'text',
       placeholder: 'Bairro',
       renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
     },
    {
-      id: 'city',
+      id: ADDRESS_FORM_FIELDS.CITY,
       validators: [requiredValidator],
       type: 'text',
       placeholder: 'Cidade',
-     renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
+      renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
     },
     {
-      id: 'state',
+      id: ADDRESS_FORM_FIELDS.STATE,
       validators: [requiredValidator],
       type: 'text',
       placeholder: 'UF',
       renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
     },
   ],
-}
-
-export const ADDRESS_FORM_LABELS = {
-  [ADDRESS_FORM_FIELDS.ZIP]: 'CEP *',
-  [ADDRESS_FORM_FIELDS.STREET]: 'Logradouro *',
-  [ADDRESS_FORM_FIELDS.NUMBER]: 'Número *',
-  [ADDRESS_FORM_FIELDS.COMPLEMENT]: 'Complemento *',
-  [ADDRESS_FORM_FIELDS.DISTRICT]: 'Bairro *',
-  [ADDRESS_FORM_FIELDS.CITY]: 'Cidade *',
-  [ADDRESS_FORM_FIELDS.STATE]: 'UF *',
-};
-
-export const ADDRESS_FIELD_MASKS = {
-  [ADDRESS_FORM_FIELDS.ZIP]: '99999-999',
 };

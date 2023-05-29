@@ -1,4 +1,4 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 
 import modal from 'slices/modal.slice';
 import contactReason from 'slices/contactReason.slice';

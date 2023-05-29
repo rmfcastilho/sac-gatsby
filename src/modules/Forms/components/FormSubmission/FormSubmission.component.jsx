@@ -1,9 +1,8 @@
 import React from 'react';
 
 import Button from "components/Button/Button.component";
-import FormFooter from "../FormFooter/FormFooter.component";
 
-import { FormSubmissionWrapper } from "modules/Forms/styles/Form.styles";
+import { FormFooterWrapper, FormSubmissionWrapper } from "modules/Forms/styles/Form.styles";
 import { BUTTON_STYLES } from "constants/button";
 
 
@@ -17,7 +16,7 @@ const FormSubmission = () => (
       key="submitForm"
     />
 
-    <FormFooter />
+    <FormFooterWrapper>Campos com * são obrigatórios</FormFooterWrapper>
   </FormSubmissionWrapper>
 );
 
