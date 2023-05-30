@@ -32,7 +32,7 @@ const FormSubsection = ({ subsectionData }) => (
           validate={fieldValidators}
         >
           {({ input, meta }) => (
-            <StyledFieldWrapper renderMethod={field.renderMethod}>
+            <StyledFieldWrapper hasError={meta.error && meta.touched} renderMethod={field.renderMethod}>
               <StyledField
                 hasError={meta.error && meta.touched}
                 type={field.type}

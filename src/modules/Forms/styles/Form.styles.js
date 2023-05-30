@@ -26,7 +26,9 @@ const getWidth = (targetProperty, sizingProperties) => sizingProperties[targetPr
 
 export const StyledFieldWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${({ hasError }) => hasError ? 'column' : 'row'};
+  gap: 0.5rem;
+  align-items: flex-start;
 
   ${({ renderMethod }) => {
     const desktopWidth = getWidth('desktop', FIELDS_RENDER_METHODS_WIDTHS[renderMethod]);
@@ -48,10 +50,10 @@ export const FormFieldsWrapper = styled.div`
   display: flex;
   flex-flow: column wrap;
   gap: 0.1rem;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   padding-top: 2rem;
-  min-width: 23.75rem;
+  min-width: 25rem;
   max-width: 32rem;
 `;
 
@@ -76,6 +78,8 @@ export const StyledTextInput = styled.input`
   ${standardFieldStyles};
   ${({ hasError }) => hasError && errorStyling}
   width: 100%;
+  max-width: ${({ hasError }) => hasError ? '93%' : '100%'};
+  max-height: 1rem;
 `;
 
 export const FormSubmissionWrapper = styled.button`
