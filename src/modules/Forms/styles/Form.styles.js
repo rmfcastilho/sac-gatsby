@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 import * as colors from 'constants/styles/colors';
-import { FONT_WEIGHTS } from "constants/styles/font";
+import { FONT_WEIGHTS } from 'constants/styles/font';
+
+import { Field } from 'react-final-form';
 
 import { FIELDS_RENDER_METHODS_WIDTHS } from 'modules/Forms/constants/FieldsRenderMethod.constants';
 
@@ -22,6 +24,25 @@ const errorStyling = `border: 1px solid red; color: red; ::placeholder { color: 
 
 const getWidth = (targetProperty, sizingProperties) => sizingProperties[targetProperty];
 
+export const StyledFieldWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  ${({ renderMethod }) => {
+    const desktopWidth = getWidth('desktop', FIELDS_RENDER_METHODS_WIDTHS[renderMethod]);
+    const mobileWidth = getWidth('mobile', FIELDS_RENDER_METHODS_WIDTHS[renderMethod]);
+
+    return `
+      min-width: ${desktopWidth};
+      max-width: ${desktopWidth};
+      
+      @media (max-width: 1200px) {
+        min-width: ${mobileWidth};
+        max-width: ${mobileWidth};
+      }
+    `
+  }}
+`;
 
 export const FormFieldsWrapper = styled.div`
   display: flex;
@@ -48,41 +69,13 @@ export const StyledTextArea = styled.textarea`
   ${({ hasError }) => hasError && errorStyling}
   min-height: 10rem;
   resize: vertical;
-
-  ${({ renderMethod }) => {
-    const desktopWidth = getWidth('desktop', FIELDS_RENDER_METHODS_WIDTHS[renderMethod]);
-    const mobileWidth = getWidth('mobile', FIELDS_RENDER_METHODS_WIDTHS[renderMethod]);
-
-    return `
-      min-width: ${desktopWidth};
-      max-width: ${desktopWidth};
-      
-      @media (max-width: 1200px) {
-        min-width: ${mobileWidth};
-        max-width: ${mobileWidth};
-      }
-    `
-  }}
+  width: 100%;
 `;
 
 export const StyledTextInput = styled.input`
   ${standardFieldStyles};
   ${({ hasError }) => hasError && errorStyling}
-  
-  ${({ renderMethod }) => {
-    const desktopWidth = getWidth('desktop', FIELDS_RENDER_METHODS_WIDTHS[renderMethod]);
-    const mobileWidth = getWidth('mobile', FIELDS_RENDER_METHODS_WIDTHS[renderMethod]);
-    
-    return `
-      min-width: ${desktopWidth};
-      max-width: ${desktopWidth};
-      
-      @media (max-width: 1200px) {
-        min-width: ${mobileWidth};
-        max-width: ${mobileWidth};
-      }
-    `
-  }}
+  width: 100%;
 `;
 
 export const FormSubmissionWrapper = styled.button`

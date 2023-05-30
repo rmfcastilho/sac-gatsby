@@ -8,7 +8,7 @@ import { composeValidators } from 'modules/Forms/helpers/composeValidators';
 
 import FormFieldError from 'modules/Forms/components/FormFieldError/FormFieldError';
 
-import { StyledFormSubsection } from 'modules/Forms/styles/Form.styles';
+import { StyledFormSubsection, StyledFieldWrapper } from 'modules/Forms/styles/Form.styles';
 
 import StyledField from '../StyledField/StyledField';
 
@@ -32,16 +32,15 @@ const FormSubsection = ({ subsectionData }) => (
           validate={fieldValidators}
         >
           {({ input, meta }) => (
-            <>
+            <StyledFieldWrapper renderMethod={field.renderMethod}>
               <StyledField
                 hasError={meta.error && meta.touched}
                 type={field.type}
                 placeholder={field.placeholder}
-                renderMethod={field.renderMethod}
                 input={input}
               />
               {meta.error && meta.touched && <FormFieldError error={meta.error} />}
-            </>
+            </StyledFieldWrapper>
           )}
         </Field>
       );

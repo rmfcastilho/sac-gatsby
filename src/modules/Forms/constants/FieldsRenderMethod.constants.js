@@ -13,18 +13,18 @@ export const FIELDS_RENDER_METHODS_WIDTHS = {
   },
   [FIELDS_RENDER_METHOD.PARTIAL_WIDTH_WIDE]: {
     desktop: '67%',
-    mobile: '63.5%',
+    mobile: '68%',
   },
   [FIELDS_RENDER_METHOD.PARTIAL_WIDTH_COMPACT]: {
     desktop: '25%',
     mobile: '',
   },
   [FIELDS_RENDER_METHOD.PARTIAL_WIDTH_SINGLE]: {
-    desktop: '26%',
+    desktop: '35%',
     mobile: '40%',
   },
   [FIELDS_RENDER_METHOD.PARTIAL_EQUAL]: {
     desktop: '46%',
-    mobile: '95%',
+    mobile: '46.5%',
   },
 };
