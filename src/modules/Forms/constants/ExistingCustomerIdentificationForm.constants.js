@@ -17,7 +17,7 @@ export const EXISTING_CUSTOMER_SUBSECTION = {
       validators: [requiredValidator, isCpfValidValidator],
       type: 'text',
       placeholder: 'CPF *',
-      renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
+      renderMethod: FIELDS_RENDER_METHOD.PARTIAL_WIDTH_COMPACT,
       maxLength: 14,
     },
     {
@@ -25,21 +25,21 @@ export const EXISTING_CUSTOMER_SUBSECTION = {
       validators: [requiredValidator],
       type: 'text',
       placeholder: 'Nome *',
-      renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
+      renderMethod: FIELDS_RENDER_METHOD.PARTIAL_WIDTH_WIDE,
     },
     {
       id: EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER,
       validators: [requiredValidator],
       type: 'text',
       placeholder: 'Número do pedido *',
-      renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
+      renderMethod: FIELDS_RENDER_METHOD.PARTIAL_EQUAL,
     },
     {
       id: EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL,
       validators: [requiredValidator, isEmailValidValidator],
       type: 'text',
       placeholder: 'E-mail usado na compra *',
-      renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
+      renderMethod: FIELDS_RENDER_METHOD.PARTIAL_EQUAL,
     },
   ],
 };

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import * as colors from 'constants/styles/colors';
 import { FONT_WEIGHTS } from "constants/styles/font";
 
+import { FIELDS_RENDER_METHODS_WIDTHS } from 'modules/Forms/constants/FieldsRenderMethod.constants';
 
 const standardFieldStyles = `
   border: none;
@@ -19,6 +20,9 @@ const standardFieldStyles = `
 
 const errorStyling = `border: 1px solid red; color: red; ::placeholder { color: red; }`;
 
+const getWidth = (targetProperty, sizingProperties) => sizingProperties[targetProperty];
+
+
 export const FormFieldsWrapper = styled.div`
   display: flex;
   flex-flow: column wrap;
@@ -26,21 +30,8 @@ export const FormFieldsWrapper = styled.div`
   width: 70%;
   margin: 0 auto;
   padding-top: 2rem;
-`;
-
-export const FormFieldWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  flex-wrap: wrap;
-  width: 100%;
-  border: 1px solid blue;
-  overflow: visible;
-  
-  ${({ doubleFieldWide }) => doubleFieldWide 
-    ? `width: 60%; flex-grow: 0;`
-    : `max-width: 25%; flex-grow: 1;`
-  }
+  min-width: 23.75rem;
+  max-width: 32rem;
 `;
 
 export const StyledFormSubsection = styled.div`
@@ -55,46 +46,43 @@ export const StyledFormSubsection = styled.div`
 export const StyledTextArea = styled.textarea`
   ${standardFieldStyles};
   ${({ hasError }) => hasError && errorStyling}
-  width: 100%;
   min-height: 10rem;
+  resize: vertical;
+
+  ${({ renderMethod }) => {
+    const desktopWidth = getWidth('desktop', FIELDS_RENDER_METHODS_WIDTHS[renderMethod]);
+    const mobileWidth = getWidth('mobile', FIELDS_RENDER_METHODS_WIDTHS[renderMethod]);
+
+    return `
+      min-width: ${desktopWidth};
+      max-width: ${desktopWidth};
+      
+      @media (max-width: 1200px) {
+        min-width: ${mobileWidth};
+        max-width: ${mobileWidth};
+      }
+    `
+  }}
 `;
 
 export const StyledTextInput = styled.input`
   ${standardFieldStyles};
   ${({ hasError }) => hasError && errorStyling}
-  width: 100%;
-`;
-
-export const StyledFieldFullWidth = styled.input`
-  ${standardFieldStyles};
-  ${({ hasError }) => hasError && errorStyling}
-  width: 100%;
-`;
-
-export const StyledFieldWide = styled.input`
-  ${standardFieldStyles};
-  ${({ hasError }) => hasError && errorStyling}
-  min-width: 60%;
-  max-width: 70%;
-`;
-
-export const StyledDoubleFieldRow = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-`;
-
-export const StyledFieldNarrow = styled.input`
-  ${standardFieldStyles};
-  ${({ hasError }) => hasError && errorStyling}
-  flex-grow: 1;
-`;
-
-export const LoneStyledFieldNarrow = styled.input`
-  ${standardFieldStyles};
-  ${({ hasError }) => hasError && errorStyling}
-  width: 35%;
-  flex-grow: 0;
+  
+  ${({ renderMethod }) => {
+    const desktopWidth = getWidth('desktop', FIELDS_RENDER_METHODS_WIDTHS[renderMethod]);
+    const mobileWidth = getWidth('mobile', FIELDS_RENDER_METHODS_WIDTHS[renderMethod]);
+    
+    return `
+      min-width: ${desktopWidth};
+      max-width: ${desktopWidth};
+      
+      @media (max-width: 1200px) {
+        min-width: ${mobileWidth};
+        max-width: ${mobileWidth};
+      }
+    `
+  }}
 `;
 
 export const FormSubmissionWrapper = styled.button`

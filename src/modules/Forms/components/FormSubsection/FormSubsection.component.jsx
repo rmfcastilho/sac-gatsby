@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormSectionHeaderWrapper, StyledFieldFullWidth } from 'modules/Forms/styles/Form.styles';
+import { FormSectionHeaderWrapper } from 'modules/Forms/styles/Form.styles';
 
 import { Field } from 'react-final-form';
 import formatString from 'format-string-by-pattern';
@@ -10,6 +10,7 @@ import FormFieldError from 'modules/Forms/components/FormFieldError/FormFieldErr
 
 import { StyledFormSubsection } from 'modules/Forms/styles/Form.styles';
 
+import StyledField from '../StyledField/StyledField';
 
 const FormSubsection = ({ subsectionData }) => (
   <StyledFormSubsection>
@@ -32,11 +33,12 @@ const FormSubsection = ({ subsectionData }) => (
         >
           {({ input, meta }) => (
             <>
-              <StyledFieldFullWidth
+              <StyledField
                 hasError={meta.error && meta.touched}
                 type={field.type}
                 placeholder={field.placeholder}
-                {...input}
+                renderMethod={field.renderMethod}
+                input={input}
               />
               {meta.error && meta.touched && <FormFieldError error={meta.error} />}
             </>
