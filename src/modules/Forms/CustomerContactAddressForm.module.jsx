@@ -1,7 +1,15 @@
 import React from 'react';
 import { Form } from 'react-final-form';
 
+import { useSelector } from 'react-redux';
+
+import { zipAddressSelector } from 'selectors/addressForm.selectors';
+
+import { getZipData } from 'api/getZipData';
+
 import { FormFieldsWrapper } from './styles/Form.styles';
+
+import { setCustomerAddressFormContent } from 'slices/customerAddressForm.slice';
 
 import { useDispatch } from 'react-redux';
 import { handleFormFieldChange } from 'modules/Forms/helpers/handleFormFieldChange';
@@ -21,12 +29,20 @@ const CustomerContactAddressForm = () => {
   const handleSubmit = () => console.log('Submitted!');
   const handleChange = (event) => handleFormFieldChange(event, FORM_NAMES.CUSTOMER_ADDRESS_FORM, dispatch);
 
+  const zipCode = useSelector(zipAddressSelector);
+
+  const handleButtonClick = async () => {
+    const result = await getZipData(zipCode)
+    console.log(result)
+  };
+
   return (
     <Form
       onSubmit={handleSubmit}
       render={() => (
         <form onChange={handleChange} onSubmit={handleSubmit}>
           <FormFieldsWrapper>
+            <div style={{ cursor: 'pointer' }} role="button" onClick={handleButtonClick}>Click me</div>
             <FormSubsection subsectionData={EXISTING_CUSTOMER_SUBSECTION} />
             <FormSubsection subsectionData={ADDRESS_SUBSECTION} />
             <FormSubsection subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION} />
