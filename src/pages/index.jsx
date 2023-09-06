@@ -8,7 +8,7 @@ import { HEADING_STYLES } from 'constants/heading';
 import { DIVIDER_ORIENTATION } from 'constants/sectionDivider';
 import { HEADERS } from "constants/headers";
 
-import LandingButtons from './index/components/LandingButtons';
+import LandingButtons from 'components/LandingButtons';
 
 
 const Index = () => (

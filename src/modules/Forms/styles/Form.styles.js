@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import * as colors from 'constants/styles/colors';
 import { FONT_WEIGHTS } from 'constants/styles/font';
 
-import { Field } from 'react-final-form';
-
 import { FIELDS_RENDER_METHODS_WIDTHS } from 'modules/Forms/constants/FieldsRenderMethod.constants';
 
 const standardFieldStyles = `

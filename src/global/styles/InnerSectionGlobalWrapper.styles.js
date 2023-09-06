@@ -10,7 +10,6 @@ export const InnerSectionGlobalWrapper = styled.div`
   flex-direction: column;
   margin: 0 auto;
 
-  @media (min-width: ${BREAKPOINT_TABLET}px) {
+  @media (min-width: ${BREAKPOINT_TABLET}) {
     width: 100%;
-    border: 1px solid red;
 `;

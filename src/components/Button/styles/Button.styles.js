@@ -13,15 +13,10 @@ const commonStyling = `
   padding: 0.75rem 0;
   border-radius: 0.75rem;
   width: 100%;
-  max-width: 25rem;
   text-align: center;
   transition: 0.5s ease-in-out;
   font-size: 1rem;
   font-weight: ${FONT_WEIGHTS.BOLD};
-  
-  @media (min-width: ${BREAKPOINT_TABLET}px) {
-    max-width: 16rem;
-  }
 `;
 
 const activeElementsStyling = `

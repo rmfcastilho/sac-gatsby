@@ -5,7 +5,7 @@ import { setIsCustomer } from "slices/isCustomer.slice";
 
 import Button from 'components/Button/Button.component';
 
-import { LandingButtonWrapper } from './LandingButtons.styles';
+import { LandingButtonWrapper } from 'global/styles/LandingButtons.styles';
 
 import { BUTTON_TYPES } from 'constants/button';
 import { LANDING_PAGE_BUTTONS } from "constants/landingPageButtons";
@@ -16,7 +16,6 @@ const LandingButtons = () => {
 
   const buttons = LANDING_PAGE_BUTTONS.map((option) => {
     const { isCustomer, label, target, buttonStyle } = option;
-
     const handleClick = () => dispatch(
       setIsCustomer(isCustomer)
     );

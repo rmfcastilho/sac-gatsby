@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { BREAKPOINT_TABLET } from 'constants/styles/sizes';
 
-
 export const LandingButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,7 +10,7 @@ export const LandingButtonWrapper = styled.div`
   width: 80%;
   justify-content: center;
   
-  @media (min-width: ${BREAKPOINT_TABLET}px) {
-    width: 30%;
+  @media (min-width: ${BREAKPOINT_TABLET}) {
+    width: 50%;
   }
-`
+`;
