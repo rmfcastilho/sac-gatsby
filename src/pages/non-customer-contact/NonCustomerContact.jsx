@@ -7,6 +7,8 @@ import Heading from 'components/Heading/Heading.component';
 import SectionDivider from 'components/SectionDivider/SectionDivider.component';
 import Link from "components/Link/Link.component";
 
+import { FormWrapper } from 'global/styles/Form.styles';
+
 import { contactReasonSelector } from "selectors/contactReason.selectors";
 
 import { FormSubheader } from "global/styles/FormSubheader.styles";
@@ -38,7 +40,9 @@ const NonCustomerContact = () => {
           {FORM_SUBHEADER_TEXT}
       </FormSubheader>
 
-      <NonCustomerForm/>
+      <FormWrapper>
+        <NonCustomerForm/>
+      </FormWrapper>
 
       <Link isBackLink link={ROUTES.NON_CUSTOMER_LANDING}>
           {BACKLINK_LABEL}

@@ -9,10 +9,10 @@ import {
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
   margin: 0 auto;
   text-align: center;
   flex-wrap: wrap;
+  width: 90%;
   
   @media (min-width: ${BREAKPOINT_TABLET}) {
     width: 80%;
@@ -20,7 +20,6 @@ export const Content = styled.div`
   }
   
   @media (min-width: ${BREAKPOINT_DESKTOP}) {
-    width: 80%;
     max-width: 50rem;
   }
 `;

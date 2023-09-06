@@ -5,7 +5,6 @@ import { Field } from 'react-final-form';
 import formatString from 'format-string-by-pattern';
 
 import { useSelector } from 'react-redux';
-import { setCustomerAddressFormContent } from 'slices/customerAddressForm.slice';
 
 import { composeValidators } from 'modules/Forms/helpers/composeValidators';
 

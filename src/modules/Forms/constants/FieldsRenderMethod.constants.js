@@ -9,15 +9,15 @@ export const FIELDS_RENDER_METHOD = {
 export const FIELDS_RENDER_METHODS_WIDTHS = {
   [FIELDS_RENDER_METHOD.FULL_WIDTH]: {
     desktop: '100%',
-    mobile: '',
+    mobile: '100%',
   },
   [FIELDS_RENDER_METHOD.PARTIAL_WIDTH_WIDE]: {
     desktop: '67%',
-    mobile: '65%',
+    mobile: '100%',
   },
   [FIELDS_RENDER_METHOD.PARTIAL_WIDTH_COMPACT]: {
     desktop: '31%',
-    mobile: '33%',
+    mobile: '100%',
   },
   [FIELDS_RENDER_METHOD.PARTIAL_WIDTH_SINGLE]: {
     desktop: '35%',
@@ -25,6 +25,6 @@ export const FIELDS_RENDER_METHODS_WIDTHS = {
   },
   [FIELDS_RENDER_METHOD.PARTIAL_EQUAL]: {
     desktop: '49%',
-    mobile: '49%',
+    mobile: '100%',
   },
 };

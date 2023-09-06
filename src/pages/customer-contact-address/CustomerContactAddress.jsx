@@ -6,6 +6,8 @@ import Heading from 'components/Heading/Heading.component';
 import SectionDivider from 'components/SectionDivider/SectionDivider.component';
 import Link from "components/Link/Link.component";
 
+import { FormWrapper } from 'global/styles/Form.styles';
+
 import { HEADING_STYLES } from 'constants/heading';
 import { DIVIDER_ORIENTATION } from 'constants/sectionDivider';
 import { ROUTES } from "constants/routes";
@@ -34,7 +36,9 @@ const CustomerContactAddress = () => {
         {FORM_SUBHEADER_TEXT}
       </FormSubheader>
 
-      <CustomerContactAddressForm/>
+      <FormWrapper>
+        <CustomerContactAddressForm />
+      </FormWrapper>
 
       <Link isBackLink link={ROUTES.CUSTOMER_LANDING}>
         {BACKLINK_LABEL}

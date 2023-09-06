@@ -9,8 +9,6 @@ import { getZipData } from 'api/getZipData';
 
 import { FormFieldsWrapper } from './styles/Form.styles';
 
-import { setCustomerAddressFormContent } from 'slices/customerAddressForm.slice';
-
 import { useDispatch } from 'react-redux';
 import { handleFormFieldChange } from 'modules/Forms/helpers/handleFormFieldChange';
 

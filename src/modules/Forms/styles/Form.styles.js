@@ -53,7 +53,6 @@ export const FormFieldsWrapper = styled.div`
   width: 100%;
   margin: 0 auto;
   padding-top: 2rem;
-  min-width: 25rem;
   max-width: 32rem;
 `;
 
@@ -62,7 +61,7 @@ export const StyledFormSubsection = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
-  margin: 1rem 0 2rem 0;
+  margin: 1rem 0;
   flex-wrap: wrap;
 `;
 
@@ -82,7 +81,7 @@ export const StyledTextInput = styled.input`
   max-height: 1rem;
 `;
 
-export const FormSubmissionWrapper = styled.button`
+export const FormSubmissionWrapper = styled.div`
   display: flex;
   padding: 2rem 0;
   flex-direction: column;

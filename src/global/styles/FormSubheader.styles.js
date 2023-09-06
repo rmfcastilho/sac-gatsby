@@ -2,13 +2,18 @@ import styled from "styled-components";
 
 import { colorSonicSilver } from "constants/styles/colors";
 import { FONT_WEIGHTS } from "constants/styles/font";
+import { BREAKPOINT_TABLET } from 'constants/styles/sizes';
 
 export const FormSubheader = styled.span`
   font-size: 1.5rem;
   text-align: center;
-  max-width: 18rem;
-  margin: auto;
+  max-width: 100%;
+  margin: 0;
   padding: 1rem 0;
   color: ${colorSonicSilver};
   font-weight: ${FONT_WEIGHTS.BOLD};
+
+  @media (min-width: ${BREAKPOINT_TABLET}px) {
+    max-width: 18rem;
+  }
 `;

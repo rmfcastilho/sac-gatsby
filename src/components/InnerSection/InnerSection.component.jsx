@@ -6,12 +6,17 @@ import {
   InnerSectionWrapper,
   InnerSectionHeader,
   InnerSectionContentWrapper,
+  InnerSectionHeaderText,
 } from "./styles/InnerSection.styles";
 
 
 const InnerSection = ({ header, content }) => (
   <InnerSectionWrapper>
-    <InnerSectionHeader>{header}</InnerSectionHeader>
+    <InnerSectionHeader>
+      <InnerSectionHeaderText>
+        {header}
+      </InnerSectionHeaderText>
+    </InnerSectionHeader>
 
     <InnerSectionContentWrapper>
       {

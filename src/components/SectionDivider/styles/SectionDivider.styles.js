@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const HorizontalLine = styled.hr`
   border: 1px solid rgba(0, 0, 0, 0.2);
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 `
 
 export const VerticalLine = styled.div`

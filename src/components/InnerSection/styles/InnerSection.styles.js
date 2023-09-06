@@ -13,7 +13,7 @@ export const InnerSectionWrapper = styled.div`
 `;
 
 export const InnerSectionHeader = styled.div`
-  padding: 1rem 0.5rem;
+  padding: 1rem 0;
   width: 100%;
   
   background-color: ${colors.colorTurquoiseGreenDark};
@@ -28,3 +28,7 @@ export const InnerSectionContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+export const InnerSectionHeaderText = styled.span`
+  padding-left: 0.5rem;
+`

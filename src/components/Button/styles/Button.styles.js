@@ -5,19 +5,23 @@ import { BUTTON_STYLES } from 'constants/button';
 import * as colors from 'constants/styles/colors';
 import { Link } from 'gatsby';
 import { FONT_WEIGHTS } from 'constants/styles/font';
+import { BREAKPOINT_TABLET } from 'constants/styles/sizes';
 
 
 const commonStyling = `
   color: white;
-  width: fit-content;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0;
   border-radius: 0.75rem;
   width: 100%;
-  max-width: 28rem;
+  max-width: 25rem;
   text-align: center;
   transition: 0.5s ease-in-out;
   font-size: 1rem;
   font-weight: ${FONT_WEIGHTS.BOLD};
+  
+  @media (min-width: ${BREAKPOINT_TABLET}px) {
+    max-width: 16rem;
+  }
 `;
 
 const activeElementsStyling = `

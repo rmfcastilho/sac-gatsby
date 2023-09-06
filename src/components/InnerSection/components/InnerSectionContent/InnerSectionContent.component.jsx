@@ -8,7 +8,8 @@ import { BUTTON_BEHAVIORS } from "constants/button";
 
 import {
   InnerSectionButton,
-  InnerSectionLink
+  InnerSectionLink,
+  InnerSectionLabel,
 } from "./styles/InnerSectionContent.styles";
 
 import { ChevronRightIcon } from "evergreen-ui";
@@ -37,7 +38,7 @@ const InnerSectionContent = ({
     behavior === BUTTON_BEHAVIORS.REDIRECT
       ? (
         <InnerSectionLink key={id} to={behaviorData} onClick={handleContactReason}>
-          {label}
+          <InnerSectionLabel>{label}</InnerSectionLabel>
 
           <IconContainer>
             <ChevronRightIcon size={18}/>
@@ -46,7 +47,7 @@ const InnerSectionContent = ({
       )
       : (
         <InnerSectionButton key={id} onClick={handleClick}>
-          {label}
+          <InnerSectionLabel>{label}</InnerSectionLabel>
 
           <IconContainer>
             <ChevronRightIcon size={18}/>

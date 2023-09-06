@@ -25,6 +25,7 @@ export const TextualLink = styled(props => <Link {...props} />)`
 export const IconContainer = styled.div`
   color: white;
   margin-left: auto;
+  padding-right: 0.5rem;
 `;
 
 export const InnerLinkText = styled.span`

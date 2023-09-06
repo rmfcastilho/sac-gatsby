@@ -14,7 +14,7 @@ import LandingButtons from './index/components/LandingButtons';
 const Index = () => (
   <React.Fragment>
     <Heading type={HEADING_STYLES.SECONDARY}>
-        {HEADERS.QUICK_SOLUTIONS}
+      {HEADERS.QUICK_SOLUTIONS}
     </Heading>
 
     <Faq />
@@ -22,7 +22,7 @@ const Index = () => (
     <SectionDivider type={DIVIDER_ORIENTATION.HORIZONTAL} />
 
     <Heading type={HEADING_STYLES.SECONDARY}>
-        {HEADERS.NEW_REQUEST}
+      {HEADERS.NEW_REQUEST}
     </Heading>
 
     <LandingButtons />

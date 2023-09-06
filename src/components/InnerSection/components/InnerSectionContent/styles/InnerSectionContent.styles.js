@@ -12,7 +12,7 @@ const commonStyling = `
   background-color: ${colors.colorTurquoiseGreen};
   color: ${colors.colorStandardWhite};
   text-align: left;
-  padding: 0.8rem 0.5rem;
+  padding: 0.8rem 0;
   cursor: pointer;
   font-size: 1rem;
   font-weight: ${FONT_WEIGHTS.SEMI_BOLD};
@@ -37,4 +37,8 @@ export const InnerSectionButton = styled.button`
 
 export const InnerSectionLink = styled(props => <Link {...props} />)`
   ${commonStyling};
+`;
+
+export const InnerSectionLabel = styled.span`
+  margin-left: 0.5rem;
 `;
