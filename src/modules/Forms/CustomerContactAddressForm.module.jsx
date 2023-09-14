@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form } from 'react-final-form';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { zipAddressSelector } from 'selectors/addressForm.selectors';
 
@@ -9,7 +9,6 @@ import { getZipData } from 'api/getZipData';
 
 import { FormFieldsWrapper } from './styles/Form.styles';
 
-import { useDispatch } from 'react-redux';
 import { handleFormFieldChange } from 'modules/Forms/helpers/handleFormFieldChange';
 
 import { FORM_NAMES } from 'modules/Forms/constants/FormNames.constants';
@@ -20,27 +19,50 @@ import { MESSAGE_ENTRY_FORM_SUBSECTION } from 'modules/Forms/constants/MessageEn
 import FormSubsection from './components/FormSubsection/FormSubsection.component';
 import FormSubmission from './components/FormSubmission/FormSubmission.component';
 
+import { setCustomerAddressFormContent } from 'slices/customerAddressForm.slice';
+import { addressFieldTransformers } from 'modules/Forms/helpers/addressFieldTransformers';
+
+import { isZipValidValidator } from 'modules/Forms/helpers/fieldValidation';
 
 const CustomerContactAddressForm = () => {
   const dispatch = useDispatch();
+  const [addressData, setAddressData] = useState({});
+  const [isZipValid, setIsZipValid] = useState(false);
 
   const handleSubmit = () => console.log('Submitted!');
   const handleChange = (event) => handleFormFieldChange(event, FORM_NAMES.CUSTOMER_ADDRESS_FORM, dispatch);
 
   const zipCode = useSelector(zipAddressSelector);
 
-  const handleButtonClick = async () => {
-    const result = await getZipData(zipCode)
-    console.log(result)
-  };
+  useEffect(() => {
+    setIsZipValid(isZipValidValidator(zipCode));
+
+    if(isZipValid) {
+      const fetchAddressData = async () => {
+
+        const result = await getZipData(zipCode);
+        setAddressData(result);
+
+        if (result) {
+          dispatch(setCustomerAddressFormContent(
+            addressFieldTransformers(result)
+          ));
+        }
+      };
+
+      if (isZipValidValidator(zipCode)) {
+        fetchAddressData();
+      }
+    }
+  }, [zipCode]);
 
   return (
     <Form
       onSubmit={handleSubmit}
+      initialValues={addressData}
       render={() => (
         <form onChange={handleChange} onSubmit={handleSubmit}>
           <FormFieldsWrapper>
-            <div style={{ cursor: 'pointer' }} role="button" onClick={handleButtonClick}>Click me</div>
             <FormSubsection subsectionData={EXISTING_CUSTOMER_SUBSECTION} />
             <FormSubsection subsectionData={ADDRESS_SUBSECTION} />
             <FormSubsection subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION} />

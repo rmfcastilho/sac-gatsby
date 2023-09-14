@@ -17,7 +17,6 @@ import { streetAddressSelector } from 'selectors/addressForm.selectors';
 
 const FormSubsection = ({ subsectionData }) => {
   const streetAddress = useSelector(streetAddressSelector);
-  console.log(streetAddress)
 
   return (
     <StyledFormSubsection>

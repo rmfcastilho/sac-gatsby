@@ -12,21 +12,21 @@ import { HEADING_STYLES } from "constants/heading";
 import { HEADERS } from "constants/headers";
 
 const StandardTemplate = ({ children }) => (
-  <ContentWrapper>
-    <GlobalStyle />
-    <Modal />
-    <Header />
+<ContentWrapper>
+  <GlobalStyle />
+  <Modal />
+  <Header />
 
-    <Content>
-        <Heading type={HEADING_STYLES.PRIMARY} colored>
-            {HEADERS.HELP_CENTRAL}
-        </Heading>
+  <Content>
+    <Heading type={HEADING_STYLES.PRIMARY} colored>
+      {HEADERS.HELP_CENTRAL}
+    </Heading>
 
-      {children}
-    </Content>
+    {children}
+  </Content>
 
-    <Footer />
-  </ContentWrapper>
+  <Footer />
+</ContentWrapper>
 );
 
 

@@ -46,5 +46,11 @@ export const isCpfValidValidator = (value) => {
   return undefined;
 }
 
+export const isZipValidValidator = (value) => {
+  if (value && !/^\d{5}-\d{3}$/i.test(value)) {
+    return 'Deve ser um CEP válido';
+  }
 
+  return undefined;
+}
 
