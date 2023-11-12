@@ -1,0 +1,714 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2023-10-05 10:25:14
+count workspace : /Users/rodrigocastilho/Desktop/Projects/sac-gatsby
+total files : 685
+total code lines : 541310
+total comment lines : 112105
+total blank lines : 116577
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |            .js|         512029|         112087|         116168|     95|
+   |           .xml|            183|              0|              0|  0.034|
+   |           .iml|             12|              0|              0| 0.0022|
+   |               |              9|              0|              0| 0.0017|
+   |           .jsx|           1040|              0|            331|   0.19|
+   |          .json|          27871|              0|             41|    5.1|
+   |            .md|             34|              9|             20| 0.0063|
+   |           .tsx|             12|              0|              5| 0.0022|
+   |            .ts|             90|              9|             12|  0.017|
+   |           .txt|              2|              0|              0|0.00037|
+   |           .css|              0|              0|              0|    0.0|
+   |          .html|              1|              0|              0|0.00018|
+   |           .map|             27|              0|              0| 0.0050|
+   -------------------------------------------------------------------------
+.cache/.eslintrc.json, code is 10, comment is 0, blank is 0.
+.cache/.parcel-cache/4dd2383efea49e8a, it is a binary file.
+.cache/.parcel-cache/57320e7e1fbcc7d6.txt, code is 2, comment is 0, blank is 0.
+.cache/.parcel-cache/7610ff39c10eded9, it is a binary file.
+.cache/.parcel-cache/89f89de0eb42ac05, it is a binary file.
+.cache/.parcel-cache/beb294f23aabd3e6, it is a binary file.
+.cache/.parcel-cache/data.mdb, it is a binary file.
+.cache/.parcel-cache/lock.mdb, it is a binary file.
+.cache/_this_is_virtual_fs_path_/$virtual/async-requires.js, code is 30, comment is 0, blank is 4.
+.cache/_this_is_virtual_fs_path_/$virtual/loading-indicator.js, code is 5, comment is 0, blank is 1.
+.cache/_this_is_virtual_fs_path_/$virtual/match-paths.json, code is 1, comment is 0, blank is 0.
+.cache/_this_is_virtual_fs_path_/$virtual/sync-requires.js, code is 16, comment is 1, blank is 4.
+.cache/api-runner-browser-plugins.js, code is 10, comment is 0, blank is 0.
+.cache/api-runner-browser.js, code is 43, comment is 2, blank is 7.
+.cache/api-runner-ssr.js, code is 44, comment is 16, blank is 9.
+.cache/api-ssr-docs.js, code is 5, comment is 197, blank is 5.
+.cache/app.js, code is 54, comment is 28, blank is 11.
+.cache/async-requires.js, code is 30, comment is 0, blank is 4.
+.cache/babelState.json, code is 231, comment is 0, blank is 1.
+.cache/blank.css, code is 0, comment is 0, blank is 0.
+.cache/caches-lmdb/data.mdb, it is a binary file.
+.cache/caches-lmdb/lock.mdb, it is a binary file.
+.cache/commonjs/api-runner-browser-plugins.js, code is 2, comment is 12, blank is 1.
+.cache/commonjs/api-runner-browser.js, code is 44, comment is 2, blank is 10.
+.cache/commonjs/api-runner-ssr.js, code is 38, comment is 16, blank is 13.
+.cache/commonjs/api-ssr-docs.js, code is 6, comment is 197, blank is 6.
+.cache/commonjs/app.js, code is 54, comment is 23, blank is 30.
+.cache/commonjs/context-utils.js, code is 20, comment is 3, blank is 8.
+.cache/commonjs/create-content-digest-browser-shim.js, code is 2, comment is 0, blank is 1.
+.cache/commonjs/css-to-object.js, code is 7, comment is 12, blank is 2.
+.cache/commonjs/debug-log.js, code is 7, comment is 1, blank is 2.
+.cache/commonjs/default-html.js, code is 31, comment is 0, blank is 6.
+.cache/commonjs/dev-loader.js, code is 161, comment is 25, blank is 50.
+.cache/commonjs/develop-static-entry.js, code is 124, comment is 1, blank is 29.
+.cache/commonjs/dummy.js, code is 5, comment is 1, blank is 1.
+.cache/commonjs/emitter.js, code is 8, comment is 0, blank is 4.
+.cache/commonjs/ensure-resources.js, code is 96, comment is 4, blank is 28.
+.cache/commonjs/error-overlay-handler.js, code is 33, comment is 0, blank is 9.
+.cache/commonjs/fast-refresh-overlay/components/accordion.js, code is 76, comment is 1, blank is 17.
+.cache/commonjs/fast-refresh-overlay/components/build-error.js, code is 35, comment is 7, blank is 10.
+.cache/commonjs/fast-refresh-overlay/components/code-frame.js, code is 36, comment is 0, blank is 6.
+.cache/commonjs/fast-refresh-overlay/components/dev-ssr-error.js, code is 50, comment is 0, blank is 8.
+.cache/commonjs/fast-refresh-overlay/components/error-boundary.js, code is 20, comment is 1, blank is 9.
+.cache/commonjs/fast-refresh-overlay/components/getserverdata-error.js, code is 45, comment is 0, blank is 11.
+.cache/commonjs/fast-refresh-overlay/components/graphql-errors.js, code is 73, comment is 1, blank is 15.
+.cache/commonjs/fast-refresh-overlay/components/hooks.js, code is 88, comment is 0, blank is 14.
+.cache/commonjs/fast-refresh-overlay/components/overlay.js, code is 143, comment is 1, blank is 18.
+.cache/commonjs/fast-refresh-overlay/components/runtime-errors.js, code is 97, comment is 2, blank is 22.
+.cache/commonjs/fast-refresh-overlay/components/use-id.js, code is 37, comment is 9, blank is 10.
+.cache/commonjs/fast-refresh-overlay/helpers/focus-trap.js, code is 2242, comment is 495, blank is 646.
+.cache/commonjs/fast-refresh-overlay/helpers/keys.js, code is 76, comment is 5, blank is 1.
+.cache/commonjs/fast-refresh-overlay/helpers/lock-body.js, code is 40, comment is 5, blank is 9.
+.cache/commonjs/fast-refresh-overlay/helpers/match.js, code is 19, comment is 22, blank is 6.
+.cache/commonjs/fast-refresh-overlay/index.js, code is 165, comment is 4, blank is 36.
+.cache/commonjs/fast-refresh-overlay/style.js, code is 374, comment is 0, blank is 49.
+.cache/commonjs/fast-refresh-overlay/utils.js, code is 72, comment is 1, blank is 19.
+.cache/commonjs/find-path.js, code is 95, comment is 43, blank is 41.
+.cache/commonjs/gatsby-browser-entry.js, code is 50, comment is 0, blank is 16.
+.cache/commonjs/head/components/fire-callback-in-effect.js, code is 13, comment is 3, blank is 3.
+.cache/commonjs/head/constants.js, code is 5, comment is 0, blank is 1.
+.cache/commonjs/head/head-export-handler-for-browser.js, code is 101, comment is 7, blank is 28.
+.cache/commonjs/head/head-export-handler-for-ssr.js, code is 106, comment is 1, blank is 23.
+.cache/commonjs/head/utils.js, code is 67, comment is 32, blank is 20.
+.cache/commonjs/loader.js, code is 623, comment is 79, blank is 151.
+.cache/commonjs/loading-indicator/index.js, code is 23, comment is 0, blank is 11.
+.cache/commonjs/loading-indicator/indicator.js, code is 38, comment is 1, blank is 10.
+.cache/commonjs/loading-indicator/style.js, code is 92, comment is 0, blank is 15.
+.cache/commonjs/navigation.js, code is 223, comment is 29, blank is 69.
+.cache/commonjs/normalize-page-path.js, code is 20, comment is 0, blank is 8.
+.cache/commonjs/page-renderer.js, code is 53, comment is 1, blank is 15.
+.cache/commonjs/pages.json, code is 1, comment is 0, blank is 0.
+.cache/commonjs/polyfill-entry.js, code is 5, comment is 0, blank is 2.
+.cache/commonjs/prefetch.js, code is 65, comment is 1, blank is 14.
+.cache/commonjs/production-app.js, code is 192, comment is 34, blank is 56.
+.cache/commonjs/public-page-renderer-dev.js, code is 24, comment is 0, blank is 9.
+.cache/commonjs/public-page-renderer-prod.js, code is 28, comment is 0, blank is 10.
+.cache/commonjs/public-page-renderer.js, code is 9, comment is 0, blank is 2.
+.cache/commonjs/query-result-store.js, code is 145, comment is 9, blank is 57.
+.cache/commonjs/react-dom-utils.js, code is 19, comment is 0, blank is 7.
+.cache/commonjs/react-lifecycles-compat.js, code is 2, comment is 0, blank is 1.
+.cache/commonjs/redirect-utils.js, code is 21, comment is 1, blank is 8.
+.cache/commonjs/redirects.json, code is 1, comment is 0, blank is 0.
+.cache/commonjs/register-service-worker.js, code is 49, comment is 12, blank is 9.
+.cache/commonjs/root.js, code is 93, comment is 9, blank is 27.
+.cache/commonjs/route-announcer-props.js, code is 20, comment is 2, blank is 1.
+.cache/commonjs/server-utils/writable-as-promise.js, code is 38, comment is 1, blank is 11.
+.cache/commonjs/shadow-portal.js, code is 34, comment is 0, blank is 7.
+.cache/commonjs/slice.js, code is 88, comment is 14, blank is 25.
+.cache/commonjs/slice/context.js, code is 13, comment is 0, blank is 11.
+.cache/commonjs/slice/inline-slice.js, code is 32, comment is 0, blank is 11.
+.cache/commonjs/slice/server-slice-renderer.js, code is 25, comment is 2, blank is 7.
+.cache/commonjs/slice/server-slice.js, code is 50, comment is 1, blank is 16.
+.cache/commonjs/socketIo.js, code is 47, comment is 9, blank is 14.
+.cache/commonjs/ssr-builtin-trackers/child_process.js, code is 5, comment is 1, blank is 2.
+.cache/commonjs/ssr-builtin-trackers/fs.js, code is 5, comment is 0, blank is 2.
+.cache/commonjs/ssr-builtin-trackers/http.js, code is 7, comment is 0, blank is 2.
+.cache/commonjs/ssr-builtin-trackers/http2.js, code is 5, comment is 0, blank is 2.
+.cache/commonjs/ssr-builtin-trackers/https.js, code is 7, comment is 0, blank is 2.
+.cache/commonjs/ssr-builtin-trackers/tracking-unsafe-module-wrapper.js, code is 40, comment is 12, blank is 13.
+.cache/commonjs/ssr-develop-static-entry.js, code is 296, comment is 6, blank is 66.
+.cache/commonjs/static-entry.js, code is 492, comment is 36, blank is 89.
+.cache/commonjs/static-query.js, code is 63, comment is 7, blank is 21.
+.cache/commonjs/strip-prefix.js, code is 15, comment is 4, blank is 5.
+.cache/context-utils.js, code is 20, comment is 3, blank is 6.
+.cache/create-content-digest-browser-shim.js, code is 1, comment is 0, blank is 0.
+.cache/css-to-object.js, code is 7, comment is 12, blank is 0.
+.cache/data/datastore/data.mdb, it is a binary file.
+.cache/data/datastore/lock.mdb, it is a binary file.
+.cache/data/gatsby-core-utils/data.mdb, it is a binary file.
+.cache/data/gatsby-core-utils/lock.mdb, it is a binary file.
+.cache/debug-log.js, code is 10, comment is 1, blank is 2.
+.cache/default-html.js, code is 34, comment is 0, blank is 2.
+.cache/dev-404-page.js, code is 226, comment is 3, blank is 22.
+.cache/dev-loader.js, code is 172, comment is 25, blank is 28.
+.cache/develop-html/index.html, code is 1, comment is 0, blank is 0.
+.cache/develop-static-entry.js, code is 107, comment is 1, blank is 21.
+.cache/dummy.js, code is 1, comment is 1, blank is 0.
+.cache/emitter.js, code is 3, comment is 0, blank is 1.
+.cache/ensure-resources.js, code is 102, comment is 4, blank is 13.
+.cache/error-overlay-handler.js, code is 32, comment is 0, blank is 4.
+.cache/fast-refresh-overlay/components/accordion.js, code is 75, comment is 1, blank is 7.
+.cache/fast-refresh-overlay/components/build-error.js, code is 36, comment is 7, blank is 3.
+.cache/fast-refresh-overlay/components/code-frame.js, code is 35, comment is 0, blank is 3.
+.cache/fast-refresh-overlay/components/dev-ssr-error.js, code is 55, comment is 0, blank is 2.
+.cache/fast-refresh-overlay/components/error-boundary.js, code is 10, comment is 1, blank is 3.
+.cache/fast-refresh-overlay/components/getserverdata-error.js, code is 49, comment is 0, blank is 4.
+.cache/fast-refresh-overlay/components/graphql-errors.js, code is 94, comment is 1, blank is 5.
+.cache/fast-refresh-overlay/components/hooks.js, code is 86, comment is 0, blank is 12.
+.cache/fast-refresh-overlay/components/overlay.js, code is 128, comment is 1, blank is 14.
+.cache/fast-refresh-overlay/components/runtime-errors.js, code is 109, comment is 2, blank is 11.
+.cache/fast-refresh-overlay/components/use-id.js, code is 38, comment is 9, blank is 9.
+.cache/fast-refresh-overlay/helpers/focus-trap.js, code is 2504, comment is 495, blank is 567.
+.cache/fast-refresh-overlay/helpers/keys.js, code is 63, comment is 5, blank is 12.
+.cache/fast-refresh-overlay/helpers/lock-body.js, code is 37, comment is 5, blank is 10.
+.cache/fast-refresh-overlay/helpers/match.js, code is 16, comment is 22, blank is 4.
+.cache/fast-refresh-overlay/index.js, code is 132, comment is 4, blank is 11.
+.cache/fast-refresh-overlay/style.js, code is 370, comment is 0, blank is 43.
+.cache/fast-refresh-overlay/utils.js, code is 67, comment is 1, blank is 14.
+.cache/find-path.js, code is 90, comment is 44, blank is 28.
+.cache/functions/manifest.json, code is 10, comment is 0, blank is 0.
+.cache/gatsby-browser-entry.js, code is 23, comment is 0, blank is 4.
+.cache/head/components/fire-callback-in-effect.js, code is 7, comment is 3, blank is 2.
+.cache/head/constants.js, code is 9, comment is 0, blank is 0.
+.cache/head/head-export-handler-for-browser.js, code is 104, comment is 6, blank is 18.
+.cache/head/head-export-handler-for-ssr.js, code is 92, comment is 1, blank is 10.
+.cache/head/utils.js, code is 62, comment is 32, blank is 10.
+.cache/loader.js, code is 634, comment is 79, blank is 111.
+.cache/loading-indicator/index.js, code is 15, comment is 0, blank is 4.
+.cache/loading-indicator/indicator.js, code is 38, comment is 1, blank is 2.
+.cache/loading-indicator/style.js, code is 89, comment is 0, blank is 10.
+.cache/match-paths.json, code is 1, comment is 0, blank is 0.
+.cache/navigation.js, code is 197, comment is 29, blank is 31.
+.cache/normalize-page-path.js, code is 16, comment is 0, blank is 1.
+.cache/page-renderer.js, code is 49, comment is 1, blank is 9.
+.cache/page-ssr/index.d.ts, code is 61, comment is 6, blank is 9.
+.cache/page-ssr/routes/component---cache-dev-404-page-js.js, code is 192, comment is 35, blank is 32.
+.cache/page-ssr/routes/component---cache-dev-404-page-js.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---cache-dev-404-page-jshead.js, code is 192, comment is 35, blank is 32.
+.cache/page-ssr/routes/component---cache-dev-404-page-jshead.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-404-jsx.js, code is 127, comment is 29, blank is 28.
+.cache/page-ssr/routes/component---src-pages-404-jsx.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-404-jsxhead.js, code is 127, comment is 29, blank is 28.
+.cache/page-ssr/routes/component---src-pages-404-jsxhead.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-customer-contact-address-customer-contact-address-jsx.js, code is 23011, comment is 5041, blank is 5254.
+.cache/page-ssr/routes/component---src-pages-customer-contact-address-customer-contact-address-jsx.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-customer-contact-address-customer-contact-address-jsxhead.js, code is 23011, comment is 5041, blank is 5254.
+.cache/page-ssr/routes/component---src-pages-customer-contact-address-customer-contact-address-jsxhead.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-customer-contact-address-index-js.js, code is 23011, comment is 5041, blank is 5254.
+.cache/page-ssr/routes/component---src-pages-customer-contact-address-index-js.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-customer-contact-address-index-jshead.js, code is 23011, comment is 5041, blank is 5254.
+.cache/page-ssr/routes/component---src-pages-customer-contact-address-index-jshead.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-customer-contact-customer-contact-jsx.js, code is 22726, comment is 5030, blank is 5226.
+.cache/page-ssr/routes/component---src-pages-customer-contact-customer-contact-jsx.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-customer-contact-customer-contact-jsxhead.js, code is 22726, comment is 5030, blank is 5226.
+.cache/page-ssr/routes/component---src-pages-customer-contact-customer-contact-jsxhead.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-customer-contact-index-js.js, code is 22726, comment is 5030, blank is 5226.
+.cache/page-ssr/routes/component---src-pages-customer-contact-index-js.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-customer-contact-index-jshead.js, code is 22726, comment is 5030, blank is 5226.
+.cache/page-ssr/routes/component---src-pages-customer-contact-index-jshead.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-customer-landing-customer-landing-jsx.js, code is 21476, comment is 4900, blank is 4945.
+.cache/page-ssr/routes/component---src-pages-customer-landing-customer-landing-jsx.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-customer-landing-customer-landing-jsxhead.js, code is 21476, comment is 4900, blank is 4945.
+.cache/page-ssr/routes/component---src-pages-customer-landing-customer-landing-jsxhead.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-customer-landing-index-js.js, code is 21476, comment is 4900, blank is 4945.
+.cache/page-ssr/routes/component---src-pages-customer-landing-index-js.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-customer-landing-index-jshead.js, code is 21476, comment is 4900, blank is 4945.
+.cache/page-ssr/routes/component---src-pages-customer-landing-index-jshead.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-index-jsx.js, code is 21476, comment is 4900, blank is 4945.
+.cache/page-ssr/routes/component---src-pages-index-jsx.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-index-jsxhead.js, code is 21476, comment is 4900, blank is 4945.
+.cache/page-ssr/routes/component---src-pages-index-jsxhead.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-non-customer-contact-index-js.js, code is 22726, comment is 5030, blank is 5226.
+.cache/page-ssr/routes/component---src-pages-non-customer-contact-index-js.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-non-customer-contact-index-jshead.js, code is 22726, comment is 5030, blank is 5226.
+.cache/page-ssr/routes/component---src-pages-non-customer-contact-index-jshead.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-non-customer-contact-non-customer-contact-jsx.js, code is 22726, comment is 5030, blank is 5226.
+.cache/page-ssr/routes/component---src-pages-non-customer-contact-non-customer-contact-jsx.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-non-customer-contact-non-customer-contact-jsxhead.js, code is 22726, comment is 5030, blank is 5226.
+.cache/page-ssr/routes/component---src-pages-non-customer-contact-non-customer-contact-jsxhead.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-non-customer-landing-index-js.js, code is 21476, comment is 4900, blank is 4945.
+.cache/page-ssr/routes/component---src-pages-non-customer-landing-index-js.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-non-customer-landing-index-jshead.js, code is 21476, comment is 4900, blank is 4945.
+.cache/page-ssr/routes/component---src-pages-non-customer-landing-index-jshead.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-non-customer-landing-non-customer-landing-jsx.js, code is 21476, comment is 4900, blank is 4945.
+.cache/page-ssr/routes/component---src-pages-non-customer-landing-non-customer-landing-jsx.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/component---src-pages-non-customer-landing-non-customer-landing-jsxhead.js, code is 21476, comment is 4900, blank is 4945.
+.cache/page-ssr/routes/component---src-pages-non-customer-landing-non-customer-landing-jsxhead.js.map, code is 1, comment is 0, blank is 0.
+.cache/page-ssr/routes/render-page.js, code is 67, comment is 127, blank is 25.
+.cache/page-ssr/routes/render-page.js.map, code is 1, comment is 0, blank is 0.
+.cache/pages.json, code is 1, comment is 0, blank is 0.
+.cache/polyfill-entry.js, code is 4, comment is 0, blank is 1.
+.cache/prefetch.js, code is 67, comment is 1, blank is 13.
+.cache/production-app.js, code is 252, comment is 34, blank is 38.
+.cache/public-page-renderer-dev.js, code is 17, comment is 0, blank is 4.
+.cache/public-page-renderer-prod.js, code is 21, comment is 0, blank is 4.
+.cache/public-page-renderer.js, code is 8, comment is 0, blank is 1.
+.cache/query-engine/index.d.ts, code is 25, comment is 3, blank is 3.
+.cache/query-result-store.js, code is 160, comment is 9, blank is 29.
+.cache/react-dom-utils.js, code is 13, comment is 0, blank is 4.
+.cache/react-lifecycles-compat.js, code is 1, comment is 0, blank is 0.
+.cache/redirect-utils.js, code is 17, comment is 1, blank is 4.
+.cache/redirects.json, code is 1, comment is 0, blank is 0.
+.cache/redux/redux.node.state_0, it is a binary file.
+.cache/redux/redux.page.state_0, it is a binary file.
+.cache/redux/redux.rest.state, it is a binary file.
+.cache/register-service-worker.js, code is 46, comment is 12, blank is 6.
+.cache/root.js, code is 127, comment is 9, blank is 11.
+.cache/route-announcer-props.js, code is 16, comment is 2, blank is 0.
+.cache/server-utils/writable-as-promise.js, code is 34, comment is 1, blank is 6.
+.cache/shadow-portal.js, code is 25, comment is 0, blank is 3.
+.cache/slice.js, code is 105, comment is 14, blank is 20.
+.cache/slice/context.js, code is 11, comment is 0, blank is 2.
+.cache/slice/inline-slice.js, code is 31, comment is 0, blank is 3.
+.cache/slice/server-slice-renderer.js, code is 23, comment is 2, blank is 3.
+.cache/slice/server-slice.js, code is 44, comment is 1, blank is 7.
+.cache/socketIo.js, code is 42, comment is 9, blank is 7.
+.cache/ssr-builtin-trackers/child_process.js, code is 2, comment is 1, blank is 1.
+.cache/ssr-builtin-trackers/fs.js, code is 2, comment is 0, blank is 1.
+.cache/ssr-builtin-trackers/http.js, code is 2, comment is 0, blank is 1.
+.cache/ssr-builtin-trackers/http2.js, code is 2, comment is 0, blank is 1.
+.cache/ssr-builtin-trackers/https.js, code is 2, comment is 0, blank is 1.
+.cache/ssr-builtin-trackers/tracking-unsafe-module-wrapper.js, code is 42, comment is 12, blank is 10.
+.cache/ssr-develop-static-entry.js, code is 301, comment is 6, blank is 53.
+.cache/static-entry.js, code is 475, comment is 36, blank is 78.
+.cache/static-query.js, code is 71, comment is 7, blank is 15.
+.cache/strip-prefix.js, code is 12, comment is 4, blank is 4.
+.cache/sync-requires.js, code is 16, comment is 1, blank is 4.
+.cache/webpack/babel/015921f5b430300cac0d7abf6a8af35c.json.gz, it is a binary file.
+.cache/webpack/babel/015bbe340b2a104957873117ddfdc4a5.json.gz, it is a binary file.
+.cache/webpack/babel/01a011ae0ae648cdfd77a715c64b8d2b.json.gz, it is a binary file.
+.cache/webpack/babel/01b5dbc6b2ae1de80260286f0b59011a.json.gz, it is a binary file.
+.cache/webpack/babel/022b7cab1f3d77933663cf0804f7d5c3.json.gz, it is a binary file.
+.cache/webpack/babel/02f153e07fe5f3aae2193b7ba14cc6b2.json.gz, it is a binary file.
+.cache/webpack/babel/03a3ae847b10082ad14301387b3dc330.json.gz, it is a binary file.
+.cache/webpack/babel/0403c3c3eb1a63e585b41d0a8a70e03b.json.gz, it is a binary file.
+.cache/webpack/babel/0485364273cb9c170f3b48fd19469ad4.json.gz, it is a binary file.
+.cache/webpack/babel/05a5b1502c227970f419055c93bf6b1b.json.gz, it is a binary file.
+.cache/webpack/babel/0675ba839458936f5bd0cc5e89ca32e5.json.gz, it is a binary file.
+.cache/webpack/babel/06db9c87432666887b6f13be3dc4f253.json.gz, it is a binary file.
+.cache/webpack/babel/075f4b4c53fbc2a8aafec86b7f0a6bc0.json.gz, it is a binary file.
+.cache/webpack/babel/09b54fe2dd68002e44733c4d0b50436d.json.gz, it is a binary file.
+.cache/webpack/babel/0a75b6a7fdc370c62a687cb0e64d143a.json.gz, it is a binary file.
+.cache/webpack/babel/0b7589d7159038401f4050c66bb1e9a7.json.gz, it is a binary file.
+.cache/webpack/babel/0c184018de51613e9b23fec9766f7d54.json.gz, it is a binary file.
+.cache/webpack/babel/0caa5013f115414916fc92c757e3d7e1.json.gz, it is a binary file.
+.cache/webpack/babel/0d8fec4959b07934d7342525cd78d85b.json.gz, it is a binary file.
+.cache/webpack/babel/0d9b0e27e8030ed0d01d5d6f00a5ea1a.json.gz, it is a binary file.
+.cache/webpack/babel/0ed02a76123dd7d44e72fdc14f357378.json.gz, it is a binary file.
+.cache/webpack/babel/10d1176d3b27257db914452d6b1d7185.json.gz, it is a binary file.
+.cache/webpack/babel/10d70d4310c0595df2478ab85b2375af.json.gz, it is a binary file.
+.cache/webpack/babel/1253eff2839a9691543ece464c54e230.json.gz, it is a binary file.
+.cache/webpack/babel/141cf9c09b64a2f9c78125200613ee7d.json.gz, it is a binary file.
+.cache/webpack/babel/148d72fd5ef617a27aed5d57755961f1.json.gz, it is a binary file.
+.cache/webpack/babel/14986a2b9add7eebf8e60d219fa01a63.json.gz, it is a binary file.
+.cache/webpack/babel/1566fa5c9a2176c074730443488deba3.json.gz, it is a binary file.
+.cache/webpack/babel/16001eee96aff62716fb13058e52c908.json.gz, it is a binary file.
+.cache/webpack/babel/18157d19404fd7e09dcce77dc2acb208.json.gz, it is a binary file.
+.cache/webpack/babel/18479fbe6dfd620fb605aec465476368.json.gz, it is a binary file.
+.cache/webpack/babel/1b07e97c0beb6a2c92a94e2a649872e1.json.gz, it is a binary file.
+.cache/webpack/babel/1cd90c22ce965799a4df21dbb2ff8eef.json.gz, it is a binary file.
+.cache/webpack/babel/1d760aac06770a0bfb3e61ea06a3fcec.json.gz, it is a binary file.
+.cache/webpack/babel/1dc81d0098583274e5a4050102b9eb38.json.gz, it is a binary file.
+.cache/webpack/babel/1e7c969b50122affba74f258ad312759.json.gz, it is a binary file.
+.cache/webpack/babel/1ea1a43b9bcaabf958b4c0ebf85ea119.json.gz, it is a binary file.
+.cache/webpack/babel/1ea8c0f0d093193af015bc6a33b3ca19.json.gz, it is a binary file.
+.cache/webpack/babel/1f3546aa1f09f79030c8fad65f83292c.json.gz, it is a binary file.
+.cache/webpack/babel/202922baaeba0a82a4a1df756387acd9.json.gz, it is a binary file.
+.cache/webpack/babel/20bdd7319a71f6a39c4cd5c90ea9b020.json.gz, it is a binary file.
+.cache/webpack/babel/20c14f8bdb6a8af3fb05a409c2446577.json.gz, it is a binary file.
+.cache/webpack/babel/21b4a63eb194f3c5727edd7ff9d512ae.json.gz, it is a binary file.
+.cache/webpack/babel/22672dd40aeeaef9d03da86d61042fb6.json.gz, it is a binary file.
+.cache/webpack/babel/22cf56707f2754644cd3e2623af7d157.json.gz, it is a binary file.
+.cache/webpack/babel/22d5dc81a8ba9cdcf7e8d74ff03d5996.json.gz, it is a binary file.
+.cache/webpack/babel/23364742702b3fdd9d380ea514e4e72d.json.gz, it is a binary file.
+.cache/webpack/babel/243612774b397df2b7f765c4e40c74c2.json.gz, it is a binary file.
+.cache/webpack/babel/2484bdd580a684cfddeec13d2e3eb0ff.json.gz, it is a binary file.
+.cache/webpack/babel/24987a115c6b73689e12894998a8bc66.json.gz, it is a binary file.
+.cache/webpack/babel/2541be787419694c130dc45a7c27bf46.json.gz, it is a binary file.
+.cache/webpack/babel/2555c503737818379eef4e8680b3ae41.json.gz, it is a binary file.
+.cache/webpack/babel/263618a42885641bd00ff8c956f2f6e5.json.gz, it is a binary file.
+.cache/webpack/babel/2712d72bfaed79880f6a0daadbb04080.json.gz, it is a binary file.
+.cache/webpack/babel/276059b1beed21d39e0cae3fcb1432fb.json.gz, it is a binary file.
+.cache/webpack/babel/28d996072bd5a62a922a4eea1ac4dd8f.json.gz, it is a binary file.
+.cache/webpack/babel/29a8d7da2cf3ebedf75c0e62ba3ff51a.json.gz, it is a binary file.
+.cache/webpack/babel/2b4f7b5822525e993cb2e59625e8dedd.json.gz, it is a binary file.
+.cache/webpack/babel/2bf28c19cbf1a8aa2768699add44fcb1.json.gz, it is a binary file.
+.cache/webpack/babel/2c08b4c84ff0ab971c7c5785d075a71a.json.gz, it is a binary file.
+.cache/webpack/babel/2cecbe574041fe2ab683eae417955c5e.json.gz, it is a binary file.
+.cache/webpack/babel/2cecf454387eb10aaa3f3e64386aa3da.json.gz, it is a binary file.
+.cache/webpack/babel/2de4c5bdda021f6277c09211311bfa7a.json.gz, it is a binary file.
+.cache/webpack/babel/2e94f335d9fc81fe29c396c2ec1b8251.json.gz, it is a binary file.
+.cache/webpack/babel/2f7065a42f4790ba1ba1bd8fe935614a.json.gz, it is a binary file.
+.cache/webpack/babel/30e7b69bad9b915f67afea7af7fb2784.json.gz, it is a binary file.
+.cache/webpack/babel/3179430e7105e04887a7712508bde9ba.json.gz, it is a binary file.
+.cache/webpack/babel/31c32f9056b84dcd87c2e816d5db1488.json.gz, it is a binary file.
+.cache/webpack/babel/32333ab127e698d28b27bdadb2cb0502.json.gz, it is a binary file.
+.cache/webpack/babel/324ff640d9c2ea1ef7bbed201a86a194.json.gz, it is a binary file.
+.cache/webpack/babel/335389e68fec9d763a5f240ee8cc7789.json.gz, it is a binary file.
+.cache/webpack/babel/340127c2960a88e709773b88e5a8e03d.json.gz, it is a binary file.
+.cache/webpack/babel/36e2439b99aac79de26f36856c062ca8.json.gz, it is a binary file.
+.cache/webpack/babel/38179bbf98d7aa9ff7124ed8b33a4d86.json.gz, it is a binary file.
+.cache/webpack/babel/3895915e8ab70c43d9fac32eef53c86b.json.gz, it is a binary file.
+.cache/webpack/babel/3a46abd9da64a4fd94cf76b418cf2126.json.gz, it is a binary file.
+.cache/webpack/babel/3b0d946b78944e3237255702b97eddfa.json.gz, it is a binary file.
+.cache/webpack/babel/3cd313ff6c6e3138ce5254c3dd69d8e6.json.gz, it is a binary file.
+.cache/webpack/babel/3d3bb5fbc7096c657653aed5934039eb.json.gz, it is a binary file.
+.cache/webpack/babel/3e498d9fc202c34d09908300cf395b49.json.gz, it is a binary file.
+.cache/webpack/babel/3e773309fa6fe319460799696b308fd3.json.gz, it is a binary file.
+.cache/webpack/babel/40335f607e32992118f57bf865ca6b48.json.gz, it is a binary file.
+.cache/webpack/babel/40718645be9ba5c2416d8d7105b72b27.json.gz, it is a binary file.
+.cache/webpack/babel/412e336e8b6978523dae1e4c17dbaa59.json.gz, it is a binary file.
+.cache/webpack/babel/4270e4b8cd09c518e06ab06ea14e80a6.json.gz, it is a binary file.
+.cache/webpack/babel/42e76fd4a45e981a64e52a310d332647.json.gz, it is a binary file.
+.cache/webpack/babel/45a1bb8600b4695752d6bf291df661a4.json.gz, it is a binary file.
+.cache/webpack/babel/47ee50791d4ba501a61abb17868a22e2.json.gz, it is a binary file.
+.cache/webpack/babel/48c8caebe04e427b871e31bf9f92a94c.json.gz, it is a binary file.
+.cache/webpack/babel/48eb8bbc098c68dc81376429e39acb06.json.gz, it is a binary file.
+.cache/webpack/babel/490ca59abe6efd00b975fee497fc4db4.json.gz, it is a binary file.
+.cache/webpack/babel/49db5d0c32baf532de1c790197103ddd.json.gz, it is a binary file.
+.cache/webpack/babel/4ad22f98822363fde224ed192ead1474.json.gz, it is a binary file.
+.cache/webpack/babel/4b47c210ccafa537446e00624df76039.json.gz, it is a binary file.
+.cache/webpack/babel/4c886f685404ba1bcc5781ffa2ee5623.json.gz, it is a binary file.
+.cache/webpack/babel/4cfe52296dd372ae8e7450c4c89d86af.json.gz, it is a binary file.
+.cache/webpack/babel/4d70e518c8980bca470d3d21fcf9d746.json.gz, it is a binary file.
+.cache/webpack/babel/4f5188a8711406649d0b419868da4e60.json.gz, it is a binary file.
+.cache/webpack/babel/4f604cd49639256bb88780872ae5fe53.json.gz, it is a binary file.
+.cache/webpack/babel/4ff008bce3a4fda0721db28a631bc0ed.json.gz, it is a binary file.
+.cache/webpack/babel/50194760b7f516986579dd17abb964a2.json.gz, it is a binary file.
+.cache/webpack/babel/519d3d0eb038fada45758c8c410c39ff.json.gz, it is a binary file.
+.cache/webpack/babel/52232b88f3564b61498437e9c3824960.json.gz, it is a binary file.
+.cache/webpack/babel/53f2540bdf7108864722b78f75646ab1.json.gz, it is a binary file.
+.cache/webpack/babel/5667d372305ce801937332a0be10c8e6.json.gz, it is a binary file.
+.cache/webpack/babel/56a663b17df6148a8920a32286c5104d.json.gz, it is a binary file.
+.cache/webpack/babel/56e0f350f4b2a920c0992dea2ed6bc4f.json.gz, it is a binary file.
+.cache/webpack/babel/57a4301b571d851c3e71a43992dbf956.json.gz, it is a binary file.
+.cache/webpack/babel/585e0c4026e9a9aa772fa5005ad0279e.json.gz, it is a binary file.
+.cache/webpack/babel/5a7f2dfd1f11905487b57afd42cf9b22.json.gz, it is a binary file.
+.cache/webpack/babel/5abf9a8667e55296afa79721c6c0f2c3.json.gz, it is a binary file.
+.cache/webpack/babel/5d0a3bba65cbfdbe7a34fcbbd2dea6ec.json.gz, it is a binary file.
+.cache/webpack/babel/5deb2fc7dd3c5e6404eee949ea401442.json.gz, it is a binary file.
+.cache/webpack/babel/5e9b5abf1e9985d87e8171479f42e19c.json.gz, it is a binary file.
+.cache/webpack/babel/611cf02ec6bf97d5de599ef8115067ac.json.gz, it is a binary file.
+.cache/webpack/babel/651bb0dd7ef37de9ee1f969a11a854b0.json.gz, it is a binary file.
+.cache/webpack/babel/6968f27bdc05504fa6a2e3c9db52d347.json.gz, it is a binary file.
+.cache/webpack/babel/699090b4dfa74f321e9dc99806d03978.json.gz, it is a binary file.
+.cache/webpack/babel/6ae586aec0ec3bada553c477d892b6cb.json.gz, it is a binary file.
+.cache/webpack/babel/6b2b15cd06199d65b5d418cc968c8463.json.gz, it is a binary file.
+.cache/webpack/babel/6b64379bc023d622e1134c5f86527143.json.gz, it is a binary file.
+.cache/webpack/babel/6b7d26e4b4025ab705d0525aacdbecb2.json.gz, it is a binary file.
+.cache/webpack/babel/6ba64614ddc90b2cac90d1fd81d5fcaf.json.gz, it is a binary file.
+.cache/webpack/babel/6cd535ecd49417bcdb4420d1440285cb.json.gz, it is a binary file.
+.cache/webpack/babel/6dc322593ad9311c247d7688e31e7142.json.gz, it is a binary file.
+.cache/webpack/babel/6dd7166795b5938740c1c3a17030e8e2.json.gz, it is a binary file.
+.cache/webpack/babel/71148b244553071499727f0c1a211577.json.gz, it is a binary file.
+.cache/webpack/babel/72c9248041b0997315af2809237b9646.json.gz, it is a binary file.
+.cache/webpack/babel/738cf097eb5230119d911afabbec34ce.json.gz, it is a binary file.
+.cache/webpack/babel/747eea639b5e725020d2a157332b9d0e.json.gz, it is a binary file.
+.cache/webpack/babel/74941797ba5f59c9f4469372153580b3.json.gz, it is a binary file.
+.cache/webpack/babel/7627a3e68d8fd49bd86e61bb62742b31.json.gz, it is a binary file.
+.cache/webpack/babel/76cdb79a7362dd307c06c6b60199bc99.json.gz, it is a binary file.
+.cache/webpack/babel/76dab69bc6fe0617458868a5ff041e03.json.gz, it is a binary file.
+.cache/webpack/babel/76ecf0bd9511abfd754f6bda4e16994f.json.gz, it is a binary file.
+.cache/webpack/babel/775b1cddbd677e3aa7ee4f0aaefe57bb.json.gz, it is a binary file.
+.cache/webpack/babel/78b206e3ede0ddca7ac958b3a2c296d1.json.gz, it is a binary file.
+.cache/webpack/babel/78b2a5d97cc87f7ee2c522452b0966d2.json.gz, it is a binary file.
+.cache/webpack/babel/7a0ba481b5a8860d368bdc54ee3dc5a5.json.gz, it is a binary file.
+.cache/webpack/babel/7ab5124820f6c2c6641d6d17e22ebd20.json.gz, it is a binary file.
+.cache/webpack/babel/7bddbba9b2da161fe365943c316affdd.json.gz, it is a binary file.
+.cache/webpack/babel/7c21b9819008435e25edd553b0901917.json.gz, it is a binary file.
+.cache/webpack/babel/7ec998a99da201ebe4f4a59ad8dc5547.json.gz, it is a binary file.
+.cache/webpack/babel/7f1d0d139835d62790236f74ae1bc2ed.json.gz, it is a binary file.
+.cache/webpack/babel/806aa78b89d3adb4371e48fffbfe1e97.json.gz, it is a binary file.
+.cache/webpack/babel/80db3f786a211f96d8b3e56c828a8ebd.json.gz, it is a binary file.
+.cache/webpack/babel/80de916e908852f509b1cc4d145c95e7.json.gz, it is a binary file.
+.cache/webpack/babel/8107cf47f5ffa139eb9d24578c362b11.json.gz, it is a binary file.
+.cache/webpack/babel/81ea2ec47a5322f4dd413622ffcf1fad.json.gz, it is a binary file.
+.cache/webpack/babel/82f5ff9c18acc05f29e267b899e340be.json.gz, it is a binary file.
+.cache/webpack/babel/833f8bc509ed5ecee81f7372091a8399.json.gz, it is a binary file.
+.cache/webpack/babel/83bda229ca7eb9bce457b09025dcf630.json.gz, it is a binary file.
+.cache/webpack/babel/843c138d3894e671c13bc46052e22330.json.gz, it is a binary file.
+.cache/webpack/babel/84ddf11331278f269605b9d014c9c22b.json.gz, it is a binary file.
+.cache/webpack/babel/860fb8aa70d40e254ccdebb8df55e6c0.json.gz, it is a binary file.
+.cache/webpack/babel/8671ba82a3e70e6a7fad5dcc51bf738f.json.gz, it is a binary file.
+.cache/webpack/babel/8705d93716e044771769c901fedb563d.json.gz, it is a binary file.
+.cache/webpack/babel/878e85794c92d3265791a86e8e691862.json.gz, it is a binary file.
+.cache/webpack/babel/889aee60400a5b3a2be165a0a2ac5327.json.gz, it is a binary file.
+.cache/webpack/babel/88c3aa7e44e7cfa80661415a4da951f1.json.gz, it is a binary file.
+.cache/webpack/babel/89f6383bcbab317efb379689b7206ddf.json.gz, it is a binary file.
+.cache/webpack/babel/8a7aece033aa777bea577b337f877b82.json.gz, it is a binary file.
+.cache/webpack/babel/8cd2e7c835eaa87f4369f8ba0e30fd9e.json.gz, it is a binary file.
+.cache/webpack/babel/8ec20c1e49088f80fcd4b123c1a75228.json.gz, it is a binary file.
+.cache/webpack/babel/90b460a4313b6d7b61da21a5cbe6cb0b.json.gz, it is a binary file.
+.cache/webpack/babel/92c7061e5671ea7d9d2e40f4a0fa7936.json.gz, it is a binary file.
+.cache/webpack/babel/93654f1cc8fab44750d03d57ef9384bb.json.gz, it is a binary file.
+.cache/webpack/babel/940fda9c45c225f9459fed16fe29861c.json.gz, it is a binary file.
+.cache/webpack/babel/944dc08d0fce010d5ba85e5a61a3c3f6.json.gz, it is a binary file.
+.cache/webpack/babel/9527acff1af5385d1a6654e5b2edb697.json.gz, it is a binary file.
+.cache/webpack/babel/9571350a524a927d0bc49b508884f8e7.json.gz, it is a binary file.
+.cache/webpack/babel/9668c5d870c4cf888e7a087c2373a3e7.json.gz, it is a binary file.
+.cache/webpack/babel/969f48fd44fc697d672db74716c60abf.json.gz, it is a binary file.
+.cache/webpack/babel/9762be3bb33341a0de4c396117fb0f24.json.gz, it is a binary file.
+.cache/webpack/babel/984dc84c2054628e4d987e67ebdfbeac.json.gz, it is a binary file.
+.cache/webpack/babel/988f5c43b5a0c622b907a19b66184674.json.gz, it is a binary file.
+.cache/webpack/babel/98f962cca8f42713d04a56e51d5480f3.json.gz, it is a binary file.
+.cache/webpack/babel/99c2a44a9cdcb44dcdef214fc79b94ef.json.gz, it is a binary file.
+.cache/webpack/babel/9ae39829fe44315411e5b772d59fc152.json.gz, it is a binary file.
+.cache/webpack/babel/9b0c636fb0753748cdf2fe720aacbddb.json.gz, it is a binary file.
+.cache/webpack/babel/9c838977d7a151ed814394b57508d7cc.json.gz, it is a binary file.
+.cache/webpack/babel/9d550f92f568033008a1e5f0b712b45c.json.gz, it is a binary file.
+.cache/webpack/babel/9e079c8152ce116ab6efca3659d97fa7.json.gz, it is a binary file.
+.cache/webpack/babel/9eb1faeaa916b6a31cb9745d31f1eef5.json.gz, it is a binary file.
+.cache/webpack/babel/9f2aaf5b548289a7ad32512cd32303d4.json.gz, it is a binary file.
+.cache/webpack/babel/a02e034df0344a1ead98d843dccdafdc.json.gz, it is a binary file.
+.cache/webpack/babel/a03625bf92d368eb40c57754a9a1cd23.json.gz, it is a binary file.
+.cache/webpack/babel/a0d61e924166229164994c04ba5d6adf.json.gz, it is a binary file.
+.cache/webpack/babel/a15da6aaeea67e67f31ca73778576215.json.gz, it is a binary file.
+.cache/webpack/babel/a3e1e8f2b7a64569017b1eb772b52cd2.json.gz, it is a binary file.
+.cache/webpack/babel/a496a0ac4334ef8f8f68ee1af7d5c78a.json.gz, it is a binary file.
+.cache/webpack/babel/a5816238be682f7a5caa020f9834cdd6.json.gz, it is a binary file.
+.cache/webpack/babel/a66611944abec4b65ffaacd750483f10.json.gz, it is a binary file.
+.cache/webpack/babel/a6b1d05e5609802d1dce9de53400e728.json.gz, it is a binary file.
+.cache/webpack/babel/a782d7bfff7c66d5af5d388d8eff0d3b.json.gz, it is a binary file.
+.cache/webpack/babel/a86b9c4c8a053eacf2e58ba1ce54260c.json.gz, it is a binary file.
+.cache/webpack/babel/a982bb16485c8aa37a737a6ac2fbb959.json.gz, it is a binary file.
+.cache/webpack/babel/aa750f7ccbadbde938e4949ef3aa5647.json.gz, it is a binary file.
+.cache/webpack/babel/abe1a524b8cf107badfb183077fa9233.json.gz, it is a binary file.
+.cache/webpack/babel/ac031115e417061265c79817c1aaa1ca.json.gz, it is a binary file.
+.cache/webpack/babel/acd0aab736a67ddb35fe117123ff604d.json.gz, it is a binary file.
+.cache/webpack/babel/ae8e550fa39baff22eaac3d614d4acfa.json.gz, it is a binary file.
+.cache/webpack/babel/aeecf7cb7e37c091b5b715c47f84bfdb.json.gz, it is a binary file.
+.cache/webpack/babel/af1b153422bf81b38248401609414f42.json.gz, it is a binary file.
+.cache/webpack/babel/b09f364d3504d976c0fd736e555dc42b.json.gz, it is a binary file.
+.cache/webpack/babel/b1dec6a7ab263581a5f186fa277f9208.json.gz, it is a binary file.
+.cache/webpack/babel/b2ae001e4c17b34948c4cc6d85e0d9f4.json.gz, it is a binary file.
+.cache/webpack/babel/b2b4440178a732cb43002f236c0e2143.json.gz, it is a binary file.
+.cache/webpack/babel/b2d3cef2d6e1cafc84562ae28df1d53e.json.gz, it is a binary file.
+.cache/webpack/babel/b319f1261fd12a406946b2b57c7a7a2e.json.gz, it is a binary file.
+.cache/webpack/babel/b35595ff007241f14dc13b04eddabeef.json.gz, it is a binary file.
+.cache/webpack/babel/b6e1b23174b8aabcc0ebec1229744e51.json.gz, it is a binary file.
+.cache/webpack/babel/b7e68b6b25f381d2ab7bcae359017a42.json.gz, it is a binary file.
+.cache/webpack/babel/b80d9ca6ced7f4b6d5afdb11f28e2c4e.json.gz, it is a binary file.
+.cache/webpack/babel/ba8ff4768be950551c0c5fa26f6eecb6.json.gz, it is a binary file.
+.cache/webpack/babel/bbcfcbedf36556f7ef943aa2649d8f89.json.gz, it is a binary file.
+.cache/webpack/babel/bdfef0863cb791424d455476366329e9.json.gz, it is a binary file.
+.cache/webpack/babel/c027852db6c6cff0e7231b4e601f3f56.json.gz, it is a binary file.
+.cache/webpack/babel/c161d892d38b33bf8b0b1535d737b0ac.json.gz, it is a binary file.
+.cache/webpack/babel/c3576b9c8510221d43c92389f95a8982.json.gz, it is a binary file.
+.cache/webpack/babel/c40086b510553c84125a75925b0cff39.json.gz, it is a binary file.
+.cache/webpack/babel/c49dfaff5c491052c9d0da170e98ef73.json.gz, it is a binary file.
+.cache/webpack/babel/c4b25b23fe3a5fb8318404ef81a1d7a4.json.gz, it is a binary file.
+.cache/webpack/babel/c5db8be2f4eb5022ed9df6863eaca3c5.json.gz, it is a binary file.
+.cache/webpack/babel/c677bd863ee7faf428d3d5d6f06afb38.json.gz, it is a binary file.
+.cache/webpack/babel/c8f22dba98c8936e3e612401ccfde3d3.json.gz, it is a binary file.
+.cache/webpack/babel/c9c6b0dba9254b3bb79a9ef83dac44d2.json.gz, it is a binary file.
+.cache/webpack/babel/cdfd76b5f5ba558a7382debe00cb3578.json.gz, it is a binary file.
+.cache/webpack/babel/d0841258344e1165a76b21fa48732abd.json.gz, it is a binary file.
+.cache/webpack/babel/d122b0e72dd2e11ea78cd2660c33bb28.json.gz, it is a binary file.
+.cache/webpack/babel/d1c2d78c99f05b9173ccad2351ce1433.json.gz, it is a binary file.
+.cache/webpack/babel/d2a7828a4a44a1d4156d234ff0484b76.json.gz, it is a binary file.
+.cache/webpack/babel/d30fe3155328ad348e20e5762f4c69c2.json.gz, it is a binary file.
+.cache/webpack/babel/d3d828f3591906444400055ab100338d.json.gz, it is a binary file.
+.cache/webpack/babel/d468cabe4aacf1ff78e947d184831e95.json.gz, it is a binary file.
+.cache/webpack/babel/d49eb81bb69ab4f428ed9e10040b2f16.json.gz, it is a binary file.
+.cache/webpack/babel/d5b25bbe9c9fc0fe8201c2c67b171683.json.gz, it is a binary file.
+.cache/webpack/babel/d6554722671ef32ec767c27093fb82ca.json.gz, it is a binary file.
+.cache/webpack/babel/d750f37d258983de5fff1dbe7b77514e.json.gz, it is a binary file.
+.cache/webpack/babel/d90b620d748ab756140d2ac103cafae0.json.gz, it is a binary file.
+.cache/webpack/babel/d94f09847b6289ce7762c7f4277db0f4.json.gz, it is a binary file.
+.cache/webpack/babel/dc9bf4223975528fb7738c07b95bb4c8.json.gz, it is a binary file.
+.cache/webpack/babel/e00c9ca4e903815f24a988242c73cdce.json.gz, it is a binary file.
+.cache/webpack/babel/e12df323d38c52f95e16ffdb5440e4cf.json.gz, it is a binary file.
+.cache/webpack/babel/e240f9b81f935fc6939c904905fea14e.json.gz, it is a binary file.
+.cache/webpack/babel/e263ac17ec6e73031d7aec0f2f8517bb.json.gz, it is a binary file.
+.cache/webpack/babel/e42438ea833ca19d071b57e6281e4d21.json.gz, it is a binary file.
+.cache/webpack/babel/e533db1500066e78484678457cc4525f.json.gz, it is a binary file.
+.cache/webpack/babel/e7a862f5b76c6699d9616a6e02da6123.json.gz, it is a binary file.
+.cache/webpack/babel/e7b8c17cc4e8a499d29a866ab6b1e45a.json.gz, it is a binary file.
+.cache/webpack/babel/e81502011889e747766aa062e80bc201.json.gz, it is a binary file.
+.cache/webpack/babel/e89cf681e7fba90691bb675faf23a468.json.gz, it is a binary file.
+.cache/webpack/babel/e93f87635636c56dfd5d130f5c53ee91.json.gz, it is a binary file.
+.cache/webpack/babel/e9422ceac72e77ee12dea597ddf39d47.json.gz, it is a binary file.
+.cache/webpack/babel/e96bdfce95738e8db15389f754cc99bc.json.gz, it is a binary file.
+.cache/webpack/babel/ea092f34367817f344dd58e9bd8ad8b5.json.gz, it is a binary file.
+.cache/webpack/babel/ea93272a909e3acfc1974a10845e7ea6.json.gz, it is a binary file.
+.cache/webpack/babel/eaa58960507f657e0789ed38c3313e92.json.gz, it is a binary file.
+.cache/webpack/babel/eaae537df14f009226d5cee347fb32da.json.gz, it is a binary file.
+.cache/webpack/babel/eb9384ec69d2b5e0382f42f1a510dc06.json.gz, it is a binary file.
+.cache/webpack/babel/ebed12ac13ca39489e5da1f0604560b5.json.gz, it is a binary file.
+.cache/webpack/babel/ec39d37af1c0ccd67448aaccd72f9fe7.json.gz, it is a binary file.
+.cache/webpack/babel/ec51dad56152f0514a886a9953da6504.json.gz, it is a binary file.
+.cache/webpack/babel/ed1589cb9a61ceada2af552bf16bd074.json.gz, it is a binary file.
+.cache/webpack/babel/ed22a8d9017ace73f68d7c279e18f3b6.json.gz, it is a binary file.
+.cache/webpack/babel/ed47e3ace13e64e6c1ff3564fe7ecb43.json.gz, it is a binary file.
+.cache/webpack/babel/ed9cf025347a36fd5630e785aa61d453.json.gz, it is a binary file.
+.cache/webpack/babel/ee6ebb4c28fb5a888c3155b405a465df.json.gz, it is a binary file.
+.cache/webpack/babel/ef601b0564cdc8c4005fcd419c2afc00.json.gz, it is a binary file.
+.cache/webpack/babel/f09283e98a54cd8ca0903560d32b0cbf.json.gz, it is a binary file.
+.cache/webpack/babel/f0fd51a238ab219f45a4533bc3a0200d.json.gz, it is a binary file.
+.cache/webpack/babel/f1709be23c4994fddbd755f089934b76.json.gz, it is a binary file.
+.cache/webpack/babel/f2a139362f0cbfb6173e42d74a2c9023.json.gz, it is a binary file.
+.cache/webpack/babel/f2c7eb8fd0d849cc0ac85ae79423d637.json.gz, it is a binary file.
+.cache/webpack/babel/f365f11cee0c29ba5a6f4146ffa0a3bf.json.gz, it is a binary file.
+.cache/webpack/babel/f451887cc1bc28e6925af23d402091e3.json.gz, it is a binary file.
+.cache/webpack/babel/f4e220f1b6bdf0dac05108b596c7faa1.json.gz, it is a binary file.
+.cache/webpack/babel/f5c449f2f19c3a8e637f5c50533b6b7b.json.gz, it is a binary file.
+.cache/webpack/babel/f6dc114cbc66abe91c8e7a5b080ab69f.json.gz, it is a binary file.
+.cache/webpack/babel/f704f597a02cf0827b634887e7fd5f12.json.gz, it is a binary file.
+.cache/webpack/babel/f7095066050bf0ad19ad6599de8c3fe2.json.gz, it is a binary file.
+.cache/webpack/babel/f78457ef39e663a6c59191d0a52bee81.json.gz, it is a binary file.
+.cache/webpack/babel/f7a1dbd878e499006e93c7a9a3f88911.json.gz, it is a binary file.
+.cache/webpack/babel/f9b4a0a460d18f312a773862043543fd.json.gz, it is a binary file.
+.cache/webpack/babel/f9d3581b1cfb9589f7dd59c34e7cfed0.json.gz, it is a binary file.
+.cache/webpack/babel/f9e0d19a51bc16d94b950d095b20daca.json.gz, it is a binary file.
+.cache/webpack/babel/fc65538d93a3d32ff51d2aada9a32f46.json.gz, it is a binary file.
+.cache/webpack/babel/ffdecb50abdb023f09fbf790aeb1dd63.json.gz, it is a binary file.
+.cache/webpack/stage-develop-html/0.pack, it is a binary file.
+.cache/webpack/stage-develop-html/index.pack, it is a binary file.
+.cache/webpack/stage-develop/0.pack, it is a binary file.
+.cache/webpack/stage-develop/index.pack, it is a binary file.
+.gitignore, code is 4, comment is 0, blank is 0.
+.idea/.gitignore, code is 5, comment is 0, blank is 0.
+.idea/active-tab-highlighter.xml, code is 13, comment is 0, blank is 0.
+.idea/codeStyles/codeStyleConfig.xml, code is 5, comment is 0, blank is 0.
+.idea/modules.xml, code is 8, comment is 0, blank is 0.
+.idea/sac-gatsby.iml, code is 12, comment is 0, blank is 0.
+.idea/vcs.xml, code is 6, comment is 0, blank is 0.
+.idea/webResources.xml, code is 14, comment is 0, blank is 0.
+.idea/workspace.xml, code is 137, comment is 0, blank is 0.
+gatsby-browser.js, code is 11, comment is 0, blank is 3.
+gatsby-config.js, code is 12, comment is 1, blank is 1.
+package-lock.json, code is 27566, comment is 0, blank is 39.
+package.json, code is 41, comment is 0, blank is 1.
+public/page-data/404.html/page-data.json, code is 1, comment is 0, blank is 0.
+public/page-data/customer-contact/page-data.json, code is 1, comment is 0, blank is 0.
+public/page-data/customer-landing/page-data.json, code is 1, comment is 0, blank is 0.
+public/page-data/dev-404-page/page-data.json, code is 1, comment is 0, blank is 0.
+public/page-data/index/page-data.json, code is 1, comment is 0, blank is 0.
+public/page-data/non-customer-contact/page-data.json, code is 1, comment is 0, blank is 0.
+public/page-data/non-customer-landing/page-data.json, code is 1, comment is 0, blank is 0.
+public/~partytown/debug/partytown-atomics.js, code is 535, comment is 1, blank is 0.
+public/~partytown/debug/partytown-media.js, code is 373, comment is 1, blank is 0.
+public/~partytown/debug/partytown-sandbox-sw.js, code is 522, comment is 1, blank is 0.
+public/~partytown/debug/partytown-sw.js, code is 51, comment is 1, blank is 7.
+public/~partytown/debug/partytown-ww-atomics.js, code is 1708, comment is 1, blank is 0.
+public/~partytown/debug/partytown-ww-sw.js, code is 1700, comment is 1, blank is 0.
+public/~partytown/debug/partytown.js, code is 71, comment is 1, blank is 0.
+public/~partytown/partytown-atomics.js, code is 1, comment is 1, blank is 0.
+public/~partytown/partytown-media.js, code is 1, comment is 1, blank is 0.
+public/~partytown/partytown-sw.js, code is 1, comment is 1, blank is 0.
+public/~partytown/partytown.js, code is 1, comment is 1, blank is 0.
+README.md, code is 34, comment is 9, blank is 20.
+src/api/getZipData.js, code is 12, comment is 1, blank is 4.
+src/components/Button/Button.component.jsx, code is 33, comment is 0, blank is 7.
+src/components/Button/components/LinkAsButton.component.jsx, code is 28, comment is 0, blank is 6.
+src/components/Button/styles/Button.styles.js, code is 47, comment is 0, blank is 12.
+src/components/CollapsibleSegment/CollapsibleSegment.component.tsx, code is 12, comment is 0, blank is 5.
+src/components/CollapsibleSegment/types/CollapsibleSegment.types.ts, code is 4, comment is 0, blank is 0.
+src/components/Faq/components/FaqUnit.component.jsx, code is 28, comment is 0, blank is 9.
+src/components/Faq/Faq.component.jsx, code is 12, comment is 0, blank is 6.
+src/components/Faq/styles/FAQ.styles.js, code is 32, comment is 0, blank is 8.
+src/components/Footer/Footer.component.jsx, code is 15, comment is 0, blank is 5.
+src/components/Footer/styles/Footer.styles.js, code is 25, comment is 0, blank is 5.
+src/components/Header/Header.component.jsx, code is 13, comment is 0, blank is 6.
+src/components/Header/styles/Header.styles.js, code is 9, comment is 0, blank is 3.
+src/components/Heading/Heading.component.jsx, code is 7, comment is 0, blank is 6.
+src/components/Heading/styles/Heading.styles.js, code is 27, comment is 0, blank is 8.
+src/components/InnerSection/components/InnerSectionContent/index.js, code is 1, comment is 0, blank is 0.
+src/components/InnerSection/components/InnerSectionContent/InnerSectionContent.component.jsx, code is 48, comment is 0, blank is 13.
+src/components/InnerSection/components/InnerSectionContent/styles/InnerSectionContent.styles.js, code is 36, comment is 0, blank is 8.
+src/components/InnerSection/InnerSection.component.jsx, code is 28, comment is 0, blank is 7.
+src/components/InnerSection/styles/InnerSection.styles.js, code is 28, comment is 0, blank is 6.
+src/components/LandingButtons/index.js, code is 1, comment is 0, blank is 0.
+src/components/LandingButtons/LandingButtons.jsx, code is 31, comment is 0, blank is 11.
+src/components/Link/Link.component.jsx, code is 13, comment is 0, blank is 6.
+src/components/Link/styles/Link.styles.js, code is 26, comment is 0, blank is 7.
+src/components/SectionDivider/SectionDivider.component.jsx, code is 7, comment is 0, blank is 4.
+src/components/SectionDivider/styles/SectionDivider.styles.js, code is 14, comment is 0, blank is 2.
+src/constants/backlink.js, code is 1, comment is 0, blank is 0.
+src/constants/button.js, code is 14, comment is 0, blank is 2.
+src/constants/form.js, code is 1, comment is 0, blank is 0.
+src/constants/headers.js, code is 8, comment is 0, blank is 0.
+src/constants/heading.js, code is 4, comment is 0, blank is 0.
+src/constants/landingPageButtons.js, code is 17, comment is 0, blank is 1.
+src/constants/modal.js, code is 18, comment is 0, blank is 0.
+src/constants/questionTypes.js, code is 5, comment is 0, blank is 0.
+src/constants/resourceUrls.js, code is 9, comment is 0, blank is 0.
+src/constants/routes.js, code is 8, comment is 0, blank is 0.
+src/constants/sectionDivider.js, code is 4, comment is 0, blank is 0.
+src/constants/styles/colors.js, code is 10, comment is 0, blank is 0.
+src/constants/styles/font.js, code is 11, comment is 0, blank is 0.
+src/constants/styles/sizes.js, code is 2, comment is 1, blank is 1.
+src/global/assets/images/logo.jsx, code is 33, comment is 0, blank is 4.
+src/global/data/currentCustomerInnerSections.js, code is 131, comment is 0, blank is 2.
+src/global/data/faq.js, code is 17, comment is 0, blank is 0.
+src/global/data/nonCustomerInnerSections.js, code is 83, comment is 0, blank is 3.
+src/global/styles/Form.styles.js, code is 5, comment is 0, blank is 2.
+src/global/styles/FormSubheader.styles.js, code is 16, comment is 0, blank is 3.
+src/global/styles/global.styles.js, code is 16, comment is 0, blank is 7.
+src/global/styles/InnerSectionGlobalWrapper.styles.js, code is 12, comment is 0, blank is 3.
+src/global/styles/LandingButtons.styles.js, code is 14, comment is 0, blank is 2.
+src/modules/Forms/components/FormFieldError/FormFieldError.jsx, code is 10, comment is 0, blank is 6.
+src/modules/Forms/components/FormFieldError/FormFieldError.styles.js, code is 20, comment is 0, blank is 3.
+src/modules/Forms/components/FormSubmission/FormSubmission.component.jsx, code is 17, comment is 0, blank is 7.
+src/modules/Forms/components/FormSubsection/FormSubsection.component.jsx, code is 47, comment is 0, blank is 13.
+src/modules/Forms/components/StyledField/StyledField.jsx, code is 16, comment is 0, blank is 5.
+src/modules/Forms/constants/AddressForm.constants.js, code is 66, comment is 0, blank is 2.
+src/modules/Forms/constants/ExistingCustomerIdentificationForm.constants.js, code is 43, comment is 0, blank is 2.
+src/modules/Forms/constants/FieldsRenderMethod.constants.js, code is 29, comment is 0, blank is 1.
+src/modules/Forms/constants/FormActions.constants.js, code is 9, comment is 0, blank is 3.
+src/modules/Forms/constants/FormNames.constants.js, code is 5, comment is 0, blank is 0.
+src/modules/Forms/constants/HighLevelCategories.constants.js, code is 26, comment is 0, blank is 4.
+src/modules/Forms/constants/MessageEntryForm.constants.js, code is 25, comment is 0, blank is 2.
+src/modules/Forms/constants/NonCustomerIdentificationForm.constants.js, code is 25, comment is 0, blank is 2.
+src/modules/Forms/CustomerContactAddressForm.module.jsx, code is 58, comment is 0, blank is 21.
+src/modules/Forms/CustomerContactForm.module.jsx, code is 30, comment is 0, blank is 12.
+src/modules/Forms/helpers/addressFieldTransformers.js, code is 10, comment is 0, blank is 1.
+src/modules/Forms/helpers/composeValidators.js, code is 1, comment is 0, blank is 1.
+src/modules/Forms/helpers/fieldValidation.js, code is 42, comment is 0, blank is 14.
+src/modules/Forms/helpers/handleFormFieldChange.js, code is 10, comment is 0, blank is 3.
+src/modules/Forms/NonCustomerForm.module.jsx, code is 30, comment is 0, blank is 13.
+src/modules/Forms/styles/Form.styles.js, code is 85, comment is 0, blank is 18.
+src/modules/Modal/components/CloseModalButton.component.jsx, code is 15, comment is 0, blank is 7.
+src/modules/Modal/components/InnerModalContent.component.jsx, code is 29, comment is 0, blank is 8.
+src/modules/Modal/components/ModalModule.jsx, code is 46, comment is 0, blank is 12.
+src/modules/Modal/components/ProductCompositionModule/constants/ProductComposition.constants.js, code is 106, comment is 0, blank is 0.
+src/modules/Modal/components/ProductCompositionModule/constants/ProductCompositionModal.constants.js, code is 1, comment is 0, blank is 0.
+src/modules/Modal/components/ProductCompositionModule/ProductCompositionDetails.component.jsx, code is 47, comment is 0, blank is 11.
+src/modules/Modal/components/ProductCompositionModule/ProductCompositionIndex.component.jsx, code is 34, comment is 0, blank is 10.
+src/modules/Modal/components/ProductCompositionModule/ProductCompositionModule.component.jsx, code is 30, comment is 0, blank is 9.
+src/modules/Modal/components/ProductCompositionModule/styles/ProductCompositionModule.styles.js, code is 15, comment is 0, blank is 13.
+src/modules/Modal/components/styles/CloseModalButton.styles.js, code is 21, comment is 0, blank is 4.
+src/modules/Modal/components/styles/InnerModalContent.styles.js, code is 36, comment is 0, blank is 7.
+src/modules/Modal/components/TimedButton.component.jsx, code is 27, comment is 0, blank is 9.
+src/modules/Modal/constants/ModalTextContent.js, code is 139, comment is 0, blank is 3.
+src/modules/Modal/constants/ModalTypes.js, code is 4, comment is 0, blank is 0.
+src/modules/Modal/Modal.component.jsx, code is 25, comment is 0, blank is 10.
+src/modules/Modal/styles/ReactModalStyles.js, code is 16, comment is 0, blank is 0.
+src/pages/404.jsx, code is 44, comment is 0, blank is 5.
+src/pages/customer-contact-address/CustomerContactAddress.jsx, code is 37, comment is 0, blank is 13.
+src/pages/customer-contact-address/index.js, code is 1, comment is 0, blank is 0.
+src/pages/customer-contact/CustomerContact.jsx, code is 39, comment is 0, blank is 11.
+src/pages/customer-contact/index.js, code is 1, comment is 0, blank is 0.
+src/pages/customer-landing/CustomerLanding.jsx, code is 39, comment is 0, blank is 12.
+src/pages/customer-landing/index.js, code is 1, comment is 0, blank is 0.
+src/pages/index.jsx, code is 22, comment is 0, blank is 11.
+src/pages/non-customer-contact/index.js, code is 1, comment is 0, blank is 0.
+src/pages/non-customer-contact/NonCustomerContact.jsx, code is 39, comment is 0, blank is 16.
+src/pages/non-customer-landing/index.js, code is 1, comment is 0, blank is 0.
+src/pages/non-customer-landing/NonCustomerLanding.jsx, code is 39, comment is 0, blank is 11.
+src/selectors/addressForm.selectors.js, code is 18, comment is 0, blank is 7.
+src/selectors/contactReason.selectors.js, code is 6, comment is 0, blank is 4.
+src/selectors/formSelectors.selectors.js, code is 6, comment is 0, blank is 5.
+src/selectors/modal.selectors.js, code is 14, comment is 0, blank is 6.
+src/slices/contactReason.slice.js, code is 13, comment is 0, blank is 5.
+src/slices/customerAddressForm.slice.js, code is 46, comment is 0, blank is 10.
+src/slices/customerContactForm.slice.js, code is 36, comment is 0, blank is 9.
+src/slices/isCustomer.slice.js, code is 13, comment is 0, blank is 6.
+src/slices/modal.slice.js, code is 20, comment is 0, blank is 8.
+src/slices/nonCustomerForm.slice.js, code is 34, comment is 0, blank is 9.
+src/store/store.js, code is 17, comment is 0, blank is 2.
+src/templates/StandardTemplate.component.jsx, code is 24, comment is 0, blank is 9.
+src/templates/styles/StandardTemplate.style.js, code is 25, comment is 0, blank is 6.
+src/workers/sendEmails.worker.js, code is 6, comment is 0, blank is 2.
+src/workers/sendEmailToCustomer.js, code is 24, comment is 0, blank is 4.
+src/workers/sendEmailToSac.js, code is 3, comment is 0, blank is 4.
+===============================================================================

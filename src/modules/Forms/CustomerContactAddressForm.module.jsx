@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Form } from 'react-final-form';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { zipAddressSelector } from 'selectors/addressForm.selectors';
 
@@ -35,24 +35,27 @@ const CustomerContactAddressForm = () => {
   const zipCode = useSelector(zipAddressSelector);
 
   useEffect(() => {
-    setIsZipValid(isZipValidValidator(zipCode));
+    const zipChecker = zipCode && !isZipValidValidator(zipCode);
+    setIsZipValid(zipChecker);
 
-    if(isZipValid) {
+    if (zipChecker) {
       const fetchAddressData = async () => {
+        try {
+          return await getZipData(zipCode);
+        } catch (error) {
+          console.error('Error fetching zip data', error);
+          return null;
+        }
+      }
 
-        const result = await getZipData(zipCode);
-        setAddressData(result);
+      fetchAddressData().then((result) => {
+        console.log('result', result);
 
         if (result) {
-          dispatch(setCustomerAddressFormContent(
-            addressFieldTransformers(result)
-          ));
+          setAddressData(result);
+          dispatch(setCustomerAddressFormContent(addressFieldTransformers(result)));
         }
-      };
-
-      if (isZipValidValidator(zipCode)) {
-        fetchAddressData();
-      }
+      });
     }
   }, [zipCode]);
 

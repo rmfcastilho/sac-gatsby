@@ -1,0 +1,723 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "/Users/rodrigocastilho/Desktop/Projects/sac-gatsby/src",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2023-10-05 10:25:56",
+            "filesum": 114,
+            "codesum": 2740,
+            "commentsum": 2,
+            "blanksum": 595,
+            "statistics": {
+                ".js": {
+                    "code": 1684,
+                    "comment": 2,
+                    "blank": 259
+                },
+                ".jsx": {
+                    "code": 1040,
+                    "comment": 0,
+                    "blank": 331
+                },
+                ".tsx": {
+                    "code": 12,
+                    "comment": 0,
+                    "blank": 5
+                },
+                ".ts": {
+                    "code": 4,
+                    "comment": 0,
+                    "blank": 0
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 1,
+                    "filename": "api/getZipData.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "components/Button/Button.component.jsx"
+                },
+                {
+                    "blank": 6,
+                    "code": 28,
+                    "comment": 0,
+                    "filename": "components/Button/components/LinkAsButton.component.jsx"
+                },
+                {
+                    "blank": 12,
+                    "code": 47,
+                    "comment": 0,
+                    "filename": "components/Button/styles/Button.styles.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "components/CollapsibleSegment/CollapsibleSegment.component.tsx"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "components/CollapsibleSegment/types/CollapsibleSegment.types.ts"
+                },
+                {
+                    "blank": 9,
+                    "code": 28,
+                    "comment": 0,
+                    "filename": "components/Faq/components/FaqUnit.component.jsx"
+                },
+                {
+                    "blank": 6,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "components/Faq/Faq.component.jsx"
+                },
+                {
+                    "blank": 8,
+                    "code": 32,
+                    "comment": 0,
+                    "filename": "components/Faq/styles/FAQ.styles.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "components/Footer/Footer.component.jsx"
+                },
+                {
+                    "blank": 5,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "components/Footer/styles/Footer.styles.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "components/Header/Header.component.jsx"
+                },
+                {
+                    "blank": 3,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "components/Header/styles/Header.styles.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "components/Heading/Heading.component.jsx"
+                },
+                {
+                    "blank": 8,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "components/Heading/styles/Heading.styles.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "components/InnerSection/components/InnerSectionContent/index.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 48,
+                    "comment": 0,
+                    "filename": "components/InnerSection/components/InnerSectionContent/InnerSectionContent.component.jsx"
+                },
+                {
+                    "blank": 8,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "components/InnerSection/components/InnerSectionContent/styles/InnerSectionContent.styles.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 28,
+                    "comment": 0,
+                    "filename": "components/InnerSection/InnerSection.component.jsx"
+                },
+                {
+                    "blank": 6,
+                    "code": 28,
+                    "comment": 0,
+                    "filename": "components/InnerSection/styles/InnerSection.styles.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "components/LandingButtons/index.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 31,
+                    "comment": 0,
+                    "filename": "components/LandingButtons/LandingButtons.jsx"
+                },
+                {
+                    "blank": 6,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "components/Link/Link.component.jsx"
+                },
+                {
+                    "blank": 7,
+                    "code": 26,
+                    "comment": 0,
+                    "filename": "components/Link/styles/Link.styles.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "components/SectionDivider/SectionDivider.component.jsx"
+                },
+                {
+                    "blank": 2,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "components/SectionDivider/styles/SectionDivider.styles.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "constants/backlink.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "constants/button.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "constants/form.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "constants/headers.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "constants/heading.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "constants/landingPageButtons.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "constants/modal.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "constants/questionTypes.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "constants/resourceUrls.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "constants/routes.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "constants/sectionDivider.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "constants/styles/colors.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "constants/styles/font.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "constants/styles/sizes.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "global/assets/images/logo.jsx"
+                },
+                {
+                    "blank": 2,
+                    "code": 131,
+                    "comment": 0,
+                    "filename": "global/data/currentCustomerInnerSections.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "global/data/faq.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 83,
+                    "comment": 0,
+                    "filename": "global/data/nonCustomerInnerSections.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "global/styles/Form.styles.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "global/styles/FormSubheader.styles.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "global/styles/global.styles.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "global/styles/InnerSectionGlobalWrapper.styles.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "global/styles/LandingButtons.styles.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "modules/Forms/components/FormFieldError/FormFieldError.jsx"
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "modules/Forms/components/FormFieldError/FormFieldError.styles.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "modules/Forms/components/FormSubmission/FormSubmission.component.jsx"
+                },
+                {
+                    "blank": 13,
+                    "code": 47,
+                    "comment": 0,
+                    "filename": "modules/Forms/components/FormSubsection/FormSubsection.component.jsx"
+                },
+                {
+                    "blank": 5,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "modules/Forms/components/StyledField/StyledField.jsx"
+                },
+                {
+                    "blank": 2,
+                    "code": 66,
+                    "comment": 0,
+                    "filename": "modules/Forms/constants/AddressForm.constants.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 43,
+                    "comment": 0,
+                    "filename": "modules/Forms/constants/ExistingCustomerIdentificationForm.constants.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 29,
+                    "comment": 0,
+                    "filename": "modules/Forms/constants/FieldsRenderMethod.constants.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "modules/Forms/constants/FormActions.constants.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "modules/Forms/constants/FormNames.constants.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 26,
+                    "comment": 0,
+                    "filename": "modules/Forms/constants/HighLevelCategories.constants.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "modules/Forms/constants/MessageEntryForm.constants.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "modules/Forms/constants/NonCustomerIdentificationForm.constants.js"
+                },
+                {
+                    "blank": 21,
+                    "code": 58,
+                    "comment": 0,
+                    "filename": "modules/Forms/CustomerContactAddressForm.module.jsx"
+                },
+                {
+                    "blank": 12,
+                    "code": 30,
+                    "comment": 0,
+                    "filename": "modules/Forms/CustomerContactForm.module.jsx"
+                },
+                {
+                    "blank": 1,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "modules/Forms/helpers/addressFieldTransformers.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "modules/Forms/helpers/composeValidators.js"
+                },
+                {
+                    "blank": 14,
+                    "code": 42,
+                    "comment": 0,
+                    "filename": "modules/Forms/helpers/fieldValidation.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "modules/Forms/helpers/handleFormFieldChange.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 30,
+                    "comment": 0,
+                    "filename": "modules/Forms/NonCustomerForm.module.jsx"
+                },
+                {
+                    "blank": 18,
+                    "code": 85,
+                    "comment": 0,
+                    "filename": "modules/Forms/styles/Form.styles.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "modules/Modal/components/CloseModalButton.component.jsx"
+                },
+                {
+                    "blank": 8,
+                    "code": 29,
+                    "comment": 0,
+                    "filename": "modules/Modal/components/InnerModalContent.component.jsx"
+                },
+                {
+                    "blank": 12,
+                    "code": 46,
+                    "comment": 0,
+                    "filename": "modules/Modal/components/ModalModule.jsx"
+                },
+                {
+                    "blank": 0,
+                    "code": 106,
+                    "comment": 0,
+                    "filename": "modules/Modal/components/ProductCompositionModule/constants/ProductComposition.constants.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "modules/Modal/components/ProductCompositionModule/constants/ProductCompositionModal.constants.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 47,
+                    "comment": 0,
+                    "filename": "modules/Modal/components/ProductCompositionModule/ProductCompositionDetails.component.jsx"
+                },
+                {
+                    "blank": 10,
+                    "code": 34,
+                    "comment": 0,
+                    "filename": "modules/Modal/components/ProductCompositionModule/ProductCompositionIndex.component.jsx"
+                },
+                {
+                    "blank": 9,
+                    "code": 30,
+                    "comment": 0,
+                    "filename": "modules/Modal/components/ProductCompositionModule/ProductCompositionModule.component.jsx"
+                },
+                {
+                    "blank": 13,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "modules/Modal/components/ProductCompositionModule/styles/ProductCompositionModule.styles.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "modules/Modal/components/styles/CloseModalButton.styles.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "modules/Modal/components/styles/InnerModalContent.styles.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "modules/Modal/components/TimedButton.component.jsx"
+                },
+                {
+                    "blank": 3,
+                    "code": 139,
+                    "comment": 0,
+                    "filename": "modules/Modal/constants/ModalTextContent.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "modules/Modal/constants/ModalTypes.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "modules/Modal/Modal.component.jsx"
+                },
+                {
+                    "blank": 0,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "modules/Modal/styles/ReactModalStyles.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 44,
+                    "comment": 0,
+                    "filename": "pages/404.jsx"
+                },
+                {
+                    "blank": 13,
+                    "code": 37,
+                    "comment": 0,
+                    "filename": "pages/customer-contact-address/CustomerContactAddress.jsx"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "pages/customer-contact-address/index.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 39,
+                    "comment": 0,
+                    "filename": "pages/customer-contact/CustomerContact.jsx"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "pages/customer-contact/index.js"
+                },
+                {
+                    "blank": 12,
+                    "code": 39,
+                    "comment": 0,
+                    "filename": "pages/customer-landing/CustomerLanding.jsx"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "pages/customer-landing/index.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "pages/index.jsx"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "pages/non-customer-contact/index.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 39,
+                    "comment": 0,
+                    "filename": "pages/non-customer-contact/NonCustomerContact.jsx"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "pages/non-customer-landing/index.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 39,
+                    "comment": 0,
+                    "filename": "pages/non-customer-landing/NonCustomerLanding.jsx"
+                },
+                {
+                    "blank": 7,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "selectors/addressForm.selectors.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "selectors/contactReason.selectors.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "selectors/formSelectors.selectors.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "selectors/modal.selectors.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "slices/contactReason.slice.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 46,
+                    "comment": 0,
+                    "filename": "slices/customerAddressForm.slice.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "slices/customerContactForm.slice.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "slices/isCustomer.slice.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "slices/modal.slice.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 34,
+                    "comment": 0,
+                    "filename": "slices/nonCustomerForm.slice.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "store/store.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "templates/StandardTemplate.component.jsx"
+                },
+                {
+                    "blank": 6,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "templates/styles/StandardTemplate.style.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "workers/sendEmails.worker.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "workers/sendEmailToCustomer.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "workers/sendEmailToSac.js"
+                }
+            ]
+        }
+    ]
+}
