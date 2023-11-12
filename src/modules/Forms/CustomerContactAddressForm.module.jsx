@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Form } from 'react-final-form';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,24 +19,28 @@ import { MESSAGE_ENTRY_FORM_SUBSECTION } from 'modules/Forms/constants/MessageEn
 import FormSubsection from './components/FormSubsection/FormSubsection.component';
 import FormSubmission from './components/FormSubmission/FormSubmission.component';
 
-import { setCustomerAddressFormContent } from 'slices/customerAddressForm.slice';
+import { updateAddressWithApiResult } from 'slices/customerAddressForm.slice';
 import { addressFieldTransformers } from 'modules/Forms/helpers/addressFieldTransformers';
 
 import { isZipValidValidator } from 'modules/Forms/helpers/fieldValidation';
 
+import { addressSubformSelector } from 'selectors/addressForm.selectors';
+
 const CustomerContactAddressForm = () => {
   const dispatch = useDispatch();
-  const [addressData, setAddressData] = useState({});
-  const [isZipValid, setIsZipValid] = useState(false);
 
   const handleSubmit = () => console.log('Submitted!');
-  const handleChange = (event) => handleFormFieldChange(event, FORM_NAMES.CUSTOMER_ADDRESS_FORM, dispatch);
+  const handleChange = (event) => handleFormFieldChange(
+    event,
+    FORM_NAMES.CUSTOMER_ADDRESS_FORM,
+    dispatch
+  );
 
   const zipCode = useSelector(zipAddressSelector);
+  const stateAddressData = useSelector(addressSubformSelector);
 
   useEffect(() => {
     const zipChecker = zipCode && !isZipValidValidator(zipCode);
-    setIsZipValid(zipChecker);
 
     if (zipChecker) {
       const fetchAddressData = async () => {
@@ -49,11 +53,8 @@ const CustomerContactAddressForm = () => {
       }
 
       fetchAddressData().then((result) => {
-        console.log('result', result);
-
         if (result) {
-          setAddressData(result);
-          dispatch(setCustomerAddressFormContent(addressFieldTransformers(result)));
+          dispatch(updateAddressWithApiResult(addressFieldTransformers(result)));
         }
       });
     }
@@ -62,7 +63,8 @@ const CustomerContactAddressForm = () => {
   return (
     <Form
       onSubmit={handleSubmit}
-      initialValues={addressData}
+      initialValues={stateAddressData}
+      keepDirtyOnReinitialize
       render={() => (
         <form onChange={handleChange} onSubmit={handleSubmit}>
           <FormFieldsWrapper>
@@ -70,7 +72,6 @@ const CustomerContactAddressForm = () => {
             <FormSubsection subsectionData={ADDRESS_SUBSECTION} />
             <FormSubsection subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION} />
           </FormFieldsWrapper>
-
           <FormSubmission />
         </form>
       )}

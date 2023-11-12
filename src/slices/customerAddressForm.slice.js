@@ -46,11 +46,24 @@ export const customerAddressFormSlice = createSlice({
       }
 
       return state;
+    },
+    updateAddressWithApiResult: (state, action) => {
+      const { address } = action.payload;
+
+      state = {
+        ...state,
+        [HIGH_LEVEL_CATEGORIES.ADDRESS]: {
+          ...{...state[HIGH_LEVEL_CATEGORIES.ADDRESS]},
+          ...address,
+        },
+      }
+
+      return state;
     }
   },
 });
 
-export const { setCustomerAddressFormContent } = customerAddressFormSlice.actions;
+export const { setCustomerAddressFormContent, updateAddressWithApiResult  } = customerAddressFormSlice.actions;
 
 
 export default customerAddressFormSlice.reducer;
