@@ -1,9 +1,21 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import * as colors from 'constants/styles/colors';
 import { FONT_WEIGHTS } from 'constants/styles/font';
 
 import { FIELDS_RENDER_METHODS_WIDTHS } from 'modules/Forms/constants/FieldsRenderMethod.constants';
+
+const gradientAnimation = keyframes`
+   0% {
+     background-position: 0% 50%;
+   }
+   50% {
+     background-position: 100% 50%;
+   }
+   100% {
+     background-position: 0% 50%;
+   }
+`;
 
 const standardFieldStyles = `
   border: none;
@@ -90,12 +102,25 @@ export const FormSubmissionWrapper = styled.div`
   margin: 0 auto;
 `;
 
-export const FormSectionHeaderWrapper = styled.div`
+export const FormSubsectionHeaderWrapper = styled.div`
   margin-top: 0.5rem;
   text-align: left;
   width: 100%;
-  color: ${colors.colorTurquoiseGreenDark};
+  color: ${colors.colorAntiFlashWhite};
   font-weight: ${FONT_WEIGHTS.BOLD};
+  padding: 1rem 0.5rem;
+  background-color: ${colors.colorTurquoiseGreenDark};
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+`;
+
+export const FormSubsectionTitle = styled.span`
+  max-height: fit-content;
+`;
+
+export const FormSubsectionCompletion = styled.span`
+  max-height: fit-content;
 `;
 
 export const FormFooterWrapper = styled.span`

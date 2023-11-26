@@ -19,6 +19,7 @@ export const EXISTING_CUSTOMER_SUBSECTION = {
       placeholder: 'CPF *',
       renderMethod: FIELDS_RENDER_METHOD.PARTIAL_WIDTH_COMPACT,
       maxLength: 14,
+      isRequired: true,
     },
     {
       id: EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME,
@@ -26,6 +27,7 @@ export const EXISTING_CUSTOMER_SUBSECTION = {
       type: 'text',
       placeholder: 'Nome *',
       renderMethod: FIELDS_RENDER_METHOD.PARTIAL_WIDTH_WIDE,
+      isRequired: true,
     },
     {
       id: EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER,
@@ -33,6 +35,7 @@ export const EXISTING_CUSTOMER_SUBSECTION = {
       type: 'text',
       placeholder: 'Número do pedido *',
       renderMethod: FIELDS_RENDER_METHOD.PARTIAL_EQUAL,
+      isRequired: true,
     },
     {
       id: EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL,
@@ -40,6 +43,7 @@ export const EXISTING_CUSTOMER_SUBSECTION = {
       type: 'text',
       placeholder: 'E-mail usado na compra *',
       renderMethod: FIELDS_RENDER_METHOD.PARTIAL_EQUAL,
+      isRequired: true,
     },
   ],
 };

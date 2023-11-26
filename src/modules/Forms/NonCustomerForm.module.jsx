@@ -13,26 +13,49 @@ import { MESSAGE_ENTRY_FORM_SUBSECTION } from './constants/MessageEntryForm.cons
 
 import FormSubsection from './components/FormSubsection/FormSubsection.component';
 import FormSubmission from './components/FormSubmission/FormSubmission.component';
+import { FORM_ACTIONS } from 'modules/Forms/constants/FormActions.constants';
+
+import { setNonCustomerFormFieldValidity } from 'slices/nonCustomerForm.slice';
+import { HIGH_LEVEL_CATEGORIES } from 'modules/Forms/constants/HighLevelCategories.constants';
 
 const handleSubmit = () => console.log('Submitted!');
-
 
 const NonCustomerForm = () => {
   const dispatch = useDispatch();
 
-  const handleChange = (event) => handleFormFieldChange(event, FORM_NAMES.NON_CUSTOMER_FORM, dispatch);
+  const formName = FORM_NAMES.NON_CUSTOMER_FORM;
+
+  const handleValueChange = (event) => handleFormFieldChange(
+    event,
+    FORM_ACTIONS[formName],
+    dispatch
+  );
 
   return (
     <Form
       onSubmit={handleSubmit}
       render={() => (
-        <form onSubmit={handleSubmit} onChange={handleChange}>
+        <form onSubmit={handleSubmit} onChange={handleValueChange}>
           <FormFieldsWrapper>
-            <FormSubsection subsectionData={NON_CUSTOMER_SUBSECTION} />
-            <FormSubsection subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION} />
+            <FormSubsection
+              formNamingData={{
+                formName: formName,
+                subsectionName: HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
+              }}
+              subsectionData={NON_CUSTOMER_SUBSECTION}
+              fieldValidationAction={setNonCustomerFormFieldValidity}
+            />
+            <FormSubsection
+              formNamingData={{
+                formName: formName,
+                subsectionName: HIGH_LEVEL_CATEGORIES.MESSAGE,
+              }}
+              subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION}
+              fieldValidationAction={setNonCustomerFormFieldValidity}
+            />
           </FormFieldsWrapper>
 
-          <FormSubmission />
+          <FormSubmission isFormValid={isFormValid} />
         </form>
       )}
     />

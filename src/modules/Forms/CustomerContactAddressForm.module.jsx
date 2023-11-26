@@ -3,6 +3,8 @@ import { Form } from 'react-final-form';
 
 import { useDispatch, useSelector } from 'react-redux';
 
+import { updateAddressWithApiResult, setCustomerAddressFormFieldValidity } from 'slices/customerAddressForm.slice';
+import { addressSubformSelector } from 'selectors/addressForm.selectors';
 import { zipAddressSelector } from 'selectors/addressForm.selectors';
 
 import { getZipData } from 'api/getZipData';
@@ -13,26 +15,28 @@ import { handleFormFieldChange } from 'modules/Forms/helpers/handleFormFieldChan
 
 import { FORM_NAMES } from 'modules/Forms/constants/FormNames.constants';
 import { ADDRESS_SUBSECTION } from 'modules/Forms/constants/AddressForm.constants';
+import { HIGH_LEVEL_CATEGORIES } from 'modules/Forms/constants/HighLevelCategories.constants';
 import { EXISTING_CUSTOMER_SUBSECTION } from 'modules/Forms/constants/ExistingCustomerIdentificationForm.constants';
 import { MESSAGE_ENTRY_FORM_SUBSECTION } from 'modules/Forms/constants/MessageEntryForm.constants';
+import { FORM_ACTIONS } from 'modules/Forms/constants/FormActions.constants';
 
 import FormSubsection from './components/FormSubsection/FormSubsection.component';
 import FormSubmission from './components/FormSubmission/FormSubmission.component';
 
-import { updateAddressWithApiResult } from 'slices/customerAddressForm.slice';
 import { addressFieldTransformers } from 'modules/Forms/helpers/addressFieldTransformers';
-
 import { isZipValidValidator } from 'modules/Forms/helpers/fieldValidation';
 
-import { addressSubformSelector } from 'selectors/addressForm.selectors';
 
 const CustomerContactAddressForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = () => console.log('Submitted!');
-  const handleChange = (event) => handleFormFieldChange(
+
+  const formName = FORM_NAMES.CUSTOMER_ADDRESS_FORM;
+
+  const handleValueChange = (event) => handleFormFieldChange(
     event,
-    FORM_NAMES.CUSTOMER_ADDRESS_FORM,
+    FORM_ACTIONS[formName],
     dispatch
   );
 
@@ -54,7 +58,9 @@ const CustomerContactAddressForm = () => {
 
       fetchAddressData().then((result) => {
         if (result) {
-          dispatch(updateAddressWithApiResult(addressFieldTransformers(result)));
+          dispatch(
+            updateAddressWithApiResult(addressFieldTransformers(result))
+          );
         }
       });
     }
@@ -66,13 +72,34 @@ const CustomerContactAddressForm = () => {
       initialValues={stateAddressData}
       keepDirtyOnReinitialize
       render={() => (
-        <form onChange={handleChange} onSubmit={handleSubmit}>
+        <form onChange={handleValueChange} onSubmit={handleSubmit}>
           <FormFieldsWrapper>
-            <FormSubsection subsectionData={EXISTING_CUSTOMER_SUBSECTION} />
-            <FormSubsection subsectionData={ADDRESS_SUBSECTION} />
-            <FormSubsection subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION} />
+            <FormSubsection
+              formNamingData={{
+                formName: formName,
+                subsectionName: HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
+              }}
+              fieldValidationAction={setCustomerAddressFormFieldValidity}
+              subsectionData={EXISTING_CUSTOMER_SUBSECTION}
+            />
+            <FormSubsection
+              formNamingData={{
+                formName: formName,
+                subsectionName: HIGH_LEVEL_CATEGORIES.ADDRESS,
+              }}
+              fieldValidationAction={setCustomerAddressFormFieldValidity}
+              subsectionData={ADDRESS_SUBSECTION}
+            />
+            <FormSubsection
+              formNamingData={{
+                formName: formName,
+                subsectionName: HIGH_LEVEL_CATEGORIES.MESSAGE,
+              }}
+              fieldValidationAction={setCustomerAddressFormFieldValidity}
+              subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION}
+            />
           </FormFieldsWrapper>
-          <FormSubmission />
+          <FormSubmission isFormValid={isFormValid} />
         </form>
       )}
     />

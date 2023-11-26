@@ -15,6 +15,7 @@ export const MESSAGE_ENTRY_FORM_SUBSECTION = {
       validators: [requiredValidator],
       placeholder: 'Assunto *',
       renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
+      isRequired: true,
     },
     {
       id: MESSAGE_ENTRY_FORM_FIELDS.MESSAGE,
@@ -22,6 +23,7 @@ export const MESSAGE_ENTRY_FORM_SUBSECTION = {
       validators: [requiredValidator],
       placeholder: 'Mensagem *',
       renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
+      isRequired: true,
     },
   ],
 };

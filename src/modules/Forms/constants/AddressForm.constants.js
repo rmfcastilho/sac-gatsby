@@ -22,6 +22,7 @@ export const ADDRESS_SUBSECTION = {
       placeholder: 'CEP',
       renderMethod: FIELDS_RENDER_METHOD.PARTIAL_WIDTH_SINGLE,
       maxLength: 9,
+      isRequired: true,
     },
     {
       id: ADDRESS_FORM_FIELDS.STREET,
@@ -29,6 +30,7 @@ export const ADDRESS_SUBSECTION = {
       type: 'text',
       placeholder: 'Logradouro',
       renderMethod: FIELDS_RENDER_METHOD.PARTIAL_WIDTH_WIDE,
+      isRequired: true,
     },
     {
       id: ADDRESS_FORM_FIELDS.NUMBER,
@@ -36,12 +38,14 @@ export const ADDRESS_SUBSECTION = {
       type: 'text',
       placeholder: 'Número',
       renderMethod: FIELDS_RENDER_METHOD.PARTIAL_WIDTH_COMPACT,
+      isRequired: true,
     },
     {
       id: ADDRESS_FORM_FIELDS.COMPLEMENT,
       type: 'text',
       placeholder: 'Complemento',
       renderMethod: FIELDS_RENDER_METHOD.PARTIAL_EQUAL,
+      isRequired: false,
     },
     {
       id: ADDRESS_FORM_FIELDS.DISTRICT,
@@ -49,6 +53,7 @@ export const ADDRESS_SUBSECTION = {
       type: 'text',
       placeholder: 'Bairro',
       renderMethod: FIELDS_RENDER_METHOD.PARTIAL_EQUAL,
+      isRequired: true,
     },
    {
       id: ADDRESS_FORM_FIELDS.CITY,
@@ -56,6 +61,7 @@ export const ADDRESS_SUBSECTION = {
       type: 'text',
       placeholder: 'Cidade',
       renderMethod: FIELDS_RENDER_METHOD.PARTIAL_WIDTH_WIDE,
+     isRequired: true,
     },
     {
       id: ADDRESS_FORM_FIELDS.STATE,
@@ -63,6 +69,7 @@ export const ADDRESS_SUBSECTION = {
       type: 'text',
       placeholder: 'UF',
       renderMethod: FIELDS_RENDER_METHOD.PARTIAL_WIDTH_COMPACT,
+      isRequired: true,
     },
   ],
 };

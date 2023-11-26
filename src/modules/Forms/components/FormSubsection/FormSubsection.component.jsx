@@ -1,28 +1,36 @@
 import React from 'react';
-import { FormSectionHeaderWrapper } from 'modules/Forms/styles/Form.styles';
+import { FormSubsectionHeaderWrapper } from 'modules/Forms/styles/Form.styles';
 
 import { Field } from 'react-final-form';
 import formatString from 'format-string-by-pattern';
-
-import { useSelector } from 'react-redux';
 
 import { composeValidators } from 'modules/Forms/helpers/composeValidators';
 
 import FormFieldError from 'modules/Forms/components/FormFieldError/FormFieldError';
 
-import { StyledFormSubsection, StyledFieldWrapper } from 'modules/Forms/styles/Form.styles';
+import {
+  StyledFormSubsection,
+  StyledFieldWrapper,
+  FormSubsectionTitle,
+  FormSubsectionCompletion
+} from 'modules/Forms/styles/Form.styles';
 
 import StyledField from '../StyledField/StyledField';
-import { streetAddressSelector } from 'selectors/addressForm.selectors';
 
-const FormSubsection = ({ subsectionData }) => {
-  const streetAddress = useSelector(streetAddressSelector);
+const FormSubsection = ({ subsectionData, completionPercentage, fieldValidationAction }) => {
+
 
   return (
     <StyledFormSubsection>
-      <FormSectionHeaderWrapper>
-        {subsectionData.title}
-      </FormSectionHeaderWrapper>
+      <FormSubsectionHeaderWrapper completionPercentage={completionPercentage}>
+        <FormSubsectionTitle>
+          {subsectionData.title}
+        </FormSubsectionTitle>
+
+        <FormSubsectionCompletion>
+          % completo
+        </FormSubsectionCompletion>
+      </FormSubsectionHeaderWrapper>
 
       {subsectionData.fields.map((field) => {
         const {id, mask, maxLength, validators} = field
@@ -37,18 +45,22 @@ const FormSubsection = ({ subsectionData }) => {
             maxLength={maxLength || null}
             validate={fieldValidators}
           >
-            {({input, meta}) => (
-              <StyledFieldWrapper hasError={meta.error && meta.touched} renderMethod={field.renderMethod}>
-                <StyledField
-                  hasError={meta.error && meta.touched}
-                  type={field.type}
-                  placeholder={field.placeholder}
-                  input={input}
-                  value={streetAddress}
-                />
-                {meta.error && meta.touched && <FormFieldError error={meta.error}/>}
-              </StyledFieldWrapper>
-            )}
+            {({input, meta}) => {
+              const hasError = meta.touched && meta.error;
+
+              return (
+                <StyledFieldWrapper hasError={hasError} renderMethod={field.renderMethod}>
+                  <StyledField
+                    hasError={hasError}
+                    type={field.type}
+                    placeholder={field.placeholder}
+                    input={input}
+                    onChange={() => fieldValidationAction(!hasError && meta.valid)}
+                  />
+                  {hasError && <FormFieldError error={meta.error}/>}
+                </StyledFieldWrapper>
+              )
+            }}
           </Field>
         );
       })}

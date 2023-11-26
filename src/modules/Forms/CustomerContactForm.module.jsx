@@ -9,29 +9,54 @@ import { handleFormFieldChange } from './helpers/handleFormFieldChange';
 import { FORM_NAMES } from './constants/FormNames.constants';
 import { EXISTING_CUSTOMER_SUBSECTION } from './constants/ExistingCustomerIdentificationForm.constants';
 import { MESSAGE_ENTRY_FORM_SUBSECTION } from './constants/MessageEntryForm.constants';
+import { FORM_ACTIONS } from 'modules/Forms/constants/FormActions.constants';
+
+import { setCustomerFormFieldValidity } from 'slices/customerContactForm.slice';
 
 import FormSubsection from './components/FormSubsection/FormSubsection.component';
 import FormSubmission from './components/FormSubmission/FormSubmission.component';
-
+import { HIGH_LEVEL_CATEGORIES } from 'modules/Forms/constants/HighLevelCategories.constants';
 
 const handleSubmit = () => console.log('Submitted!');
 
 const CustomerContactForm = () => {
   const dispatch = useDispatch();
 
-  const handleChange = (event) => handleFormFieldChange(event, FORM_NAMES.CUSTOMER_FORM, dispatch);
+  const formName = FORM_NAMES.CUSTOMER_FORM;
+
+  const handleValueChange = (event) => handleFormFieldChange(
+    event,
+    FORM_ACTIONS[formName],
+    dispatch
+  );
+
+  const isFormValid = false;
 
   return (
     <Form
       onSubmit={handleSubmit}
       render={() => (
-        <form onSubmit={handleSubmit} onChange={handleChange}>
+        <form onSubmit={handleSubmit} onChange={handleValueChange}>
           <FormFieldsWrapper>
-            <FormSubsection subsectionData={EXISTING_CUSTOMER_SUBSECTION} />
-            <FormSubsection subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION} />
+            <FormSubsection
+              formNamingData={{
+                formName: formName,
+                subsectionName: HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
+              }}
+              fieldValidationAction={setCustomerFormFieldValidity}
+              subsectionData={EXISTING_CUSTOMER_SUBSECTION}
+            />
+            <FormSubsection
+              formNamingData={{
+                formName: formName,
+                subsectionName: HIGH_LEVEL_CATEGORIES.MESSAGE,
+              }}
+              fieldValidationAction={setCustomerFormFieldValidity}
+              subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION}
+            />
           </FormFieldsWrapper>
 
-          <FormSubmission />
+          <FormSubmission isFormValid={isFormValid} />
         </form>
       )}
     />

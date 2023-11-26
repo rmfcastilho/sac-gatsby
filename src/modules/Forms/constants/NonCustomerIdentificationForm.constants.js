@@ -15,13 +15,15 @@ export const NON_CUSTOMER_SUBSECTION = {
       type: 'text',
       placeholder: 'Nome *',
       renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
+      isRequired: true,
     },
     {
       id: NON_CUSTOMER_FORM_FIELDS.EMAIL,
       validators: [requiredValidator, isEmailValidValidator],
       type: 'text',
-      placeholder: 'E-mail usado na compra *',
+      placeholder: 'E-mail para contato *',
       renderMethod: FIELDS_RENDER_METHOD.FULL_WIDTH,
+      isRequired: true,
     }
   ],
 };
