@@ -40,6 +40,16 @@ export const StyledButton = styled.button`
   
   border: none;
   box-sizing: content-box;
+  
+  :disabled {
+    background-color: ${colors.colorFormGrey};
+    cursor: not-allowed;
+    animation: none;
+    
+    &:hover {
+      transform: none;
+    }
+  }
 `;
 
 export const StyledLink = styled(props => <Link {...props} />)`

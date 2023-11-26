@@ -17,7 +17,12 @@ import {
 
 import StyledField from '../StyledField/StyledField';
 
-const FormSubsection = ({ subsectionData, completionPercentage, fieldValidationAction }) => {
+const FormSubsection = ({
+  subsectionData,
+  formNamingData,
+  completionPercentage,
+  fieldValidationAction,
+}) => {
 
 
   return (

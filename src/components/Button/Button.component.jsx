@@ -8,7 +8,7 @@ import { StyledButton } from 'components/Button/styles/Button.styles';
 
 const Button = ({
   key,
-  isDisabled = false,
+  isDisabled,
   type,
   label,
   link,
@@ -27,13 +27,13 @@ const Button = ({
     </StyledButton>
 
     : <LinkAsButton
-        key={key}
-        link={link}
-        buttonStyle={buttonStyle}
-        isDisabled={isDisabled}
-        onClick={onClick}
-        label={label}
-      />
+      key={key}
+      link={link}
+      buttonStyle={buttonStyle}
+      isDisabled={isDisabled}
+      onClick={onClick}
+      label={label}
+    />
 );
 
 

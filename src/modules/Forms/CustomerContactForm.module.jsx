@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form } from 'react-final-form';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { FormFieldsWrapper } from "./styles/Form.styles";
 
@@ -10,12 +10,15 @@ import { FORM_NAMES } from './constants/FormNames.constants';
 import { EXISTING_CUSTOMER_SUBSECTION } from './constants/ExistingCustomerIdentificationForm.constants';
 import { MESSAGE_ENTRY_FORM_SUBSECTION } from './constants/MessageEntryForm.constants';
 import { FORM_ACTIONS } from 'modules/Forms/constants/FormActions.constants';
+import { HIGH_LEVEL_CATEGORIES } from 'modules/Forms/constants/HighLevelCategories.constants';
 
 import { setCustomerFormFieldValidity } from 'slices/customerContactForm.slice';
 
+import { customerFormSelector } from 'selectors/formSelectors.selectors';
+
 import FormSubsection from './components/FormSubsection/FormSubsection.component';
 import FormSubmission from './components/FormSubmission/FormSubmission.component';
-import { HIGH_LEVEL_CATEGORIES } from 'modules/Forms/constants/HighLevelCategories.constants';
+import { submitNewRequest } from 'api/submitNewRequest';
 
 const handleSubmit = () => console.log('Submitted!');
 
@@ -23,6 +26,7 @@ const CustomerContactForm = () => {
   const dispatch = useDispatch();
 
   const formName = FORM_NAMES.CUSTOMER_FORM;
+  const formData = useSelector(customerFormSelector);
 
   const handleValueChange = (event) => handleFormFieldChange(
     event,
@@ -34,7 +38,7 @@ const CustomerContactForm = () => {
 
   return (
     <Form
-      onSubmit={handleSubmit}
+      onSubmit={() => submitNewRequest('new-request', formData)}
       render={() => (
         <form onSubmit={handleSubmit} onChange={handleValueChange}>
           <FormFieldsWrapper>

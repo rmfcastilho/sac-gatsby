@@ -6,13 +6,13 @@ import { FormFooterWrapper, FormSubmissionWrapper } from "modules/Forms/styles/F
 import { BUTTON_STYLES } from "constants/button";
 
 
-const FormSubmission = () => (
+const FormSubmission = ({ isFormValid }) => (
   <FormSubmissionWrapper>
     <Button
       type="submit"
-      isDisabled={false}
+      isDisabled={!isFormValid}
       buttonStyle={BUTTON_STYLES.PRIMARY}
-      label="Enviar solicitação"
+      label={isFormValid ? 'Enviar Solicitação' : 'Preencha os campos obrigatórios'}
       key="submitForm"
     />
 

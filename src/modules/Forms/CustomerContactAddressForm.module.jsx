@@ -66,6 +66,8 @@ const CustomerContactAddressForm = () => {
     }
   }, [zipCode]);
 
+  const isFormValid = false;
+
   return (
     <Form
       onSubmit={handleSubmit}

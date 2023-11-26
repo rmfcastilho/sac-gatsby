@@ -9,3 +9,12 @@ export const nonCustomerFormSelector = createDraftSafeSelector(
   (state) => state.nonCustomerForm,
 );
 
+export const customerFormSelector = createDraftSafeSelector(
+  [getState],
+  (state) => state.customerForm,
+);
+
+export const customerAddressFormSelector = createDraftSafeSelector(
+  [getState],
+  (state) => state.customerAddressForm,
+);

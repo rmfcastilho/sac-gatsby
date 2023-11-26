@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form } from 'react-final-form';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { handleFormFieldChange } from 'modules/Forms/helpers/handleFormFieldChange';
 
@@ -18,12 +18,16 @@ import { FORM_ACTIONS } from 'modules/Forms/constants/FormActions.constants';
 import { setNonCustomerFormFieldValidity } from 'slices/nonCustomerForm.slice';
 import { HIGH_LEVEL_CATEGORIES } from 'modules/Forms/constants/HighLevelCategories.constants';
 
+import { submitNewRequest } from 'api/submitNewRequest';
+import { nonCustomerFormSelector } from 'selectors/formSelectors.selectors';
+
 const handleSubmit = () => console.log('Submitted!');
 
 const NonCustomerForm = () => {
   const dispatch = useDispatch();
 
   const formName = FORM_NAMES.NON_CUSTOMER_FORM;
+  const formData = useSelector(nonCustomerFormSelector);
 
   const handleValueChange = (event) => handleFormFieldChange(
     event,
@@ -31,9 +35,11 @@ const NonCustomerForm = () => {
     dispatch
   );
 
+  const isFormValid = false;
+
   return (
     <Form
-      onSubmit={handleSubmit}
+      onSubmit={() => submitNewRequest('new-request', formData)}
       render={() => (
         <form onSubmit={handleSubmit} onChange={handleValueChange}>
           <FormFieldsWrapper>

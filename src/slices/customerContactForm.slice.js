@@ -7,38 +7,14 @@ import { HIGH_LEVEL_CATEGORIES } from 'modules/Forms/constants/HighLevelCategori
 
 const initialState = {
   [HIGH_LEVEL_CATEGORIES.IDENTIFICATION]: {
-    [EXISTING_CUSTOMER_ID_FORM_FIELDS.ID]: {
-      value: '',
-      isValid: false,
-      isRequired: true,
-    },
-    [EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME]: {
-      value: '',
-      isValid: false,
-      isRequired: true,
-    },
-    [EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER]: {
-      value: '',
-      isValid: false,
-      isRequired: true,
-    },
-    [EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL]: {
-      value: '',
-      isValid: false,
-      isRequired: true,
-    },
+    [EXISTING_CUSTOMER_ID_FORM_FIELDS.ID]:'',
+    [EXISTING_CUSTOMER_ID_FORM_FIELDS.NAME]: '',
+    [EXISTING_CUSTOMER_ID_FORM_FIELDS.ORDER_NUMBER]: '',
+    [EXISTING_CUSTOMER_ID_FORM_FIELDS.EMAIL]: '',
   },
   [HIGH_LEVEL_CATEGORIES.MESSAGE]: {
-    [MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]: {
-      value: '',
-      isValid: false,
-      isRequired: true,
-    },
-    [MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]: {
-      value: '',
-      isValid: false,
-      isRequired: true,
-    },
+    [MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]: '',
+    [MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]: '',
   },
 };
 
@@ -56,26 +32,7 @@ export const customerFormSlice = createSlice({
         ...state,
         [category]: {
           ...categoryState,
-          [field]: {
-            ...categoryState[field],
-            value: value,
-          }
-        },
-      }
-
-      return state;
-    },
-    setCustomerFormFieldValidity: (state, action) => {
-      const { category, field, isValid } = action.payload;
-
-      state = {
-        ...state,
-        [category]: {
-          ...{...state[category]},
-          [field]: {
-            ...field,
-            isValid: isValid,
-          }
+          [field]: value,
         },
       }
 
@@ -84,7 +41,7 @@ export const customerFormSlice = createSlice({
   },
 });
 
-export const { setCustomerFormContent, setCustomerFormFieldValidity } = customerFormSlice.actions;
+export const { setCustomerFormContent } = customerFormSlice.actions;
 
 
 export default customerFormSlice.reducer;
