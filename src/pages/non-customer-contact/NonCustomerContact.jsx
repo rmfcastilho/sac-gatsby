@@ -19,6 +19,7 @@ import { DIVIDER_ORIENTATION } from 'constants/sectionDivider';
 import { ROUTES } from "constants/routes";
 import { HEADERS } from "constants/headers";
 import { BACKLINK_LABEL } from "constants/backlink";
+import { REQUEST_TYPE_LABELS } from 'constants/requestTypes.constants';
 
 
 const NonCustomerContact = () => {
@@ -33,7 +34,7 @@ const NonCustomerContact = () => {
       <SectionDivider type={DIVIDER_ORIENTATION.HORIZONTAL}/>
 
       <Heading type={HEADING_STYLES.SECONDARY}>
-        {contactReason}
+        {REQUEST_TYPE_LABELS[contactReason]}
       </Heading>
 
       <FormSubheader>

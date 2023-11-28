@@ -21,8 +21,7 @@ import { submitNewRequest } from 'api/submitNewRequest';
 import { nonCustomerFormSelector } from 'selectors/formSelectors.selectors';
 
 import { nonCustomerFormValidationSelector } from 'selectors/formValidation.selectors';
-
-const handleSubmit = () => console.log('Submitted!');
+import { contactReasonSelector } from 'selectors/contactReason.selectors';
 
 const NonCustomerForm = () => {
   const [isFormValid, setIsFormValid] = useState(false);
@@ -30,6 +29,7 @@ const NonCustomerForm = () => {
 
   const formName = FORM_NAMES.NON_CUSTOMER_FORM;
   const formData = useSelector(nonCustomerFormSelector);
+  const contactReason = useSelector(contactReasonSelector);
 
   const formValidator = useSelector(nonCustomerFormValidationSelector);
   const areAllCategoriesValid = Object.values(formValidator).every(
@@ -46,9 +46,11 @@ const NonCustomerForm = () => {
     dispatch
   );
 
+  const handleSubmit = () => submitNewRequest(contactReason, formData);
+
   return (
     <Form
-      onSubmit={() => submitNewRequest('new-request', formData)}
+      onSubmit={handleSubmit}
       render={() => (
         <form onSubmit={handleSubmit} onChange={handleValueChange}>
           <FormFieldsWrapper>

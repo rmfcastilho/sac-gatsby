@@ -1,7 +1,7 @@
 import { BUTTON_BEHAVIORS } from "constants/button";
 import { ROUTES } from "constants/routes";
 import { MODAL_CONTENT_TYPES } from "constants/modal";
-
+import { REQUEST_TYPES } from 'constants/requestTypes.constants';
 
 export const nonCustomerInnerSections = [
   {
@@ -13,6 +13,7 @@ export const nonCustomerInnerSections = [
         label: 'Dúvida sobre o produto',
         behavior: BUTTON_BEHAVIORS.ALERT,
         behaviorData: MODAL_CONTENT_TYPES.NON_CUSTOMER_PRODUCT_DOUBT,
+        contactType: REQUEST_TYPES.NC_PRODUCT_DOUBT,
       },
     ],
   },
@@ -25,18 +26,21 @@ export const nonCustomerInnerSections = [
         label: "Quero fazer um elogio",
         behavior: BUTTON_BEHAVIORS.REDIRECT,
         behaviorData: ROUTES.NON_CUSTOMER_CONTACT,
+        contactType: REQUEST_TYPES.NC_COMPLIMENT,
       },
       {
         id: "suggestion",
         label: "Quero fazer uma sugestão",
         behavior: BUTTON_BEHAVIORS.REDIRECT,
         behaviorData: ROUTES.NON_CUSTOMER_CONTACT,
+        contactType: REQUEST_TYPES.NC_SUGGESTION,
       },
       {
         id: "complaint",
         label: "Quero fazer uma reclamação",
         behavior: BUTTON_BEHAVIORS.REDIRECT,
         behaviorData: ROUTES.NON_CUSTOMER_CONTACT,
+        contactType: REQUEST_TYPES.NC_COMPLAINT,
       },
       {
         id: "partnerships",

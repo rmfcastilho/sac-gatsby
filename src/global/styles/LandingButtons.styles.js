@@ -9,6 +9,7 @@ export const LandingButtonWrapper = styled.div`
   padding-bottom: 2rem;
   width: 80%;
   justify-content: center;
+  height: auto;
   
   @media (min-width: ${BREAKPOINT_TABLET}) {
     width: 50%;

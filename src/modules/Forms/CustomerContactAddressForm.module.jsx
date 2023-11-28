@@ -31,6 +31,7 @@ import { addressFormValidationSelector } from 'selectors/formValidation.selector
 import { setFormFieldValidity } from 'slices/formValidation.slice';
 import { submitNewRequest } from 'api/submitNewRequest';
 import { customerAddressFormSelector } from 'selectors/formSelectors.selectors';
+import { contactReasonSelector } from 'selectors/contactReason.selectors';
 
 
 const CustomerContactAddressForm = () => {
@@ -44,6 +45,7 @@ const CustomerContactAddressForm = () => {
 
   const formName = FORM_NAMES.CUSTOMER_ADDRESS_FORM;
   const formData = useSelector(customerAddressFormSelector);
+  const contactReason = useSelector(contactReasonSelector);
 
   const handleValueChange = (event) => handleFormFieldChange(
     event,
@@ -91,13 +93,15 @@ const CustomerContactAddressForm = () => {
     setIsFormValid(areAllCategoriesValid);
   }, [areAllCategoriesValid])
 
+  const handleSubmit = () => submitNewRequest(contactReason, formData);
+
   return (
     <Form
-      onSubmit={() => submitNewRequest('new-request', formData)}
+      onSubmit={handleSubmit}
       initialValues={stateAddressData}
       keepDirtyOnReinitialize
       render={() => (
-        <form onChange={handleValueChange}>
+        <form onChange={handleValueChange} onSubmit={handleSubmit}>
           <FormFieldsWrapper>
             <FormSubsection
               formNamingData={{

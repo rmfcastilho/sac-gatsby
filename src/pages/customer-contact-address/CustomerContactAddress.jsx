@@ -17,6 +17,7 @@ import { FormSubheader } from "global/styles/FormSubheader.styles";
 import { FORM_SUBHEADER_TEXT } from "constants/form";
 
 import { contactReasonSelector } from "selectors/contactReason.selectors";
+import { REQUEST_TYPE_LABELS } from 'constants/requestTypes.constants';
 
 
 const CustomerContactAddress = () => {
@@ -29,7 +30,7 @@ const CustomerContactAddress = () => {
       <SectionDivider type={DIVIDER_ORIENTATION.HORIZONTAL}/>
 
       <Heading type={HEADING_STYLES.SECONDARY}>
-        {contactReason}
+        {REQUEST_TYPE_LABELS[contactReason]}
       </Heading>
 
       <FormSubheader>

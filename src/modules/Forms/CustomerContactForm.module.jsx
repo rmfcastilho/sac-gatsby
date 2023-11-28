@@ -13,14 +13,12 @@ import { FORM_ACTIONS } from 'modules/Forms/constants/FormActions.constants';
 import { HIGH_LEVEL_CATEGORIES } from 'modules/Forms/constants/HighLevelCategories.constants';
 
 import { customerFormValidationSelector } from 'selectors/formValidation.selectors';
-
+import { contactReasonSelector } from 'selectors/contactReason.selectors';
 import { customerFormSelector } from 'selectors/formSelectors.selectors';
 
 import FormSubsection from './components/FormSubsection/FormSubsection.component';
 import FormSubmission from './components/FormSubmission/FormSubmission.component';
 import { submitNewRequest } from 'api/submitNewRequest';
-
-const handleSubmit = () => console.log('Submitted!');
 
 const CustomerContactForm = () => {
   const [isFormValid, setIsFormValid] = useState(false);
@@ -28,6 +26,7 @@ const CustomerContactForm = () => {
 
   const formName = FORM_NAMES.CUSTOMER_FORM;
   const formData = useSelector(customerFormSelector);
+  const contactReason = useSelector(contactReasonSelector);
 
   const formValidator = useSelector(customerFormValidationSelector);
   const areAllCategoriesValid = Object.values(formValidator).every(
@@ -44,11 +43,20 @@ const CustomerContactForm = () => {
     dispatch
   );
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    return submitNewRequest(contactReason, formData).then(
+      (result) => {
+        console.log(result);
+      }
+    );
+  };
+
   return (
     <Form
-      onSubmit={() => submitNewRequest('new-request', formData)}
+      onSubmit={handleSubmit}
       render={() => (
-        <form onChange={handleValueChange}>
+        <form onChange={handleValueChange} onSubmit={handleSubmit}>
           <FormFieldsWrapper>
             <FormSubsection
               formNamingData={{

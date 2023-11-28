@@ -13,10 +13,6 @@ const Index = () => (
       {HEADERS.QUICK_SOLUTIONS}
     </Heading>
 
-    <Heading type={HEADING_STYLES.SECONDARY}>
-      {HEADERS.NEW_REQUEST}
-    </Heading>
-
     <LandingButtons />
   </React.Fragment>
 );

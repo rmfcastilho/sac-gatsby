@@ -21,11 +21,16 @@ const InnerSectionContent = ({
   label,
   behavior,
   behaviorData,
+  contactType,
 }) => {
   const dispatch = useDispatch();
 
+  console.log('contactType', contactType);
+  console.log('id', id);
+  console.log('label', label);
+
   const handleContactReason = () => {
-    dispatch(setContactReason(label));
+    dispatch(setContactReason(contactType || 'NA'));
   };
 
   const handleClick = () => {
