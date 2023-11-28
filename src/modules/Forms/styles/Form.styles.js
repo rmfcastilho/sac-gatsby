@@ -1,24 +1,12 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 import * as colors from 'constants/styles/colors';
 import { FONT_WEIGHTS } from 'constants/styles/font';
 
 import { FIELDS_RENDER_METHODS_WIDTHS } from 'modules/Forms/constants/FieldsRenderMethod.constants';
 
-const gradientAnimation = keyframes`
-   0% {
-     background-position: 0% 50%;
-   }
-   50% {
-     background-position: 100% 50%;
-   }
-   100% {
-     background-position: 0% 50%;
-   }
-`;
-
 const standardFieldStyles = `
-  border: none;
+  border: 1px solid ${colors.colorTurquoiseGreenExtraDark};
   box-shadow: 0 0 1rem 0.25rem rgba(122, 122, 122, 0.1);
   border-radius: 5px;
   color: ${colors.colorFormGrey};
@@ -26,7 +14,7 @@ const standardFieldStyles = `
   flex-grow: 1;
 
   ::placeholder {
-    color: ${colors.colorTurquoiseGreen};
+    color: ${colors.colorTurquoiseGreenExtraDark};
   }
 `;
 
@@ -36,7 +24,7 @@ const getWidth = (targetProperty, sizingProperties) => sizingProperties[targetPr
 
 export const StyledFieldWrapper = styled.div`
   display: flex;
-  flex-direction: ${({ hasError }) => hasError ? 'column' : 'row'};
+  flex-direction: ${({ hasError, hasValue }) => hasError || hasValue ? 'column' : 'row'};
   gap: 0.5rem;
   align-items: flex-start;
 
@@ -81,6 +69,7 @@ export const StyledTextArea = styled.textarea`
   min-height: 10rem;
   resize: vertical;
   width: 100%;
+  font-family: inherit;
 `;
 
 export const StyledTextInput = styled.input`
@@ -109,18 +98,34 @@ export const FormSubsectionHeaderWrapper = styled.div`
   color: ${colors.colorAntiFlashWhite};
   font-weight: ${FONT_WEIGHTS.BOLD};
   padding: 1rem 0.5rem;
-  background-color: ${colors.colorTurquoiseGreenDark};
+  background-color: ${colors.colorTurquoiseGreen};
   display: flex;
   align-content: center;
   justify-content: space-between;
+  position: relative;
+  box-shadow: 1px 1px 1px ${colors.colorTurquoiseGreenExtraDark};
+ `;
+
+export const ProgressBar = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: ${({ completionPercentage }) => completionPercentage}%;
+  background-color: ${colors.colorTurquoiseGreenExtraDark};
+  transition: width 0.5s ease-in-out;
 `;
 
 export const FormSubsectionTitle = styled.span`
   max-height: fit-content;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  z-index: 1;
 `;
 
 export const FormSubsectionCompletion = styled.span`
   max-height: fit-content;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  z-index: 1;
 `;
 
 export const FormFooterWrapper = styled.span`

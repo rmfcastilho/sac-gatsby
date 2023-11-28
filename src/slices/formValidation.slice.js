@@ -41,7 +41,6 @@ const initialState = {
       [ADDRESS_FORM_FIELDS.ZIP]: false,
       [ADDRESS_FORM_FIELDS.STREET]: false,
       [ADDRESS_FORM_FIELDS.NUMBER]: false,
-      [ADDRESS_FORM_FIELDS.COMPLEMENT]: true,
       [ADDRESS_FORM_FIELDS.DISTRICT]: false,
       [ADDRESS_FORM_FIELDS.CITY]: false,
       [ADDRESS_FORM_FIELDS.STATE]: false,
@@ -78,7 +77,7 @@ export const formValidationSlice = createSlice({
 });
 
 export const {
-  setCustomerFormContent,
+  setFormFieldValidity,
 } = formValidationSlice.actions;
 
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form } from 'react-final-form';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -15,27 +15,36 @@ import FormSubsection from './components/FormSubsection/FormSubsection.component
 import FormSubmission from './components/FormSubmission/FormSubmission.component';
 import { FORM_ACTIONS } from 'modules/Forms/constants/FormActions.constants';
 
-import { setNonCustomerFormFieldValidity } from 'slices/nonCustomerForm.slice';
 import { HIGH_LEVEL_CATEGORIES } from 'modules/Forms/constants/HighLevelCategories.constants';
 
 import { submitNewRequest } from 'api/submitNewRequest';
 import { nonCustomerFormSelector } from 'selectors/formSelectors.selectors';
 
+import { nonCustomerFormValidationSelector } from 'selectors/formValidation.selectors';
+
 const handleSubmit = () => console.log('Submitted!');
 
 const NonCustomerForm = () => {
+  const [isFormValid, setIsFormValid] = useState(false);
   const dispatch = useDispatch();
 
   const formName = FORM_NAMES.NON_CUSTOMER_FORM;
   const formData = useSelector(nonCustomerFormSelector);
+
+  const formValidator = useSelector(nonCustomerFormValidationSelector);
+  const areAllCategoriesValid = Object.values(formValidator).every(
+    category => Object.values(category).every(field => field === true)
+  );
+
+  useEffect(() => {
+    setIsFormValid(areAllCategoriesValid);
+  }, [areAllCategoriesValid])
 
   const handleValueChange = (event) => handleFormFieldChange(
     event,
     FORM_ACTIONS[formName],
     dispatch
   );
-
-  const isFormValid = false;
 
   return (
     <Form
@@ -49,7 +58,6 @@ const NonCustomerForm = () => {
                 subsectionName: HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
               }}
               subsectionData={NON_CUSTOMER_SUBSECTION}
-              fieldValidationAction={setNonCustomerFormFieldValidity}
             />
             <FormSubsection
               formNamingData={{
@@ -57,7 +65,6 @@ const NonCustomerForm = () => {
                 subsectionName: HIGH_LEVEL_CATEGORIES.MESSAGE,
               }}
               subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION}
-              fieldValidationAction={setNonCustomerFormFieldValidity}
             />
           </FormFieldsWrapper>
 

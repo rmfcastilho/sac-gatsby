@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form } from 'react-final-form';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -12,7 +12,7 @@ import { MESSAGE_ENTRY_FORM_SUBSECTION } from './constants/MessageEntryForm.cons
 import { FORM_ACTIONS } from 'modules/Forms/constants/FormActions.constants';
 import { HIGH_LEVEL_CATEGORIES } from 'modules/Forms/constants/HighLevelCategories.constants';
 
-import { setCustomerFormFieldValidity } from 'slices/customerContactForm.slice';
+import { customerFormValidationSelector } from 'selectors/formValidation.selectors';
 
 import { customerFormSelector } from 'selectors/formSelectors.selectors';
 
@@ -23,10 +23,20 @@ import { submitNewRequest } from 'api/submitNewRequest';
 const handleSubmit = () => console.log('Submitted!');
 
 const CustomerContactForm = () => {
+  const [isFormValid, setIsFormValid] = useState(false);
   const dispatch = useDispatch();
 
   const formName = FORM_NAMES.CUSTOMER_FORM;
   const formData = useSelector(customerFormSelector);
+
+  const formValidator = useSelector(customerFormValidationSelector);
+  const areAllCategoriesValid = Object.values(formValidator).every(
+    category => Object.values(category).every(field => field === true)
+  );
+
+  useEffect(() => {
+    setIsFormValid(areAllCategoriesValid);
+  }, [areAllCategoriesValid])
 
   const handleValueChange = (event) => handleFormFieldChange(
     event,
@@ -34,20 +44,17 @@ const CustomerContactForm = () => {
     dispatch
   );
 
-  const isFormValid = false;
-
   return (
     <Form
       onSubmit={() => submitNewRequest('new-request', formData)}
       render={() => (
-        <form onSubmit={handleSubmit} onChange={handleValueChange}>
+        <form onChange={handleValueChange}>
           <FormFieldsWrapper>
             <FormSubsection
               formNamingData={{
                 formName: formName,
                 subsectionName: HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
               }}
-              fieldValidationAction={setCustomerFormFieldValidity}
               subsectionData={EXISTING_CUSTOMER_SUBSECTION}
             />
             <FormSubsection
@@ -55,7 +62,6 @@ const CustomerContactForm = () => {
                 formName: formName,
                 subsectionName: HIGH_LEVEL_CATEGORIES.MESSAGE,
               }}
-              fieldValidationAction={setCustomerFormFieldValidity}
               subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION}
             />
           </FormFieldsWrapper>

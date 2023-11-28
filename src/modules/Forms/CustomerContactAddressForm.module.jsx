@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form } from 'react-final-form';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { updateAddressWithApiResult, setCustomerAddressFormFieldValidity } from 'slices/customerAddressForm.slice';
+import { updateAddressWithApiResult } from 'slices/customerAddressForm.slice';
 import { addressSubformSelector } from 'selectors/addressForm.selectors';
 import { zipAddressSelector } from 'selectors/addressForm.selectors';
 
@@ -26,13 +26,24 @@ import FormSubmission from './components/FormSubmission/FormSubmission.component
 import { addressFieldTransformers } from 'modules/Forms/helpers/addressFieldTransformers';
 import { isZipValidValidator } from 'modules/Forms/helpers/fieldValidation';
 
+import { addressFormValidationSelector } from 'selectors/formValidation.selectors';
+
+import { setFormFieldValidity } from 'slices/formValidation.slice';
+import { submitNewRequest } from 'api/submitNewRequest';
+import { customerAddressFormSelector } from 'selectors/formSelectors.selectors';
+
 
 const CustomerContactAddressForm = () => {
+  const [isFormValid, setIsFormValid] = useState(false);
   const dispatch = useDispatch();
 
-  const handleSubmit = () => console.log('Submitted!');
+  const formValidator = useSelector(addressFormValidationSelector);
+  const areAllCategoriesValid = Object.values(formValidator).every(
+    category => Object.values(category).every(field => field === true)
+  );
 
   const formName = FORM_NAMES.CUSTOMER_ADDRESS_FORM;
+  const formData = useSelector(customerAddressFormSelector);
 
   const handleValueChange = (event) => handleFormFieldChange(
     event,
@@ -58,30 +69,41 @@ const CustomerContactAddressForm = () => {
 
       fetchAddressData().then((result) => {
         if (result) {
-          dispatch(
-            updateAddressWithApiResult(addressFieldTransformers(result))
-          );
+          const transformedAddress = addressFieldTransformers(result);
+
+          dispatch(updateAddressWithApiResult(transformedAddress));
+          Object.keys(
+            transformedAddress[HIGH_LEVEL_CATEGORIES.ADDRESS]
+          ).forEach((fieldName) => {
+            dispatch(setFormFieldValidity({
+              category: HIGH_LEVEL_CATEGORIES.ADDRESS,
+              targetForm: formName,
+              field: fieldName,
+              isValid: !!transformedAddress[HIGH_LEVEL_CATEGORIES.ADDRESS][fieldName],
+            }));
+          });
         }
       });
     }
   }, [zipCode]);
 
-  const isFormValid = false;
+  useEffect(() => {
+    setIsFormValid(areAllCategoriesValid);
+  }, [areAllCategoriesValid])
 
   return (
     <Form
-      onSubmit={handleSubmit}
+      onSubmit={() => submitNewRequest('new-request', formData)}
       initialValues={stateAddressData}
       keepDirtyOnReinitialize
       render={() => (
-        <form onChange={handleValueChange} onSubmit={handleSubmit}>
+        <form onChange={handleValueChange}>
           <FormFieldsWrapper>
             <FormSubsection
               formNamingData={{
                 formName: formName,
                 subsectionName: HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
               }}
-              fieldValidationAction={setCustomerAddressFormFieldValidity}
               subsectionData={EXISTING_CUSTOMER_SUBSECTION}
             />
             <FormSubsection
@@ -89,7 +111,6 @@ const CustomerContactAddressForm = () => {
                 formName: formName,
                 subsectionName: HIGH_LEVEL_CATEGORIES.ADDRESS,
               }}
-              fieldValidationAction={setCustomerAddressFormFieldValidity}
               subsectionData={ADDRESS_SUBSECTION}
             />
             <FormSubsection
@@ -97,7 +118,6 @@ const CustomerContactAddressForm = () => {
                 formName: formName,
                 subsectionName: HIGH_LEVEL_CATEGORIES.MESSAGE,
               }}
-              fieldValidationAction={setCustomerAddressFormFieldValidity}
               subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION}
             />
           </FormFieldsWrapper>

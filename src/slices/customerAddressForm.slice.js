@@ -65,7 +65,6 @@ export const customerAddressFormSlice = createSlice({
 export const {
   setCustomerAddressFormContent,
   updateAddressWithApiResult ,
-  setCustomerAddressFormFieldValidity,
 } = customerAddressFormSlice.actions;
 
 

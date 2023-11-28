@@ -2,14 +2,12 @@ import { ADDRESS_FORM_FIELDS } from 'modules/Forms/constants/AddressForm.constan
 import { EXISTING_CUSTOMER_ID_FORM_FIELDS } from 'modules/Forms/constants/ExistingCustomerIdentificationForm.constants';
 import { NON_CUSTOMER_FORM_FIELDS } from 'modules/Forms/constants/NonCustomerIdentificationForm.constants';
 import { MESSAGE_ENTRY_FORM_FIELDS } from 'modules/Forms/constants/MessageEntryForm.constants';
-import { FORM_NAMES } from 'modules/Forms/constants/FormNames.constants';
 
 export const HIGH_LEVEL_CATEGORIES = {
   ADDRESS: 'address',
   IDENTIFICATION: 'identification',
   MESSAGE: 'message',
 };
-
 
 export const FORM_FIELD_CATEGORIES = {
   [ADDRESS_FORM_FIELDS.ZIP]: HIGH_LEVEL_CATEGORIES.ADDRESS,
@@ -27,20 +25,4 @@ export const FORM_FIELD_CATEGORIES = {
   [NON_CUSTOMER_FORM_FIELDS.NAME]: HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
   [MESSAGE_ENTRY_FORM_FIELDS.SUBJECT]: HIGH_LEVEL_CATEGORIES.MESSAGE,
   [MESSAGE_ENTRY_FORM_FIELDS.MESSAGE]: HIGH_LEVEL_CATEGORIES.MESSAGE,
-};
-
-export const SELECTORS_PER_FORM = {
-  [FORM_NAMES.CUSTOMER_FORM]: [
-    HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
-    HIGH_LEVEL_CATEGORIES.MESSAGE,
-  ],
-  [FORM_NAMES.NON_CUSTOMER_FORM]: [
-    HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
-    HIGH_LEVEL_CATEGORIES.MESSAGE,
-  ],
-  [FORM_NAMES.CUSTOMER_ADDRESS_FORM]: [
-    HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
-    HIGH_LEVEL_CATEGORIES.ADDRESS,
-    HIGH_LEVEL_CATEGORIES.MESSAGE,
-  ],
 };
