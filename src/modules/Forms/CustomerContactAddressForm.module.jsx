@@ -93,7 +93,7 @@ const CustomerContactAddressForm = () => {
         }
       });
     }
-  }, [zipCode]);
+  }, [zipCode, dispatch, formName]);
 
   useEffect(() => {
     setIsFormValid(areAllCategoriesValid);

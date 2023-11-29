@@ -5,8 +5,6 @@ import { BUTTON_STYLES } from 'constants/button';
 import * as colors from 'constants/styles/colors';
 import { Link } from 'gatsby';
 import { FONT_WEIGHTS } from 'constants/styles/font';
-import { BREAKPOINT_TABLET } from 'constants/styles/sizes';
-
 
 const commonStyling = `
   color: white;

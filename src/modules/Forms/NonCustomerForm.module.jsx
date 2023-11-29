@@ -52,6 +52,9 @@ const NonCustomerForm = () => {
     dispatch
   );
 
+  console.log(process.env.GATSBY_ZIP_CODE_API_BASE_URL)
+  console.log(process.env.GATSBY_API_BASE_URL)
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setIsSubmitting(true);

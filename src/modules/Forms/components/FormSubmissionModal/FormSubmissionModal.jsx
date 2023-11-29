@@ -10,7 +10,6 @@ import {
   FormSubmissionModalContent,
   FormSubmissionModalTitle,
   FormSubmissionModalText,
-  StyledButton,
 } from './styled';
 
 import { InfoSignIcon, TickCircleIcon, Spinner } from 'evergreen-ui';
