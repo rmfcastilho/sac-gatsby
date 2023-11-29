@@ -1,11 +1,14 @@
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+  path: '.env',
+});
 
 module.exports = {
   siteMetadata: {
     title: `SAC Gatsby`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://sac.ubbeauty.com.br`
   },
   plugins: [
     "gatsby-plugin-root-import",
