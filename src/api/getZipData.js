@@ -4,6 +4,6 @@ export const getZipData = async (zipCode) => {
     cache: 'default',
   };
 
-  return await fetch(`${process.env.ZIP_CODE_API_BASE_URL}/${zipCode.replace('-', '')}/json/`, options)
+  return await fetch(`${process.env.GATSBY_ZIP_CODE_API_BASE_URL}/${zipCode.replace('-', '')}/json/`, options)
     .then((response) => response.json());
 };
