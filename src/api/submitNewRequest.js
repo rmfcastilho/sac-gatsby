@@ -1,6 +1,6 @@
 export const submitNewRequest = async (type, data) => {
   try {
-    const response = await fetch(`http://localhost:3000/submit-new-request`, {
+    const response = await fetch(`${process.env.GATSBY_API_BASE_URL}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -13,9 +13,7 @@ export const submitNewRequest = async (type, data) => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const result = await response.json();
-    console.log('Response:', result);
-    return result;
+    return await response.json();
   } catch (error) {
     console.error('Error:', error);
     return error;
