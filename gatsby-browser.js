@@ -5,7 +5,7 @@ import { store } from "store/store";
 
 import StandardTemplate from "templates/StandardTemplate.component";
 
-export const wrapPageElement = ({ element, props }) => {
+export const wrapRootElement = ({ element, props }) => {
   return (
     <Provider store={store}>
       <StandardTemplate {...props}>{element}</StandardTemplate>

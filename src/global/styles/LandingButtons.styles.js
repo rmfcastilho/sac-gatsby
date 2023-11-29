@@ -7,6 +7,6 @@ export const LandingButtonWrapper = styled.div`
   margin: 0 auto;
   padding: 2rem 0;
   width: fit-content;
-  max-width: 50%;
+  max-width: 60%;
   justify-content: center;
 `;
