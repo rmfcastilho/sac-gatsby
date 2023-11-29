@@ -12,6 +12,7 @@ const standardFieldStyles = `
   color: ${colors.colorFormGrey};
   padding: 0.5rem;
   flex-grow: 1;
+  font-size: 1rem;
 
   ::placeholder {
     color: ${colors.colorTurquoiseGreenExtraDark};
