@@ -10,7 +10,6 @@ import { LandingButtonWrapper } from 'global/styles/LandingButtons.styles';
 import { BUTTON_TYPES } from 'constants/button';
 import { LANDING_PAGE_BUTTONS } from "constants/landingPageButtons";
 
-
 const LandingButtons = () => {
   const dispatch = useDispatch();
 

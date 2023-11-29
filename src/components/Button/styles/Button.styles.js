@@ -10,13 +10,14 @@ import { BREAKPOINT_TABLET } from 'constants/styles/sizes';
 
 const commonStyling = `
   color: white;
-  padding: 0.75rem 0;
+  padding: 0.75rem 3rem;
   border-radius: 0.75rem;
   width: 100%;
   text-align: center;
   transition: 0.5s ease-in-out;
   font-size: 1rem;
   font-weight: ${FONT_WEIGHTS.BOLD};
+  box-sizing: border-box;
 `;
 
 const activeElementsStyling = `
