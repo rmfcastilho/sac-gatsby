@@ -16,6 +16,9 @@ export const StyledCloseModalButton = styled.button`
   align-items: center;
   transition: 0.2s ease-in-out;
   border: 1px solid ${colors.colorTurquoiseGreenDark};
+  position: absolute;
+  top: 1rem;
+  right: 0.25rem;
 
   &:hover {
     border: none;

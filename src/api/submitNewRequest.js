@@ -1,8 +1,4 @@
 export const submitNewRequest = async (type, data) => {
-  console.log('Submitting request');
-  console.log('Type:', type);
-  console.log('Data:', data);
-
   try {
     const response = await fetch(`http://localhost:3000/submit-new-request`, {
       method: 'POST',

@@ -32,10 +32,16 @@ import { setFormFieldValidity } from 'slices/formValidation.slice';
 import { submitNewRequest } from 'api/submitNewRequest';
 import { customerAddressFormSelector } from 'selectors/formSelectors.selectors';
 import { contactReasonSelector } from 'selectors/contactReason.selectors';
+import FormSubmissionModal from 'modules/Forms/components/FormSubmissionModal/FormSubmissionModal';
 
 
 const CustomerContactAddressForm = () => {
   const [isFormValid, setIsFormValid] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [isSubmissionSuccessful, setIsSubmissionSuccessful] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const dispatch = useDispatch();
 
   const formValidator = useSelector(addressFormValidationSelector);
@@ -93,42 +99,62 @@ const CustomerContactAddressForm = () => {
     setIsFormValid(areAllCategoriesValid);
   }, [areAllCategoriesValid])
 
-  const handleSubmit = () => submitNewRequest(contactReason, formData);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setHasSubmitted(true);
+    setIsModalOpen(true);
+
+    return submitNewRequest(contactReason, formData).then(
+      (result) => {
+        setIsSubmissionSuccessful(result.ok);
+        setIsSubmitting(false);
+      }
+    );
+  };
 
   return (
-    <Form
-      onSubmit={handleSubmit}
-      initialValues={stateAddressData}
-      keepDirtyOnReinitialize
-      render={() => (
-        <form onChange={handleValueChange} onSubmit={handleSubmit}>
-          <FormFieldsWrapper>
-            <FormSubsection
-              formNamingData={{
-                formName: formName,
-                subsectionName: HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
-              }}
-              subsectionData={EXISTING_CUSTOMER_SUBSECTION}
-            />
-            <FormSubsection
-              formNamingData={{
-                formName: formName,
-                subsectionName: HIGH_LEVEL_CATEGORIES.ADDRESS,
-              }}
-              subsectionData={ADDRESS_SUBSECTION}
-            />
-            <FormSubsection
-              formNamingData={{
-                formName: formName,
-                subsectionName: HIGH_LEVEL_CATEGORIES.MESSAGE,
-              }}
-              subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION}
-            />
-          </FormFieldsWrapper>
-          <FormSubmission isFormValid={isFormValid} />
-        </form>
-      )}
-    />
+    <>
+      <FormSubmissionModal
+        isModalOpen={isModalOpen}
+        isSubmitting={isSubmitting}
+        isSubmissionSuccessful={isSubmissionSuccessful}
+        hasSubmitted={hasSubmitted}
+      />
+      <Form
+        onSubmit={handleSubmit}
+        initialValues={stateAddressData}
+        keepDirtyOnReinitialize
+        render={() => (
+          <form onChange={handleValueChange} onSubmit={handleSubmit}>
+            <FormFieldsWrapper>
+              <FormSubsection
+                formNamingData={{
+                  formName: formName,
+                  subsectionName: HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
+                }}
+                subsectionData={EXISTING_CUSTOMER_SUBSECTION}
+              />
+              <FormSubsection
+                formNamingData={{
+                  formName: formName,
+                  subsectionName: HIGH_LEVEL_CATEGORIES.ADDRESS,
+                }}
+                subsectionData={ADDRESS_SUBSECTION}
+              />
+              <FormSubsection
+                formNamingData={{
+                  formName: formName,
+                  subsectionName: HIGH_LEVEL_CATEGORIES.MESSAGE,
+                }}
+                subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION}
+              />
+            </FormFieldsWrapper>
+            <FormSubmission isFormValid={isFormValid} />
+          </form>
+        )}
+      />
+    </>
   )
 };
 

@@ -22,9 +22,15 @@ import { nonCustomerFormSelector } from 'selectors/formSelectors.selectors';
 
 import { nonCustomerFormValidationSelector } from 'selectors/formValidation.selectors';
 import { contactReasonSelector } from 'selectors/contactReason.selectors';
+import FormSubmissionModal from 'modules/Forms/components/FormSubmissionModal/FormSubmissionModal';
 
 const NonCustomerForm = () => {
   const [isFormValid, setIsFormValid] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [isSubmissionSuccessful, setIsSubmissionSuccessful] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const dispatch = useDispatch();
 
   const formName = FORM_NAMES.NON_CUSTOMER_FORM;
@@ -46,34 +52,54 @@ const NonCustomerForm = () => {
     dispatch
   );
 
-  const handleSubmit = () => submitNewRequest(contactReason, formData);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setHasSubmitted(true);
+    setIsModalOpen(true);
+
+    return submitNewRequest(contactReason, formData).then(
+      (result) => {
+        setIsSubmissionSuccessful(result.ok);
+        setIsSubmitting(false);
+      }
+    );
+  };
 
   return (
-    <Form
-      onSubmit={handleSubmit}
-      render={() => (
-        <form onSubmit={handleSubmit} onChange={handleValueChange}>
-          <FormFieldsWrapper>
-            <FormSubsection
-              formNamingData={{
-                formName: formName,
-                subsectionName: HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
-              }}
-              subsectionData={NON_CUSTOMER_SUBSECTION}
-            />
-            <FormSubsection
-              formNamingData={{
-                formName: formName,
-                subsectionName: HIGH_LEVEL_CATEGORIES.MESSAGE,
-              }}
-              subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION}
-            />
-          </FormFieldsWrapper>
+    <>
+      <FormSubmissionModal
+        isModalOpen={isModalOpen}
+        isSubmitting={isSubmitting}
+        isSubmissionSuccessful={isSubmissionSuccessful}
+        hasSubmitted={hasSubmitted}
+      />
+      <Form
+        onSubmit={handleSubmit}
+        render={() => (
+          <form onSubmit={handleSubmit} onChange={handleValueChange}>
+            <FormFieldsWrapper>
+              <FormSubsection
+                formNamingData={{
+                  formName: formName,
+                  subsectionName: HIGH_LEVEL_CATEGORIES.IDENTIFICATION,
+                }}
+                subsectionData={NON_CUSTOMER_SUBSECTION}
+              />
+              <FormSubsection
+                formNamingData={{
+                  formName: formName,
+                  subsectionName: HIGH_LEVEL_CATEGORIES.MESSAGE,
+                }}
+                subsectionData={MESSAGE_ENTRY_FORM_SUBSECTION}
+              />
+            </FormFieldsWrapper>
 
-          <FormSubmission isFormValid={isFormValid} />
-        </form>
-      )}
-    />
+            <FormSubmission isFormValid={isFormValid} />
+          </form>
+        )}
+      />
+    </>
   );
 };
 

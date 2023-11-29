@@ -79,6 +79,7 @@ const FormSubsection = ({
                   hasError={hasError}
                   renderMethod={field.renderMethod}
                   onKeyUp={() => fieldValidationAction(!hasError && meta.valid, id)}
+                  onBlur={() => fieldValidationAction(!hasError && meta.valid, id)}
                 >
                   <StyledField
                     hasError={hasError}
