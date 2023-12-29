@@ -2,8 +2,8 @@ import { requiredValidator, isEmailValidValidator } from 'modules/Forms/helpers/
 import { FIELDS_RENDER_METHOD } from 'modules/Forms/constants/FieldsRenderMethod.constants';
 
 export const NON_CUSTOMER_FORM_FIELDS = {
-  NAME: 'name',
-  EMAIL: 'email',
+  NAME: 'customerName',
+  EMAIL: 'customerEmail',
 }
 
 export const NON_CUSTOMER_SUBSECTION = {

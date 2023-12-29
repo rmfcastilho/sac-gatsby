@@ -6,9 +6,15 @@ import { HEADERS } from "constants/headers";
 
 import LandingButtons from 'components/LandingButtons';
 
+import { Helmet } from 'react-helmet';
+
 
 const Index = () => (
   <React.Fragment>
+    <Helmet>
+      <title>SAC UBBeauty</title>
+    </Helmet>
+
     <Heading type={HEADING_STYLES.SECONDARY}>
       {HEADERS.QUICK_SOLUTIONS}
     </Heading>

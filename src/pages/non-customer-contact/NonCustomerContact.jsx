@@ -20,6 +20,7 @@ import { ROUTES } from "constants/routes";
 import { HEADERS } from "constants/headers";
 import { BACKLINK_LABEL } from "constants/backlink";
 import { REQUEST_TYPE_LABELS } from 'constants/requestTypes.constants';
+import { Helmet } from 'react-helmet';
 
 
 const NonCustomerContact = () => {
@@ -27,6 +28,10 @@ const NonCustomerContact = () => {
 
   return (
     <React.Fragment>
+      <Helmet>
+        <title>SAC UBBeauty | Formulário de Contato | Não sou cliente</title>
+      </Helmet>
+
       <Heading type={HEADING_STYLES.SECONDARY}>
           {HEADERS.NON_CUSTOMER}
       </Heading>

@@ -13,6 +13,7 @@ import { HEADING_STYLES } from "constants/heading";
 import { HEADERS } from "constants/headers";
 import { BACKLINK_LABEL } from "constants/backlink";
 
+import { Helmet } from 'react-helmet';
 const NonCustomerLanding = () => {
   const sectionsToRender = nonCustomerInnerSections.map(
     (section) => (
@@ -25,6 +26,10 @@ const NonCustomerLanding = () => {
 
   return (
     <React.Fragment>
+      <Helmet>
+        <title>SAC UBBeauty | Não sou cliente</title>
+      </Helmet>
+
       <Heading type={HEADING_STYLES.SECONDARY}>
         {HEADERS.NON_CUSTOMER}
       </Heading>

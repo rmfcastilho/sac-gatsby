@@ -18,6 +18,7 @@ import { FORM_SUBHEADER_TEXT } from "constants/form";
 
 import { contactReasonSelector } from "selectors/contactReason.selectors";
 import { REQUEST_TYPE_LABELS } from 'constants/requestTypes.constants';
+import { Helmet } from 'react-helmet';
 
 
 const CustomerContactAddress = () => {
@@ -25,6 +26,10 @@ const CustomerContactAddress = () => {
 
   return (
     <React.Fragment>
+      <Helmet>
+        <title>SAC UBBeauty | Formulário de Contato | Sou cliente</title>
+      </Helmet>
+
       <Heading type={HEADING_STYLES.SECONDARY}>{HEADERS.EXISTING_CUSTOMER}</Heading>
 
       <SectionDivider type={DIVIDER_ORIENTATION.HORIZONTAL}/>

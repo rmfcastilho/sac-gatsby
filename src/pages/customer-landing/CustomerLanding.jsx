@@ -12,6 +12,7 @@ import { HEADING_STYLES } from "constants/heading";
 import { DIVIDER_ORIENTATION } from "constants/sectionDivider";
 import { BACKLINK_LABEL } from "constants/backlink";
 import { HEADERS } from "constants/headers";
+import { Helmet } from 'react-helmet';
 
 
 const CustomerLanding = () => {
@@ -26,6 +27,10 @@ const CustomerLanding = () => {
 
   return (
     <React.Fragment>
+      <Helmet>
+        <title>SAC UBBeauty | Sou cliente</title>
+      </Helmet>
+
       <Heading type={HEADING_STYLES.SECONDARY}>
         {HEADERS.EXISTING_CUSTOMER}
       </Heading>
