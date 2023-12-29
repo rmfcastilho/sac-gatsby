@@ -1,6 +1,6 @@
 export const submitNewRequest = async (type, data) => {
   try {
-    const response = await fetch(`${process.env.GATSBY_API_BASE_URL}/submit-new-request`, {
+    const response = await fetch(`${process.env.GATSBY_API_BASE_URL}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
