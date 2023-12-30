@@ -18,7 +18,7 @@ export const StyledCloseModalButton = styled.button`
   border: 1px solid ${colors.colorTurquoiseGreenDark};
   position: absolute;
   top: 1rem;
-  right: 0.25rem;
+  right: 0.75rem;
 
   &:hover {
     border: none;

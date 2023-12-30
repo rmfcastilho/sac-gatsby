@@ -6,7 +6,7 @@ import { BUTTON_STYLES, BUTTON_TYPES } from "constants/button";
 import { toggleModal } from "slices/modal.slice";
 
 
-const TimedButton = ({ targetRoute }) => {
+const TimedButton = ({ targetRoute, label = '' }) => {
   const [timeRemaining, setTimeRemaining] = useState(10);
   const dispatch = useDispatch();
 
@@ -20,7 +20,7 @@ const TimedButton = ({ targetRoute }) => {
 
   const buttonLabel = timeRemaining > 0
     ? `${timeRemaining}s`
-    : 'Li a página, mas meu problema persiste';
+    : label || 'Li a página, mas meu problema persiste';
 
   return <Button
     type={BUTTON_TYPES.LINK}

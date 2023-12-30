@@ -84,6 +84,7 @@ export const nonCustomerInnerSections = [
         label: "Minha compra foi cancelada",
         behavior: BUTTON_BEHAVIORS.ALERT,
         behaviorData: MODAL_CONTENT_TYPES.CANCELLED_ORDER,
+        contactType: REQUEST_TYPES.CANCELLED_ORDER,
       },
     ],
   },

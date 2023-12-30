@@ -64,7 +64,7 @@ export const currentCustomerInnerSections = [
     content: [
       {
         id: "wrongOrder",
-        label: "Meu pedido veio incorreto",
+        label: "Minha compra veio incorreta",
         behavior: BUTTON_BEHAVIORS.REDIRECT,
         behaviorData: ROUTES.CUSTOMER_CONTACT,
         contactType: REQUEST_TYPES.WRONG_PRODUCT,
@@ -116,6 +116,7 @@ export const currentCustomerInnerSections = [
         label: "Minha compra foi cancelada",
         behavior: BUTTON_BEHAVIORS.ALERT,
         behaviorData: MODAL_CONTENT_TYPES.CANCELLED_ORDER,
+        contactType: REQUEST_TYPES.CANCELLED_ORDER,
       },
     ],
   },
@@ -130,16 +131,11 @@ export const currentCustomerInnerSections = [
         behaviorData: MODAL_CONTENT_TYPES.PRODUCT_COMPOSITION,
       },
       {
-        id: "noFlowToTip",
-        label: "O produto não flui para a ponta",
-        behavior: BUTTON_BEHAVIORS.ALERT,
-        behaviorData: MODAL_CONTENT_TYPES.TIP_UNDERFLOW,
-      },
-      {
         id: "tipOverflow",
-        label: "A ponta está soltando muito produto",
+        label: "A ponta está soltando NENHUM, POUCO ou MUITO produto",
         behavior: BUTTON_BEHAVIORS.ALERT,
         behaviorData: MODAL_CONTENT_TYPES.TIP_OVERFLOW,
+        contactType: REQUEST_TYPES.TIP_OVERFLOW,
       },
     ],
   },

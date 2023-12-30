@@ -6,7 +6,7 @@ import { ROUTES } from "constants/routes";
 
 const UNREAD_PAGE_CTA = 'CLIQUE AQUI se ainda não leu a página';
 const THANK_YOU_HEADER = 'Agradecemos o interesse';
-const HEADER_STANDARD_BEGINNING = 'Temos uma página com todas as clarificações sobre';
+const HEADER_STANDARD_BEGINNING = 'Temos uma página com todas as explicações sobre';
 
 export const modalTextContent = {
   [MODAL_CONTENT_TYPES.PARTNERSHIPS]: {
@@ -42,27 +42,27 @@ export const modalTextContent = {
     ctaContent: UNREAD_PAGE_CTA,
   },
   [MODAL_CONTENT_TYPES.TIP_OVERFLOW]: {
-    type: modalTypes.SIMPLE_ALERT,
+    type: modalTypes.DELAYED_RESOURCE,
     header: `${HEADER_STANDARD_BEGINNING} a ponta!`,
     textualClarification: '',
     resource: RESOURCE_URLS.TIP_QUERIES,
-    targetRoute: null,
+    targetRoute: ROUTES.CUSTOMER_CONTACT,
     ctaContent: UNREAD_PAGE_CTA,
   },
   [MODAL_CONTENT_TYPES.TIP_UNDERFLOW]: {
-    type: modalTypes.SIMPLE_ALERT,
+    type: modalTypes.DELAYED_RESOURCE,
     header: `${HEADER_STANDARD_BEGINNING} a ponta!`,
     textualClarification: '',
     resource: RESOURCE_URLS.TIP_QUERIES,
-    targetRoute: null,
+    targetRoute: ROUTES.CUSTOMER_CONTACT,
     ctaContent: UNREAD_PAGE_CTA,
   },
   [MODAL_CONTENT_TYPES.CANCELLED_ORDER]: {
-    type: modalTypes.SIMPLE_ALERT,
+    type: modalTypes.DELAYED_RESOURCE,
     header: `${HEADER_STANDARD_BEGINNING} cancelamentos`,
     textualClarification: '',
     resource: RESOURCE_URLS.CANCELLED_TRANSACTION,
-    targetRoute: null,
+    targetRoute: ROUTES.CUSTOMER_CONTACT,
     ctaContent: UNREAD_PAGE_CTA,
   },
   [MODAL_CONTENT_TYPES.PRODUCT_DOUBT]: {
@@ -85,7 +85,7 @@ export const modalTextContent = {
     type: modalTypes.DELAYED_RESOURCE,
     header: `${HEADER_STANDARD_BEGINNING} pedidos!`,
     textualClarification: '',
-    resource: RESOURCE_URLS.DELIVERY,
+    resource: RESOURCE_URLS.ORDER_QUERIES,
     targetRoute: ROUTES.CUSTOMER_CONTACT,
     ctaContent: UNREAD_PAGE_CTA,
   },
@@ -133,10 +133,12 @@ export const modalTextContent = {
     type: modalTypes.DELAYED_RESOURCE,
     header: 'Somente podemos trocar o endereço de entrega se o pedido ainda não tiver sido enviado.',
     textualClarification: `
-      Se o status do seu pedido for "Pago" ou "Emitindo Nota Fiscal", 
-      você pode prosseguir.`,
+      SOMENTE se o status do seu pedido for "Pago" ou "Emitindo Nota Fiscal", 
+      você pode prosseguir`,
     resource: RESOURCE_URLS.TRACKING,
     targetRoute: ROUTES.CUSTOMER_CONTACT_ADDRESS,
     ctaContent: 'CLIQUE AQUI PARA VER O STATUS DO PEDIDO',
+    timedButtonLabel: 'Sim, o status de meu pedido é PAGO ou EMITINDO NOTA FISCAL, ' +
+      'portanto, desejo alterar meu endereço de entrega.',
   },
 };

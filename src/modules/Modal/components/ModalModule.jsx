@@ -48,7 +48,10 @@ const ModalModule = ({ contentType }) => (
 
       {
         modalTextContent[contentType].type === modalTypes.DELAYED_RESOURCE
-        && <TimedButton targetRoute={modalTextContent[contentType].targetRoute}/>
+        && <TimedButton
+              targetRoute={modalTextContent[contentType].targetRoute}
+              label={modalTextContent[contentType].timedButtonLabel}
+            />
       }
     </InnerModalButtonWrapper>
   </InnerModalContentWrapper>

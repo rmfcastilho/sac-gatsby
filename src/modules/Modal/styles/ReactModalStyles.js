@@ -14,8 +14,8 @@ export const modalStyles = {
     color: 'black',
     textShadow: '1px 0.5px rgba(0, 0, 0, 0.2)',
     zIndex: 20,
-    minHeight: '20rem',
-    maxHeight: '60vh',
+    minHeight: '14.75rem',
+    maxHeight: '80vh',
     overflowY: 'scroll',
   },
 };

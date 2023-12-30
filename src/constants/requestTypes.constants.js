@@ -16,6 +16,9 @@ export const REQUEST_TYPES = {
   ORDER_TRACKING: 'orderTracking',
   DELIVERY_DEADLINES: 'deliveryDeadlines',
   ORDER_STATUS: 'orderStatus',
+  CANCELLED_ORDER: 'cancelledOrder',
+  NC_CANCELLED_ORDER: 'nonCustomerCancelledOrder',
+  TIP_OVERFLOW: 'tipOverflow',
 };
 
 export const REQUEST_TYPE_LABELS = {
@@ -29,11 +32,14 @@ export const REQUEST_TYPE_LABELS = {
   [REQUEST_TYPES.PRODUCT_DOUBT]: 'Tenho dúvidas sobre produto',
   [REQUEST_TYPES.NC_PRODUCT_DOUBT]: 'Tenho dúvidas sobre produto',
   [REQUEST_TYPES.ORDER_DOUBT]: 'Tenho dúvidas sobre meu pedido',
-  [REQUEST_TYPES.WRONG_PRODUCT]: 'Recebi um produto errado',
+  [REQUEST_TYPES.WRONG_PRODUCT]: 'Minha compra veio incorreta',
   [REQUEST_TYPES.LATE_DELIVERY]: 'Meu pedido está atrasado',
   [REQUEST_TYPES.ADDRESS_CHANGE]: 'Quero alterar meu endereço',
   [REQUEST_TYPES.PRODUCT_RETURN]: 'Quero devolver ou trocar um produto',
   [REQUEST_TYPES.ORDER_TRACKING]: 'Quero rastrear meu pedido',
   [REQUEST_TYPES.DELIVERY_DEADLINES]: 'Quero saber prazos de entrega',
   [REQUEST_TYPES.ORDER_STATUS]: 'Quero saber o status do meu pedido',
+  [REQUEST_TYPES.CANCELLED_ORDER]: 'Meu pedido foi cancelado',
+  [REQUEST_TYPES.NC_CANCELLED_ORDER]: 'Meu pedido foi cancelado',
+  [REQUEST_TYPES.TIP_OVERFLOW]: 'A ponta está soltando NENHUM, POUCO ou MUITO produto',
 }
