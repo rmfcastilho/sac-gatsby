@@ -15,6 +15,16 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp"
-  ]
+    "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `SAC UBBeauty`,
+        short_name: `SAC UBBeauty`,
+        start_url: `/`,
+        display: `standalone`,
+        icon: 'src/icons/favicon.png'
+      },
+    },
+  ],
 };
