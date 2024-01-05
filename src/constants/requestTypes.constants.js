@@ -19,6 +19,10 @@ export const REQUEST_TYPES = {
   CANCELLED_ORDER: 'cancelledOrder',
   NC_CANCELLED_ORDER: 'nonCustomerCancelledOrder',
   TIP_OVERFLOW: 'tipOverflow',
+  NOTA: 'noneOfTheAbove',
+  CHANGE_ORDER: 'changeOrder',
+  CANCELLED_TRANSACTION: 'cancelledTransaction',
+  NC_CANCELLED_TRANSACTION: 'nonCustomerCancelledTransaction',
 };
 
 export const REQUEST_TYPE_LABELS = {
@@ -42,4 +46,8 @@ export const REQUEST_TYPE_LABELS = {
   [REQUEST_TYPES.CANCELLED_ORDER]: 'Meu pedido foi cancelado',
   [REQUEST_TYPES.NC_CANCELLED_ORDER]: 'Meu pedido foi cancelado',
   [REQUEST_TYPES.TIP_OVERFLOW]: 'A ponta está soltando NENHUM, POUCO ou MUITO produto',
+  [REQUEST_TYPES.NOTA]: 'Outras dúvidas',
+  [REQUEST_TYPES.CHANGE_ORDER]: 'Quero alterar o pedido',
+  [REQUEST_TYPES.CANCELLED_TRANSACTION]: 'Minha transação foi cancelada',
+  [REQUEST_TYPES.NC_CANCELLED_TRANSACTION]: 'Minha transação foi cancelada',
 }

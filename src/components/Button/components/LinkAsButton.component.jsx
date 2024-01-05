@@ -16,6 +16,8 @@ const LinkAsButton = ({
       key={key}
       buttonStyle={buttonStyle}
       onClick={onClick}
+      target="_blank"
+      rel="noreferrer"
     >
       {label}
     </StyledDisabledLink>
@@ -24,6 +26,8 @@ const LinkAsButton = ({
       to={link}
       buttonStyle={buttonStyle}
       onClick={onClick}
+      target="_blank"
+      rel="noreferrer"
     >
       {label}
     </StyledLink>

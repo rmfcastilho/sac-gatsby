@@ -29,6 +29,19 @@ export const currentCustomerInnerSections = [
         behaviorData: ROUTES.CUSTOMER_CONTACT,
         contactType: REQUEST_TYPES.PAYMENT_DOUBT,
       },
+      {
+        id: 'paymentMethods',
+        label: 'Quais os métodos de pagamento aceitos?',
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.PAYMENT_METHODS,
+      },
+      {
+        id: 'cancelledTransaction',
+        label: 'Minha transação foi cancelada',
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.CANCELLED_TRANSACTION,
+        contactType: REQUEST_TYPES.CANCELLED_TRANSACTION,
+      },
     ],
   },
   {
@@ -48,13 +61,6 @@ export const currentCustomerInnerSections = [
         behavior: BUTTON_BEHAVIORS.REDIRECT,
         behaviorData: ROUTES.CUSTOMER_CONTACT,
         contactType: REQUEST_TYPES.SUGGESTION,
-      },
-      {
-        id: "complaint",
-        label: "Quero fazer uma reclamação",
-        behavior: BUTTON_BEHAVIORS.REDIRECT,
-        behaviorData: ROUTES.CUSTOMER_CONTACT,
-        contactType: REQUEST_TYPES.COMPLAINT,
       },
     ],
   },
@@ -112,6 +118,13 @@ export const currentCustomerInnerSections = [
         contactType: REQUEST_TYPES.ADDRESS_CHANGE,
       },
       {
+        id: "changeOrder",
+        label: "Quero alterar o pedido",
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.CHANGE_ORDER,
+        contactType: REQUEST_TYPES.CHANGE_ORDER,
+      },
+      {
         id: "cancelledOrder",
         label: "Minha compra foi cancelada",
         behavior: BUTTON_BEHAVIORS.ALERT,
@@ -138,5 +151,18 @@ export const currentCustomerInnerSections = [
         contactType: REQUEST_TYPES.TIP_OVERFLOW,
       },
     ],
+  },
+  {
+    id: 'other',
+    header: 'Outras questões',
+    content: [
+      {
+        id: 'noneOfTheAbove',
+        label: 'Nenhum dos itens acima corresponde à minha dúvida',
+        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behaviorData: ROUTES.CUSTOMER_CONTACT,
+        contactType: REQUEST_TYPES.NOTA,
+      }
+    ]
   },
 ];

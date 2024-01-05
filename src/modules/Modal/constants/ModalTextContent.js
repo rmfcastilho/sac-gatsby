@@ -17,6 +17,14 @@ export const modalTextContent = {
     targetRoute: null,
     ctaContent: '',
   },
+  [MODAL_CONTENT_TYPES.PAYMENT_METHODS]: {
+    type: modalTypes.SIMPLE_ALERT,
+    header: `Métodos de pagamento aceitos`,
+    textualClarification: 'São aceitos exclusivamente pagamentos por cartão de crédito ou PIX.',
+    resource: null,
+    targetRoute: null,
+    ctaContent: '',
+  },
   [MODAL_CONTENT_TYPES.RESALES]: {
     type: modalTypes.SIMPLE_ALERT,
     header: THANK_YOU_HEADER,
@@ -129,6 +137,14 @@ export const modalTextContent = {
     targetRoute: ROUTES.CUSTOMER_CONTACT,
     ctaContent: UNREAD_PAGE_CTA,
   },
+  [MODAL_CONTENT_TYPES.CANCELLED_TRANSACTION]: {
+    type: modalTypes.DELAYED_RESOURCE,
+    header: `${HEADER_STANDARD_BEGINNING} cancelamentos`,
+    textualClarification: '',
+    resource: RESOURCE_URLS.CANCELLED_TRANSACTION,
+    targetRoute: ROUTES.CUSTOMER_CONTACT,
+    ctaContent: UNREAD_PAGE_CTA,
+  },
   [MODAL_CONTENT_TYPES.CHANGE_SHIPPING_ADDRESS]: {
     type: modalTypes.DELAYED_RESOURCE,
     header: 'Somente podemos trocar o endereço de entrega se o pedido ainda não tiver sido enviado.',
@@ -141,4 +157,16 @@ export const modalTextContent = {
     timedButtonLabel: 'Sim, o status de meu pedido é PAGO ou EMITINDO NOTA FISCAL, ' +
       'portanto, desejo alterar meu endereço de entrega.',
   },
+  [MODAL_CONTENT_TYPES.CHANGE_ORDER]: {
+    type: modalTypes.DELAYED_RESOURCE,
+    header: 'Somente podemos alterar o pedido se ele ainda não tiver sido enviado.',
+    textualClarification: `
+      SOMENTE se o status do seu pedido for "Pago" ou "Emitindo Nota Fiscal", 
+      você pode prosseguir`,
+    resource: RESOURCE_URLS.TRACKING,
+    targetRoute: ROUTES.CUSTOMER_CONTACT_ADDRESS,
+    ctaContent: 'CLIQUE AQUI PARA VER O STATUS DO PEDIDO',
+    timedButtonLabel: 'Sim, o status de meu pedido é PAGO ou EMITINDO NOTA FISCAL, ' +
+      'portanto, desejo alterar meu pedido.',
+  }
 };

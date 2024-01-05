@@ -15,6 +15,19 @@ export const nonCustomerInnerSections = [
         behaviorData: MODAL_CONTENT_TYPES.NON_CUSTOMER_PRODUCT_DOUBT,
         contactType: REQUEST_TYPES.NC_PRODUCT_DOUBT,
       },
+      {
+        id: 'paymentMethods',
+        label: 'Quais os métodos de pagamento aceitos?',
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.PAYMENT_METHODS,
+      },
+      {
+        id: 'cancelledTransaction',
+        label: 'Minha transação foi cancelada',
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.CANCELLED_TRANSACTION,
+        contactType: REQUEST_TYPES.NC_CANCELLED_TRANSACTION,
+      },
     ],
   },
   {
@@ -34,13 +47,6 @@ export const nonCustomerInnerSections = [
         behavior: BUTTON_BEHAVIORS.REDIRECT,
         behaviorData: ROUTES.NON_CUSTOMER_CONTACT,
         contactType: REQUEST_TYPES.NC_SUGGESTION,
-      },
-      {
-        id: "complaint",
-        label: "Quero fazer uma reclamação",
-        behavior: BUTTON_BEHAVIORS.REDIRECT,
-        behaviorData: ROUTES.NON_CUSTOMER_CONTACT,
-        contactType: REQUEST_TYPES.NC_COMPLAINT,
       },
       {
         id: "partnerships",
@@ -87,5 +93,18 @@ export const nonCustomerInnerSections = [
         contactType: REQUEST_TYPES.CANCELLED_ORDER,
       },
     ],
+  },
+  {
+    id: 'other',
+    header: 'Outras questões',
+    content: [
+      {
+        id: 'noneOfTheAbove',
+        label: 'Nenhum dos itens acima corresponde à minha dúvida',
+        behavior: BUTTON_BEHAVIORS.REDIRECT,
+        behaviorData: ROUTES.NON_CUSTOMER_CONTACT,
+        contactType: REQUEST_TYPES.NOTA,
+      }
+    ]
   },
 ];
