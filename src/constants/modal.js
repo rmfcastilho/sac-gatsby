@@ -18,4 +18,5 @@ export const MODAL_CONTENT_TYPES = {
   CHANGE_ORDER: 'changeOrder',
   PAYMENT_METHODS: 'paymentMethods',
   CANCELLED_TRANSACTION: 'cancelledTransaction',
+  LOOSE_TIP: 'looseTip',
 };

@@ -49,6 +49,14 @@ export const modalTextContent = {
     targetRoute: null,
     ctaContent: UNREAD_PAGE_CTA,
   },
+  [MODAL_CONTENT_TYPES.LOOSE_TIP]: {
+    type: modalTypes.SIMPLE_ALERT,
+    header: `${HEADER_STANDARD_BEGINNING} a ponta!`,
+    textualClarification: '',
+    resource: RESOURCE_URLS.LOOSE_TIP,
+    targetRoute: null,
+    ctaContent: UNREAD_PAGE_CTA,
+  },
   [MODAL_CONTENT_TYPES.TIP_OVERFLOW]: {
     type: modalTypes.DELAYED_RESOURCE,
     header: `${HEADER_STANDARD_BEGINNING} a ponta!`,

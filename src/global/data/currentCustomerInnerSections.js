@@ -150,6 +150,12 @@ export const currentCustomerInnerSections = [
         behaviorData: MODAL_CONTENT_TYPES.TIP_OVERFLOW,
         contactType: REQUEST_TYPES.TIP_OVERFLOW,
       },
+      {
+        id: "looseTip",
+        label: "Comprei a caneta e a ponta veio solta",
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.LOOSE_TIP,
+      }
     ],
   },
   {

@@ -7,4 +7,5 @@ export const RESOURCE_URLS = {
   DELIVERY: 'https://www.ubbeauty.com.br/store/entrega/',
   RETURNS: 'https://www.ubbeauty.com.br/store/trocas-devolucoes/',
   TRACKING: 'https://www.ubbeauty.com.br/store/acompanhando-seu-pedido/',
+  LOOSE_TIP: 'https://store.ubbeauty.com.br/cuidados-com-a-ponta/',
 }
