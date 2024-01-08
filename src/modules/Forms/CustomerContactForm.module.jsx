@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ReactGA from 'react-ga';
 import { Form } from 'react-final-form';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -55,6 +56,11 @@ const CustomerContactForm = () => {
     setIsSubmitting(true);
     setHasSubmitted(true);
     setIsModalOpen(true);
+    ReactGA.event({
+      category: 'Form',
+      action: 'Submit',
+      label: 'submitted_customer_contact_form',
+    });
 
     return submitNewRequest(contactReason, formData).then(
       (result) => {

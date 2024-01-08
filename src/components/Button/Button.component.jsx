@@ -5,6 +5,7 @@ import LinkAsButton from "./components/LinkAsButton.component";
 import { BUTTON_TYPES } from 'constants/button';
 import { StyledButton } from 'components/Button/styles/Button.styles';
 
+import ReactGA from 'react-ga';
 
 const Button = ({
   key,
@@ -21,7 +22,14 @@ const Button = ({
       disabled={isDisabled}
       buttonStyle={buttonStyle}
       type={type}
-      onClick={onClick}
+      onClick={() => {
+        ReactGA.event({
+          category: 'Button',
+          action: 'Click',
+          label: label,
+        });
+        onClick();
+      }}
     >
       {label}
     </StyledButton>
@@ -31,7 +39,14 @@ const Button = ({
       link={link}
       buttonStyle={buttonStyle}
       isDisabled={isDisabled}
-      onClick={onClick}
+      onClick={() => {
+        ReactGA.event({
+          category: 'Link',
+          action: 'Click',
+          label: label,
+        });
+        onClick();
+      }}
       label={label}
     />
 );

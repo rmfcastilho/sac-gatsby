@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import ReactGA from 'react-ga';
+
 import { Form } from 'react-final-form';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -13,16 +15,17 @@ import { MESSAGE_ENTRY_FORM_SUBSECTION } from './constants/MessageEntryForm.cons
 
 import FormSubsection from './components/FormSubsection/FormSubsection.component';
 import FormSubmission from './components/FormSubmission/FormSubmission.component';
-import { FORM_ACTIONS } from 'modules/Forms/constants/FormActions.constants';
+import FormSubmissionModal from 'modules/Forms/components/FormSubmissionModal/FormSubmissionModal';
 
+import { FORM_ACTIONS } from 'modules/Forms/constants/FormActions.constants';
 import { HIGH_LEVEL_CATEGORIES } from 'modules/Forms/constants/HighLevelCategories.constants';
 
 import { submitNewRequest } from 'api/submitNewRequest';
-import { nonCustomerFormSelector } from 'selectors/formSelectors.selectors';
 
+import { nonCustomerFormSelector } from 'selectors/formSelectors.selectors';
 import { nonCustomerFormValidationSelector } from 'selectors/formValidation.selectors';
 import { contactReasonSelector } from 'selectors/contactReason.selectors';
-import FormSubmissionModal from 'modules/Forms/components/FormSubmissionModal/FormSubmissionModal';
+
 
 const NonCustomerForm = () => {
   const [isFormValid, setIsFormValid] = useState(false);
@@ -57,6 +60,11 @@ const NonCustomerForm = () => {
     setIsSubmitting(true);
     setHasSubmitted(true);
     setIsModalOpen(true);
+    ReactGA.event({
+      category: 'Form',
+      action: 'Submit',
+      label: 'submitted_customer_contact_form',
+    });
 
     return submitNewRequest(contactReason, formData).then(
       (result) => {

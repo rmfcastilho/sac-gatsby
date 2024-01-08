@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import ReactGA from 'react-ga';
+
 import { Form } from 'react-final-form';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,11 +9,11 @@ import { updateAddressWithApiResult } from 'slices/customerAddressForm.slice';
 import { addressSubformSelector } from 'selectors/addressForm.selectors';
 import { zipAddressSelector } from 'selectors/addressForm.selectors';
 
-import { getZipData } from 'api/getZipData';
+import { customerAddressFormSelector } from 'selectors/formSelectors.selectors';
+import { contactReasonSelector } from 'selectors/contactReason.selectors';
+import { addressFormValidationSelector } from 'selectors/formValidation.selectors';
 
 import { FormFieldsWrapper } from './styles/Form.styles';
-
-import { handleFormFieldChange } from 'modules/Forms/helpers/handleFormFieldChange';
 
 import { FORM_NAMES } from 'modules/Forms/constants/FormNames.constants';
 import { ADDRESS_SUBSECTION } from 'modules/Forms/constants/AddressForm.constants';
@@ -20,20 +22,19 @@ import { EXISTING_CUSTOMER_SUBSECTION } from 'modules/Forms/constants/ExistingCu
 import { MESSAGE_ENTRY_FORM_SUBSECTION } from 'modules/Forms/constants/MessageEntryForm.constants';
 import { FORM_ACTIONS } from 'modules/Forms/constants/FormActions.constants';
 
+import { handleFormFieldChange } from 'modules/Forms/helpers/handleFormFieldChange';
+
 import FormSubsection from './components/FormSubsection/FormSubsection.component';
 import FormSubmission from './components/FormSubmission/FormSubmission.component';
+import FormSubmissionModal from 'modules/Forms/components/FormSubmissionModal/FormSubmissionModal';
 
 import { addressFieldTransformers } from 'modules/Forms/helpers/addressFieldTransformers';
 import { isZipValidValidator } from 'modules/Forms/helpers/fieldValidation';
 
-import { addressFormValidationSelector } from 'selectors/formValidation.selectors';
-
 import { setFormFieldValidity } from 'slices/formValidation.slice';
-import { submitNewRequest } from 'api/submitNewRequest';
-import { customerAddressFormSelector } from 'selectors/formSelectors.selectors';
-import { contactReasonSelector } from 'selectors/contactReason.selectors';
-import FormSubmissionModal from 'modules/Forms/components/FormSubmissionModal/FormSubmissionModal';
 
+import { submitNewRequest } from 'api/submitNewRequest';
+import { getZipData } from 'api/getZipData';
 
 const CustomerContactAddressForm = () => {
   const [isFormValid, setIsFormValid] = useState(false);
@@ -104,6 +105,11 @@ const CustomerContactAddressForm = () => {
     setIsSubmitting(true);
     setHasSubmitted(true);
     setIsModalOpen(true);
+    ReactGA.event({
+      category: 'Form',
+      action: 'Submit',
+      label: 'submitted_contact_address_form',
+    });
 
     return submitNewRequest(contactReason, formData).then(
       (result) => {
