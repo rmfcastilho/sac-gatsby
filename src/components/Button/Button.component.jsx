@@ -5,7 +5,7 @@ import LinkAsButton from "./components/LinkAsButton.component";
 import { BUTTON_TYPES } from 'constants/button';
 import { StyledButton } from 'components/Button/styles/Button.styles';
 
-import ReactGA from 'react-ga';
+import { submitAnalyticsEvent } from 'helpers/submitAnalyticsEvent';
 
 const Button = ({
   key,
@@ -23,7 +23,7 @@ const Button = ({
       buttonStyle={buttonStyle}
       type={type}
       onClick={() => {
-        ReactGA.event({
+        submitAnalyticsEvent('click', {
           category: 'Button',
           action: 'Click',
           label: label,
@@ -40,8 +40,8 @@ const Button = ({
       buttonStyle={buttonStyle}
       isDisabled={isDisabled}
       onClick={() => {
-        ReactGA.event({
-          category: 'Link',
+        submitAnalyticsEvent('click', {
+          category: 'Button',
           action: 'Click',
           label: label,
         });

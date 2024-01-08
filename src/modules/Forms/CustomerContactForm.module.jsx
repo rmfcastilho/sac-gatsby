@@ -22,6 +22,7 @@ import FormSubmission from './components/FormSubmission/FormSubmission.component
 import { submitNewRequest } from 'api/submitNewRequest';
 
 import FormSubmissionModal from './components/FormSubmissionModal/FormSubmissionModal';
+import { submitAnalyticsEvent } from 'helpers/submitAnalyticsEvent';
 
 const CustomerContactForm = () => {
   const [isFormValid, setIsFormValid] = useState(false);
@@ -56,6 +57,12 @@ const CustomerContactForm = () => {
     setIsSubmitting(true);
     setHasSubmitted(true);
     setIsModalOpen(true);
+
+    submitAnalyticsEvent('submit', {
+      category: 'Form',
+      action: 'Submit',
+      label: 'submit_customer_contact_form',
+    });
 
     return submitNewRequest(contactReason, formData).then(
       (result) => {

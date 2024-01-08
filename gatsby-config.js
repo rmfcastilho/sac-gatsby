@@ -26,5 +26,13 @@ module.exports = {
         icon: 'src/icons/favicon.png'
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingId: "G-HLC3S9GTJX",
+        head: true,
+        anonymize: true,
+      },
+    },
   ],
 };

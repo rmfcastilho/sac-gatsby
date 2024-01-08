@@ -5,10 +5,6 @@ import { store } from "store/store";
 
 import StandardTemplate from "templates/StandardTemplate.component";
 
-import ReactGA from 'react-ga';
-
-ReactGA.initialize('G-HLC3S9GTJX');
-
 export const wrapRootElement = ({ element, props }) => {
   return (
     <Provider store={store}>

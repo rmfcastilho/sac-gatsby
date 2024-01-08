@@ -34,6 +34,7 @@ import { setFormFieldValidity } from 'slices/formValidation.slice';
 
 import { submitNewRequest } from 'api/submitNewRequest';
 import { getZipData } from 'api/getZipData';
+import { submitAnalyticsEvent } from 'helpers/submitAnalyticsEvent';
 
 const CustomerContactAddressForm = () => {
   const [isFormValid, setIsFormValid] = useState(false);
@@ -104,6 +105,12 @@ const CustomerContactAddressForm = () => {
     setIsSubmitting(true);
     setHasSubmitted(true);
     setIsModalOpen(true);
+
+    submitAnalyticsEvent('submit', {
+      category: 'Form',
+      action: 'Submit',
+      label: 'submit_customer_address_form',
+    });
 
     return submitNewRequest(contactReason, formData).then(
       (result) => {

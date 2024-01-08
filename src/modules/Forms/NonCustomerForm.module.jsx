@@ -24,6 +24,7 @@ import { submitNewRequest } from 'api/submitNewRequest';
 import { nonCustomerFormSelector } from 'selectors/formSelectors.selectors';
 import { nonCustomerFormValidationSelector } from 'selectors/formValidation.selectors';
 import { contactReasonSelector } from 'selectors/contactReason.selectors';
+import { submitAnalyticsEvent } from 'helpers/submitAnalyticsEvent';
 
 
 const NonCustomerForm = () => {
@@ -59,6 +60,12 @@ const NonCustomerForm = () => {
     setIsSubmitting(true);
     setHasSubmitted(true);
     setIsModalOpen(true);
+
+    submitAnalyticsEvent('submit', {
+      category: 'Form',
+      action: 'Submit',
+      label: 'submit_non_customer_contact_form',
+    });
 
     return submitNewRequest(contactReason, formData).then(
       (result) => {
