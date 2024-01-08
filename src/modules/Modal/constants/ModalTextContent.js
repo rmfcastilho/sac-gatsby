@@ -172,7 +172,7 @@ export const modalTextContent = {
       SOMENTE se o status do seu pedido for "Pago" ou "Emitindo Nota Fiscal", 
       você pode prosseguir`,
     resource: RESOURCE_URLS.TRACKING,
-    targetRoute: ROUTES.CUSTOMER_CONTACT_ADDRESS,
+    targetRoute: ROUTES.CUSTOMER_CONTACT,
     ctaContent: 'CLIQUE AQUI PARA VER O STATUS DO PEDIDO',
     timedButtonLabel: 'Sim, o status de meu pedido é PAGO ou EMITINDO NOTA FISCAL, ' +
       'portanto, desejo alterar meu pedido.',
