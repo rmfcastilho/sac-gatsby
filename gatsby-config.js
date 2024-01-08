@@ -29,9 +29,23 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "G-HLC3S9GTJX",
-        head: true,
-        anonymize: true,
+        trackingIds: [
+          "G-HLC3S9GTJX"
+        ],
+
+        gtagConfig: {
+          optimize_id: "OPT_CONTAINER_ID",
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          origin: "YOUR_SELF_HOSTED_ORIGIN",
+          delayOnRouteUpdate: 0,
+        },
       },
     },
   ],
