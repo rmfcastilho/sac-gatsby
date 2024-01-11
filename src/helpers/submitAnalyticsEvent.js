@@ -1,5 +1,5 @@
 export const submitAnalyticsEvent = (eventType, eventData) => {
-  if (typeof window === "undefined") {
+  if (typeof window === "undefined" || !window.gtag) {
     return null
   }
 
