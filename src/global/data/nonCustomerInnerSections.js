@@ -28,6 +28,12 @@ export const nonCustomerInnerSections = [
         behaviorData: MODAL_CONTENT_TYPES.CANCELLED_TRANSACTION,
         contactType: REQUEST_TYPES.NC_CANCELLED_TRANSACTION,
       },
+      {
+        id: 'coupon',
+        label: 'Tem cupom de desconto para primeira compra?',
+        behavior: BUTTON_BEHAVIORS.ALERT,
+        behaviorData: MODAL_CONTENT_TYPES.COUPON,
+      }
     ],
   },
   {

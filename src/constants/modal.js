@@ -1,4 +1,5 @@
 export const MODAL_CONTENT_TYPES = {
+  COUPON: 'coupon',
   PARTNERSHIPS: 'partnerships',
   RESALES: 'resales',
   EXPORTS: 'exports',

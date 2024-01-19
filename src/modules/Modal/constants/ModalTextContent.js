@@ -176,5 +176,13 @@ export const modalTextContent = {
     ctaContent: 'CLIQUE AQUI PARA VER O STATUS DO PEDIDO',
     timedButtonLabel: 'Sim, o status de meu pedido é PAGO ou EMITINDO NOTA FISCAL, ' +
       'portanto, desejo alterar meu pedido.',
-  }
+  },
+  [MODAL_CONTENT_TYPES.COUPON]: {
+    type: modalTypes.SIMPLE_ALERT,
+    header: `Não. Não temos cupons de descontos pois existem vários combos com descontos já aplicados.`,
+    textualClarification: 'Você também pode criar seu próprio combo! Aproveite os descontos!',
+    resource: 'https://store.ubbeauty.com.br/',
+    targetRoute: null,
+    ctaContent: 'Ir para a loja',
+  },
 };
