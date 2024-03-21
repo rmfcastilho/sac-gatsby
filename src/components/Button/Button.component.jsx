@@ -28,7 +28,9 @@ const Button = ({
           action: 'Click',
           label: label,
         });
-        onClick();
+        if (typeof onClick === 'function') {
+          onClick();
+        }
       }}
     >
       {label}
@@ -45,7 +47,9 @@ const Button = ({
           action: 'Click',
           label: label,
         });
-        onClick();
+        if (typeof onClick === 'function') {
+          onClick();
+        }
       }}
       label={label}
     />

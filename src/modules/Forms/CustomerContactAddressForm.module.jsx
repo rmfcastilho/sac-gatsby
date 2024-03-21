@@ -112,7 +112,7 @@ const CustomerContactAddressForm = () => {
       label: 'submit_customer_address_form',
     });
 
-    return submitNewRequest(contactReason, formData).then(
+    return submitNewRequest(contactReason, formData, true).then(
       (result) => {
         setIsSubmissionSuccessful(result.ok);
         setIsSubmitting(false);

@@ -67,7 +67,7 @@ const NonCustomerForm = () => {
       label: 'submit_non_customer_contact_form',
     });
 
-    return submitNewRequest(contactReason, formData).then(
+    return submitNewRequest(contactReason, formData, false).then(
       (result) => {
         setIsSubmissionSuccessful(result.ok);
         setIsSubmitting(false);

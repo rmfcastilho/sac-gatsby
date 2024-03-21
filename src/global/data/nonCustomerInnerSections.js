@@ -13,7 +13,7 @@ export const nonCustomerInnerSections = [
         label: 'Dúvida sobre o produto',
         behavior: BUTTON_BEHAVIORS.ALERT,
         behaviorData: MODAL_CONTENT_TYPES.NON_CUSTOMER_PRODUCT_DOUBT,
-        contactType: REQUEST_TYPES.NC_PRODUCT_DOUBT,
+        contactType: REQUEST_TYPES.PRODUCT_DOUBT,
       },
       {
         id: 'paymentMethods',
@@ -26,7 +26,7 @@ export const nonCustomerInnerSections = [
         label: 'Minha transação foi cancelada',
         behavior: BUTTON_BEHAVIORS.ALERT,
         behaviorData: MODAL_CONTENT_TYPES.CANCELLED_TRANSACTION,
-        contactType: REQUEST_TYPES.NC_CANCELLED_TRANSACTION,
+        contactType: REQUEST_TYPES.CANCELLED_TRANSACTION,
       },
       {
         id: 'coupon',
@@ -45,14 +45,14 @@ export const nonCustomerInnerSections = [
         label: "Quero fazer um elogio",
         behavior: BUTTON_BEHAVIORS.REDIRECT,
         behaviorData: ROUTES.NON_CUSTOMER_CONTACT,
-        contactType: REQUEST_TYPES.NC_COMPLIMENT,
+        contactType: REQUEST_TYPES.COMPLIMENT,
       },
       {
         id: "suggestion",
         label: "Quero fazer uma sugestão",
         behavior: BUTTON_BEHAVIORS.REDIRECT,
         behaviorData: ROUTES.NON_CUSTOMER_CONTACT,
-        contactType: REQUEST_TYPES.NC_SUGGESTION,
+        contactType: REQUEST_TYPES.SUGGESTION,
       },
       {
         id: "partnerships",
