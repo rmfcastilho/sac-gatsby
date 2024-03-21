@@ -1,4 +1,4 @@
-export const submitNewRequest = async (type, data) => {
+export const submitNewRequest = async (type, data, isCustomer) => {
   try {
     const response = await fetch(`${process.env.GATSBY_API_BASE_URL}`, {
       method: 'POST',
@@ -6,7 +6,10 @@ export const submitNewRequest = async (type, data) => {
         'Content-Type': 'application/json',
         'type': type,
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify({
+        ...data,
+        isCustomer,
+      }),
     });
 
     if (!response.ok) {
